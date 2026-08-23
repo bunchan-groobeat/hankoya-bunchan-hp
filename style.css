@@ -20,7 +20,8 @@
       overflow-x: hidden;
       color: var(--text);
       background: var(--white);
-      font-family: "Zen Maru Gothic", "Noto Sans JP", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+      /* ★カード画像（マーシー納品）と同じ極太の角ゴシックに統一 */
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
       font-size: 16px;
       line-height: 1.9;
       -webkit-font-smoothing: antialiased;
@@ -29,7 +30,7 @@
     img { max-width: 100%; }
     h1, h2, h3, p { margin-top: 0; }
     h1, h2, h3 {
-      font-family: "Zen Maru Gothic", "Noto Sans JP", "Hiragino Maru Gothic ProN", sans-serif;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
       font-weight: 900;
       letter-spacing: .01em;
       line-height: 1.35;
@@ -232,6 +233,29 @@
       color: var(--muted);
       font-size: 18px;
       font-weight: 900;
+    }
+
+    /* ===== スマホ：流さず、1列で大きく並べる =====
+       「流れてこないと何があるか分からない」「1枚が小さい」の2点を解消する。
+       自動スクロールはPCだけ。スマホは指で縦に送れば8品目すべて見られる。
+       （2026-08-23 社長判断：1列で大きく） */
+    @media (max-width: 760px) {
+      .carousel { overflow: visible; }
+      .carousel-track {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: auto;
+        min-height: 0;
+        animation: none;
+        transform: none;
+      }
+      /* 流すために複製したカードはスマホでは不要 */
+      .carousel-track > [aria-hidden="true"] { display: none; }
+      .ci { flex: none; width: auto; }
+      .ci:hover { transform: none; }
+      /* 左右の余白を詰めて、カードを少しでも大きく見せる */
+      .hero > .container { padding-inline: 12px; }
     }
 
     /* 8品目＝蛍光色で差別化 */
@@ -575,8 +599,9 @@
       .evidence-head { display: block; }
       .years { margin-top: 24px; }
       .evidence-photo { min-height: 440px; }
-      .carousel-track { min-height: 420px; gap: 14px; }
-      .ci.is-card { flex: 0 0 240px; width: 240px; }
+      /* ★スマホは流さず2列グリッド（上のメディアクエリで指定）。
+         横流し前提の固定幅は解除する */
+      .ci.is-card { flex: none; width: auto; }
           .ci-photo { height: 150px; margin: 10px 10px 0; }
       .ci-name { font-size: clamp(26px, 8vw, 40px); padding: 14px 8px 0; }
       .ci-body { padding: 12px 10px 14px; gap: 10px; }

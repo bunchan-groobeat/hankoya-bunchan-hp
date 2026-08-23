@@ -1,6 +1,5 @@
-# はんこ屋ぶんちゃん — 確認用サイト（本番ではありません）
-# ★本番公開時は C:\HQ\hanko-bunchan\hp\robots.txt の内容に戻すこと
-#   （本番用はAIクローラーを明示許可する内容。ここでは全面的に閉じている）
+# hankoya bunchan - confirmation site (NOT production)
+# restore C:\HQ\hanko-bunchan\hp\robots.txt on real launch
 
 User-agent: *
 Disallow: /
