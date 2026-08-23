@@ -608,8 +608,9 @@
 
 /* ===== 品目ページ ===== */
 .pg-hero { padding-block: 32px 48px; background: var(--warm); }
-.pg-hero-inner { display: grid; grid-template-columns: 340px 1fr; gap: 44px; align-items: center; }
-.pg-card { display: block; width: 100%; height: auto; border-radius: 6px; }
+/* 横バンドを上段に、文言をその下に（2026-08-24 社長指示） */
+.pg-hero-inner { display: grid; grid-template-columns: 1fr; gap: 30px; }
+.pg-band { display: block; width: 100%; height: auto; border-radius: 8px; }
 .pg-crumb { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
 .pg-crumb a { color: var(--muted); }
 .pg-title {
@@ -658,8 +659,7 @@
 .spec dd { margin: 0; color: var(--muted); line-height: 1.9; }
 
 @media (max-width: 760px) {
-  .pg-hero-inner { grid-template-columns: 1fr; gap: 24px; }
-  .pg-card { max-width: 300px; margin-inline: auto; }
+  .pg-hero-inner { gap: 18px; }
   .pg-actions .cta { width: 100%; }
   .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .spec-row { grid-template-columns: 1fr; gap: 6px; }
