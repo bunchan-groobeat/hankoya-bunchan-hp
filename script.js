@@ -18,29 +18,14 @@
       });
     })();
 
-    /* 品目カード：自動でゆっくり流れる（帯ストックは廃止） */
+    /* 品目カード：3列で並べる
+       ★2026-08-23、自動で流す形（カルーセル）は廃止。
+         流れてくるのを待たないと何があるか分からず、1枚も小さかったため。
+         複製カードの生成と流れる速度の計算も不要になった。 */
     (() => {
       const track = document.getElementById("carouselTrack");
       if (!track) return;
-      const originals = [...track.children];
-      // 途切れずに流すため、同じ並びをもう1組つくる
-      originals.forEach((el) => {
-        const clone = el.cloneNode(true);
-        clone.removeAttribute("id");
-        clone.setAttribute("aria-hidden", "true");
-        track.appendChild(clone);
-      });
       [...track.children].forEach((el) => el.classList.add("is-card"));
-
-      // 1組ぶんの幅だけ流して先頭に戻す＝無限に見える
-      const setDuration = () => {
-        const gap = parseFloat(getComputedStyle(track).gap) || 0;
-        const one = originals.reduce((w, el) => w + el.getBoundingClientRect().width + gap, 0);
-        track.style.setProperty("--flow-distance", one + "px");
-        track.style.setProperty("--flow-duration", Math.max(24, one / 40) + "s");
-      };
-      setDuration();
-      window.addEventListener("resize", setDuration);
 
       // 画像が置かれていれば敷く（未設置ならキャプションのまま）
       track.querySelectorAll(".ci-photo[data-photo]").forEach((face) => {
@@ -50,7 +35,6 @@
           face.style.backgroundImage = 'url("' + src + '")';
           const cap = face.querySelector("span");
           if (cap) cap.remove();
-          setDuration();
         });
         probe.src = src;
       });

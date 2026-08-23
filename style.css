@@ -192,37 +192,33 @@
     .opening-safe { margin: 4px 0 0; color: var(--muted); font-size: 13px; font-weight: 700; }
     .cta-line { background: #06c755; }
 
-    /* ===== 品目カルーセル（4枚表示＋右に帯ストック） ===== */
-    /* 差別化は「文字の蛍光色」で行う。カード自体は暗い共通色 */
+    /* ===== 品目カード：3列で並べる =====
+       自動で流す形（カルーセル）は2026-08-23に廃止。
+       理由＝流れてくるのを待たないと何があるか分からず、1枚も小さかったため。
+       PC・スマホとも3列。8品目が一度に見える。 */
     .carousel { position: relative; margin-top: 22px; }
-    .carousel { overflow: hidden; }
     .carousel-track {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
       align-items: stretch;
-      width: max-content;
-      min-height: 470px;
-      animation: cardFlow var(--flow-duration, 40s) linear infinite;
     }
-    .carousel:hover .carousel-track { animation-play-state: paused; }
-    @keyframes cardFlow {
-      from { transform: translateX(0); }
-      to { transform: translateX(calc(var(--flow-distance, 0px) * -1)); }
-    }
+    /* 流すために複製したカード（script.jsが生成）はもう使わない */
+    .carousel-track > [aria-hidden="true"] { display: none; }
     /* カードはマーシー納品の画像1枚。画像を差し替えるだけで見た目が変わる */
     .ci {
       position: relative;
       display: block;
       overflow: hidden;
-      flex: 0 0 300px;
-      width: 300px;
       background: var(--warm);
       border-radius: 6px;
       text-decoration: none;
       transition: transform .18s ease;
     }
     .ci:hover { transform: translateY(-6px); }
-    .ci-img { display: block; width: 100%; height: auto; }
+    /* ★カード画像は900×1600（9:16）。読み込み前から高さを確保して、
+       あとから画像が入ったときにレイアウトがガタつくのを防ぐ */
+    .ci-img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; }
     /* 画像が未設置のときだけ品目名を出す（差し替え前の保険） */
     .ci-fallback {
       position: absolute;
@@ -235,25 +231,9 @@
       font-weight: 900;
     }
 
-    /* ===== スマホ：流さず、1列で大きく並べる =====
-       「流れてこないと何があるか分からない」「1枚が小さい」の2点を解消する。
-       自動スクロールはPCだけ。スマホは指で縦に送れば8品目すべて見られる。
-       （2026-08-23 社長判断：1列で大きく） */
+    /* スマホも3列。間隔と余白だけ詰める */
     @media (max-width: 760px) {
-      .carousel { overflow: visible; }
-      .carousel-track {
-        display: grid;
-        /* 1列に3項目（2026-08-23 社長判断） */
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-        width: auto;
-        min-height: 0;
-        animation: none;
-        transform: none;
-      }
-      /* 流すために複製したカードはスマホでは不要 */
-      .carousel-track > [aria-hidden="true"] { display: none; }
-      .ci { flex: none; width: auto; }
+      .carousel-track { gap: 8px; }
       .ci:hover { transform: none; }
       /* 左右の余白を詰めて、カードを少しでも大きく見せる */
       .hero > .container { padding-inline: 12px; }
@@ -600,8 +580,7 @@
       .evidence-head { display: block; }
       .years { margin-top: 24px; }
       .evidence-photo { min-height: 440px; }
-      /* ★スマホは流さず2列グリッド（上のメディアクエリで指定）。
-         横流し前提の固定幅は解除する */
+      /* ★3列グリッドなので、横流し前提の固定幅は使わない */
       .ci.is-card { flex: none; width: auto; }
           .ci-photo { height: 150px; margin: 10px 10px 0; }
       .ci-name { font-size: clamp(26px, 8vw, 40px); padding: 14px 8px 0; }
