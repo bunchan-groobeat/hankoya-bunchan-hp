@@ -601,23 +601,30 @@
       border-radius: var(--radius);
       box-shadow: 0 6px 0 var(--text);
     }
-    .cf-title { margin: 0 0 18px; font-size: 18px; font-weight: 900; }
-    .contact-form { display: grid; gap: 14px; }
-    .cf-row { display: grid; gap: 6px; }
-    .cf-label { font-size: 13px; font-weight: 900; }
-    .cf-label em { color: var(--red); font-style: normal; }
+    .cf-title {
+      margin: 0 0 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--line);
+      font-size: 20px;
+      font-weight: 900;
+    }
+    .contact-form { display: grid; gap: 18px; }
+    .cf-row { display: grid; gap: 8px; }
+    .cf-label { color: var(--text); font-size: 14px; font-weight: 900; }
+    .cf-label em { margin-left: 4px; color: var(--red); font-style: normal; }
     .contact-form input,
     .contact-form select,
     .contact-form textarea {
       width: 100%;
-      padding: 12px 14px;
-      background: #fffdf9;
-      border: 2px solid var(--line);
+      padding: 14px 16px;
+      background: #fff;
+      border: 2px solid #ddd2bf;
       border-radius: 12px;
       color: var(--text);
       font-family: inherit;
-      font-size: 15px;
+      font-size: 16px;
     }
+    .contact-form ::placeholder { color: #b3a999; }
     .contact-form input:focus,
     .contact-form select:focus,
     .contact-form textarea:focus { outline: none; border-color: var(--red); }
@@ -1015,14 +1022,15 @@
     .closing-note { margin: 0; color: var(--muted); }
 
     /* 7. contact */
-    .contact { background: var(--navy); color: #fff; }
-    .contact .eyebrow { color: #fff; }
+    /* ★お問い合わせは紺地をやめてクリーム地に（2026-08-25 社長「contactがみずらい」）
+       白いフォームカードを紺の上に置くと沈んで見えたため */
+    .contact { color: var(--text); }
     .contact-grid { display: grid; grid-template-columns: 1fr auto; gap: 42px; align-items: end; }
     .contact-actions { display: flex; flex-direction: column; gap: 14px; }
-    .contact h2 { margin-bottom: 16px; color: #fff; font-size: clamp(30px, 4vw, 48px); }
-    .contact-info { color: rgba(255,255,255,.72); }
+    .contact h2 { margin-bottom: 16px; color: var(--navy); font-size: clamp(30px, 4vw, 48px); }
+    .contact-info { color: var(--muted); }
     .contact-info a { text-decoration: none; }
-    footer { padding: 25px 0; border-top: 1px solid rgba(255,255,255,.15); background: var(--navy); color: rgba(255,255,255,.58); font-size: 12px; }
+    footer { padding: 25px 0; border-top: 3px solid var(--text); background: var(--navy); color: rgba(255,255,255,.58); font-size: 12px; }
     .footer-row { display: flex; justify-content: space-between; gap: 20px; }
 
 
