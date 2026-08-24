@@ -58,8 +58,10 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 16px;
-      padding: 0;
+      margin-bottom: 22px;
+      /* 吹き出しの下に細い赤ライン（2026-08-25 社長指示） */
+      padding: 0 0 14px;
+      border-bottom: 2px solid var(--red);
       background: none;
       color: var(--text);
       font-weight: 900;
@@ -240,8 +242,27 @@
     /* ★赤帯は .header-bar（container の外側）が担当。.header 自体は中身の配置のみ */
     .header-bar { background: var(--red); }
     .header-bar > .container { display: block; }
-    .logo img { filter: brightness(0) invert(1); }
+    /* ロゴはアプリと同じカラー版（img/app-logo.png）。
+       赤地だと沈むので、白い座布団を敷いて見せる */
+    .logo img {
+      height: 46px;
+      padding: 6px 12px;
+      background: #fff;
+      border-radius: 10px;
+    }
+    .f-name img {
+      display: block;
+      width: auto;
+      height: 42px;
+      padding: 6px 12px;
+      background: #fff;
+      border-radius: 10px;
+    }
     .nav-toggle span { background: #fff; }
+    @media (max-width: 760px) {
+      .logo img { height: 38px; padding: 5px 9px; border-radius: 8px; }
+      .f-name img { height: 36px; padding: 5px 9px; border-radius: 8px; }
+    }
 
     /* スマホはスクロールしても上に貼り付く（2026-08-24 社長指示）
        ★sticky では親（.container）の高さぶんしか効かないため fixed で固定する */
