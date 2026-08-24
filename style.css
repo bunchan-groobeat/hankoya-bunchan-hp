@@ -570,6 +570,37 @@
       .doc-contact { padding: 18px 16px; }
     }
 
+    /* ===== 品目ごとの納期（2026-08-25 社長指示）===== */
+    .speed-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+    .sp-item {
+      padding: 24px 22px;
+      background: #fff;
+      border: 3px solid var(--text);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 0 var(--text);
+    }
+    .sp-name {
+      margin: 0 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--red);
+      color: var(--navy);
+      font-size: 20px;
+      font-weight: 900;
+    }
+    .sp-rows { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .sp-rows li { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .sp-label { color: var(--muted); font-size: 14px; font-weight: 700; }
+    .sp-time { color: var(--red); font-size: 20px; font-weight: 900; white-space: nowrap; }
+    .sp-note { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .speed-other { margin: 26px 0 0; font-size: 15px; line-height: 2; }
+    @media (max-width: 760px) {
+      .speed-list { grid-template-columns: 1fr; gap: 12px; margin-top: 26px; }
+      .sp-item { padding: 20px 18px; }
+      .sp-name { font-size: 18px; }
+      .sp-time { font-size: 19px; }
+      .speed-other { font-size: 14px; }
+    }
+
     /* 納期の但し書き（景表法まわりの注意書き。2026-08-25） */
     .speed-caution { margin: 28px 0 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
     .speed-caution a { color: inherit; }
