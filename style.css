@@ -193,14 +193,14 @@
     .opening-safe { margin: 4px 0 0; color: var(--muted); font-size: 13px; font-weight: 700; }
     .cta-line { background: #06c755; }
 
-    /* ===== 品目カード：3列で並べる =====
+    /* ===== 品目カード =====
        自動で流す形（カルーセル）は2026-08-23に廃止。
-       理由＝流れてくるのを待たないと何があるか分からず、1枚も小さかったため。
-       PC・スマホとも3列。8品目が一度に見える。 */
+       PC＝1列4枚×2段（8品目が割り切れる／2026-08-24 社長「4枚か5枚1列が一番見やすい」）
+       スマホ＝3列。 */
     .carousel { position: relative; margin-top: 22px; }
     .carousel-track {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 20px;
       align-items: stretch;
     }
@@ -232,9 +232,9 @@
       font-weight: 900;
     }
 
-    /* スマホも3列。間隔と余白だけ詰める */
+    /* スマホは3列。間隔と余白を詰める */
     @media (max-width: 760px) {
-      .carousel-track { gap: 8px; }
+      .carousel-track { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
       .ci:hover { transform: none; }
       /* 左右の余白を詰めて、カードを少しでも大きく見せる */
       .hero > .container { padding-inline: 12px; }
