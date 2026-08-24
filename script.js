@@ -14,6 +14,38 @@
       window.addEventListener("resize", fit);
     })();
 
+/* お問い合わせフォーム（2026-08-24）
+   action が Formspree のURLになっていれば、ページを移動せずに送信して
+   「送信しました」を出す。mailto のままなら、これまで通りメールソフトが開く。 */
+    (() => {
+      const form = document.getElementById("contactForm");
+      if (!form) return;
+      const action = form.getAttribute("action") || "";
+      if (!/formspree\.io/.test(action)) return;   // 未設定のうちは何もしない
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector(".cf-submit");
+        const before = btn ? btn.textContent : "";
+        if (btn) { btn.disabled = true; btn.textContent = "送信中…"; }
+        try {
+          const res = await fetch(action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+          if (!res.ok) throw new Error("送信に失敗しました");
+          const done = document.createElement("p");
+          done.className = "cf-done";
+          done.textContent = "送信しました。ありがとうございます。折り返しご連絡します。";
+          form.replaceWith(done);
+        } catch (err) {
+          if (btn) { btn.disabled = false; btn.textContent = before; }
+          alert("うまく送信できませんでした。お手数ですが、お電話（024-925-6861）かLINEでご連絡ください。");
+        }
+      });
+    })();
+
 /* クチコミのスライダー（矢印で1枚ずつ送る。2026-08-24） */
     (() => {
       const track = document.getElementById("voicesTrack");
