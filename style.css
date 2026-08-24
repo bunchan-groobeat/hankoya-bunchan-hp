@@ -252,9 +252,9 @@
       transition: transform .12s ease, box-shadow .12s ease;
     }
     .item-nav a:hover { transform: translateY(2px); box-shadow: 0 1px 0 var(--c, var(--text)); }
+    /* スマホでは品目ボタンは出さない（2026-08-24 社長指示。3列のカード一覧が既に一覧の役を担う） */
     @media (max-width: 760px) {
-      .item-nav { grid-template-columns: repeat(4, 1fr); gap: 8px; }
-      .item-nav a { min-height: 40px; font-size: 12px; border-width: 2px; }
+      .item-nav { display: none; }
     }
 
     /* 開業パックの横型カード（画像1枚。差し替えは img/band-kaigyo.jpg） */
