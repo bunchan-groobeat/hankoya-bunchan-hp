@@ -194,11 +194,11 @@
     .cta-line { background: #06c755; }
 
     /* ===== 品目カード =====
-       自動で流す形は2026-08-23に廃止（待たないと見えないため）。
-       PC＝5枚表示の手動スライド（矢印で送る／2026-08-24 社長指定）
+       PC＝常時ゆっくり流れるスライド（2026-08-24 社長「前の方がいい。ゆっくり流れる感じ」）
+          カードの大きさは5枚表示相当のまま。マウスが乗ると止まる。
        スマホ＝3列グリッド。 */
     .carousel { position: relative; margin-top: 22px; }
-    /* 基本（スマホ）＝3列グリッド */
+    /* 基本（スマホ）＝3列グリッド。複製カードは出さない */
     .carousel-track {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -206,46 +206,25 @@
       align-items: stretch;
     }
     .car-btn { display: none; }
+    @media (max-width: 760px) {
+      .carousel-track > [aria-hidden="true"] { display: none; }
+    }
 
-    /* PC＝5枚見えるスライド */
+    /* PC＝ゆっくり流れる（5枚表示相当の大きさ） */
     @media (min-width: 761px) {
+      .carousel { overflow: hidden; }
       .carousel-track {
         display: flex;
         gap: 20px;
-        overflow-x: auto;
-        scroll-snap-type: x proximity;
-        scrollbar-width: none;
-        padding-bottom: 4px;
+        width: max-content;
+        animation: cardFlow var(--flow-duration, 70s) linear infinite;
       }
-      .carousel-track::-webkit-scrollbar { display: none; }
-      .carousel-track .ci {
-        flex: 0 0 calc((100% - 80px) / 5);
-        scroll-snap-align: start;
-      }
-      .car-btn {
-        position: absolute;
-        top: 50%;
-        z-index: 5;
-        display: grid;
-        place-items: center;
-        width: 58px;
-        height: 58px;
-        border: 3px solid var(--text);
-        border-radius: 50%;
-        background: #fff;
-        color: var(--text);
-        font-size: 28px;
-        font-weight: 900;
-        line-height: 1;
-        cursor: pointer;
-        box-shadow: 0 4px 0 var(--text);
-        transform: translateY(-50%);
-        transition: opacity .2s ease;
-      }
-      .car-btn:active { transform: translateY(calc(-50% + 3px)); box-shadow: 0 1px 0 var(--text); }
-      .car-prev { left: -16px; }
-      .car-next { right: -16px; }
-      .car-btn[disabled] { opacity: .25; cursor: default; }
+      .carousel:hover .carousel-track { animation-play-state: paused; }
+      .carousel-track .ci { flex: 0 0 240px; width: 240px; }
+    }
+    @keyframes cardFlow {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(var(--flow-distance, 0px) * -1)); }
     }
     /* 流すために複製したカード（script.jsが生成）はもう使わない */
     .carousel-track > [aria-hidden="true"] { display: none; }
