@@ -4,7 +4,11 @@
     (() => {
       const fit = () => {
         const w = window.innerWidth;
-        document.body.style.zoom = w > 1600 ? String(Math.min(3, w / 1560)) : "";
+        const z = w > 1600 ? Math.min(3, w / 1560) : 1;
+        // ★html に掛ける。body に掛けると幅が画面幅のまま拡大され右へ溢れる
+        document.documentElement.style.zoom = z === 1 ? "" : String(z);
+        document.body.style.zoom = "";
+        document.body.style.width = "";
       };
       fit();
       window.addEventListener("resize", fit);
@@ -53,6 +57,8 @@
         const open = nav.classList.toggle("is-open");
         btn.setAttribute("aria-expanded", String(open));
         btn.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
+        // 開いている間は後ろのページを動かさない
+        document.body.style.overflow = open ? "hidden" : "";
       });
       // 行き先を選んだら閉じる
       nav.querySelectorAll("a").forEach((a) => {
@@ -60,6 +66,7 @@
           nav.classList.remove("is-open");
           btn.setAttribute("aria-expanded", "false");
           btn.setAttribute("aria-label", "メニューを開く");
+          document.body.style.overflow = "";
         });
       });
     })();

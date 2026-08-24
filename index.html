@@ -105,10 +105,11 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608242251">
+  <link rel="stylesheet" href="style.css?v=202608242315">
 </head>
 <body>
   <main>
+    <div class="header-bar">
     <div class="container">
       <header class="header">
         <h1 class="logo"><!-- ★ロゴ画像は img/logo.png を差し替えるだけ -->
@@ -119,24 +120,43 @@
         </button>
 
         <nav class="gnav" id="globalNav" aria-label="サイト内メニュー">
-          <a href="inkan.html">印鑑</a>
-          <a href="gomuin.html">ゴム印</a>
-          <a href="meishi.html">名刺</a>
-          <a href="sticker.html">ステッカー</a>
-          <a href="#about">お店について</a>
-          <a href="#flow">ご利用の流れ</a>
-          <a href="#works">制作事例</a>
-          <a href="#contact-title">店舗情報</a>
+          <div class="gnav-main">
+            <a href="index.html">ホーム</a>
+            <a href="#works">制作事例</a>
+            <a href="#tsukureru">つくれるもの</a>
+            <a href="#flow">ご利用の流れ</a>
+            <a href="#about">お店について</a>
+            <a href="#contact-title">お問い合わせ</a>
+          </div>
+          <div class="gnav-sub">
+            <p class="gnav-label">ITEM</p>
+            <div class="gnav-items">
+              <a href="inkan.html">印鑑</a>
+              <a href="gomuin.html">ゴム印</a>
+              <a href="meishi.html">名刺</a>
+              <a href="sticker.html">ステッカー</a>
+              <a href="flyer.html">チラシ</a>
+              <a href="poster.html">ポスター</a>
+              <a href="goods.html">グッズ</a>
+              <a href="other.html">その他</a>
+              <a href="kaigyo.html">開業・開店パック</a>
+            </div>
+          </div>
+          <div class="gnav-foot">
+            <a class="gnav-line" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">LINEで相談</a>
+            <a class="gnav-tel" href="tel:0249256861">024-925-6861</a>
+          </div>
         </nav>
 
         <div class="header-note">郡山駅前で創業11年</div>
       </header>
     </div>
+    </div>
 
     <section class="hero" aria-label="つくれるもの">
       <div class="container">
         <!-- 見出しの上のキャッチ（2026-08-24 社長指示） -->
-        <p class="hero-catch">郡山で<b class="hc-big">『モノづくり』</b>するなら<br class="hc-br"><b class="hc-big">はんこ屋ぶんちゃん</b></p>
+        <p class="hero-catch">郡山で<b class="hc-big hc-red">『モノづくり』</b>するなら<br class="hc-br"><b class="hc-big hc-black">はんこ屋ぶんちゃん</b></p>
 
         <div class="tiles-head">
           <!-- ★見出し画像は img/heading.png を差し替えるだけ -->
@@ -201,7 +221,19 @@
           <img src="img/band-kaigyo.jpg" alt="開業・開店パック — お店を始める準備、ロゴから印鑑までまとめてお任せ！当店で全て制作できます！">
         </a>
 
-        <p class="brand-note">Tシャツプリント・ユニフォームは、同じ店主の「BUN PRINT（ぶんプリ）」で承っています。</p>
+        <!-- 姉妹ブランド（2026-08-24 社長指示：開業パックの下に2項目） -->
+        <div class="brands">
+          <a class="brand-card brand-print" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">
+            <span class="bc-lead">オリジナルTシャツ、ユニフォーム作成はこちら！</span>
+            <span class="bc-name">BUN PRINT<small>ぶんプリ</small></span>
+            <span class="bc-go">相談する&nbsp;→</span>
+          </a>
+          <a class="brand-card brand-design" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">
+            <span class="bc-lead">ホームページ制作、アプリ制作、看板制作はこちら！</span>
+            <span class="bc-name">BUN Design<small>ぶんデザイン</small></span>
+            <span class="bc-go">相談する&nbsp;→</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -424,6 +456,20 @@
       </div>
     </section>
 
+    <!-- 地域訴求カード（2026-08-24 社長指示） -->
+    <section class="section reveal" aria-labelledby="local-title">
+      <div class="container">
+        <div class="local-card">
+          <p class="local-eyebrow"><span class="local-dot" aria-hidden="true"></span>KORIYAMA — 郡山でモノづくりを頼むなら</p>
+          <h2 class="local-title" id="local-title">郡山で『モノづくり』<br>するならはんこ屋ぶんちゃん</h2>
+          <p class="local-text">郡山駅前で創業11年。印鑑・ゴム印・名刺・ステッカー・チラシ・ポスター・グッズまで、お店・会社・チーム・イベントの「かたちにしたいもの」を、ご相談から制作までお引き受けします。認印は最短15分、実印・銀行印も店頭約1時間。1点からで大丈夫です。</p>
+          <div class="pg-actions">
+            <a class="cta cta-line" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">郡山でモノづくりを相談する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section reveal" id="works" aria-labelledby="works-title">
       <div class="container">
         <div class="evidence-head">
@@ -542,6 +588,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608242251" defer></script>
+  <script src="script.js?v=202608242315" defer></script>
 </body>
 </html>

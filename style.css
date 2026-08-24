@@ -164,23 +164,90 @@
       transform: rotate(1.5deg);
     }
 
-    /* ===== ヘッダーはロゴ＋三本線だけ（PCも）。2026-08-24 社長指示 =====
-       メニューは押したときに開く。中身はスマホと同じ縦並び。 */
+    /* ===== ヘッダー =====
+       PC＝ロゴ＋横並びナビ（三本線はスマホだけ。2026-08-24 社長指摘で戻した）
+       スマホ＝ロゴ＋三本線で固定、開くと全画面の大文字メニュー */
     .header { justify-content: space-between; }
-    .nav-toggle { display: block; order: 2; }
-    .header-note { display: none; }
-    .gnav {
-      display: none;
-      order: 3;
-      width: 100%;
-      flex: none;
-      flex-direction: column;
-      gap: 0;
-      padding-bottom: 10px;
+    .gnav-sub, .gnav-foot { display: none; }   /* PCでは出さない */
+    .gnav-main { display: contents; }          /* PCでは横並びナビとして扱う */
+
+    /* ===== ヘッダーは赤地（2026-08-24 社長指示）。ロゴと三本線は白に反転 =====
+       ヘッダーを包む .container の左右余白ぶん、外へ広げて全幅の帯にする */
+    /* ★赤帯は .header-bar（container の外側）が担当。.header 自体は中身の配置のみ */
+    .header-bar { background: var(--red); }
+    .header-bar > .container { display: block; }
+    .logo img { filter: brightness(0) invert(1); }
+    .nav-toggle span { background: #fff; }
+
+    /* スマホはスクロールしても上に貼り付く（2026-08-24 社長指示）
+       ★sticky では親（.container）の高さぶんしか効かないため fixed で固定する */
+    @media (max-width: 760px) {
+      /* 固定するのは赤帯ごと */
+      .header-bar {
+        position: fixed;
+        top: 0; right: 0; left: 0;
+        z-index: 800;
+      }
+      .header { min-height: 58px; padding-block: 6px; border-bottom: 0; }
+      /* 固定したぶん、本文が隠れないよう上に余白 */
+      body { padding-top: 58px; }
+      /* 開いたメニューが画面から溢れないように */
+      .gnav.is-open { max-height: calc(100vh - 76px); overflow-y: auto; }
     }
-    .gnav.is-open { display: flex; }
-    .gnav a { padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: 16px; }
-    .gnav a::after { display: none; }
+    /* PCのナビは白文字（赤地のため） */
+    .gnav a { color: #fff; }
+    .gnav a::after { background: #fff; }
+    .header-note { display: none; }
+
+    /* ===== スマホ：開くと全画面の大文字メニュー（2026-08-24 社長指示：dub-design 風）===== */
+    @media (max-width: 760px) {
+      .nav-toggle { display: block; order: 2; position: relative; z-index: 810; }
+      .gnav {
+        display: none;
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: 790;
+        order: 3;
+        width: auto;
+        flex: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 88px 24px 40px;
+        background: var(--white);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+      .gnav.is-open { display: flex; }
+      .gnav-main { display: grid; gap: 2px; }
+      /* ★差し色は赤で統一（DUBDESIGNは黒だが、ぶんちゃんは赤。2026-08-24 社長指示） */
+      .gnav-main a {
+        padding: 6px 0;
+        color: var(--red);
+        font-size: clamp(30px, 7vw, 46px);
+        font-weight: 900;
+        line-height: 1.28;
+        letter-spacing: .01em;
+        border: 0;
+      }
+      .gnav-sub { display: block; margin-top: 34px; padding-top: 22px; border-top: 2px solid var(--red); }
+      .gnav-label { margin: 0 0 12px; color: var(--red); font-size: 12px; font-weight: 900; letter-spacing: .18em; }
+      .gnav-items { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
+      .gnav-items a { padding: 0; color: var(--text); font-size: 15px; font-weight: 700; border: 0; }
+      .gnav-foot { display: grid; gap: 10px; margin-top: 30px; }
+      .gnav-line, .gnav-tel {
+        display: grid;
+        place-items: center;
+        min-height: 54px;
+        border: 3px solid var(--text);
+        border-radius: 999px;
+        box-shadow: 0 4px 0 var(--text);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 900;
+      }
+      .gnav-line { background: #06c755; }
+      .gnav-tel { background: var(--red); }
+    }
 
     /* 1. オープニング看板 → 品目タイル */
     .hero { position: relative; overflow: hidden; padding-block: 30px 56px; background: var(--warm); }
@@ -228,7 +295,8 @@
       .carousel-track > [aria-hidden="true"] { display: none; }
     }
 
-    /* PC＝ゆっくり流れる（5枚表示相当の大きさ） */
+    /* PC＝ゆっくり流れる（5枚表示相当の大きさ）
+       ★はみ出しは .carousel の overflow:hidden で隠す。body 側にも保険をかけてある */
     @media (min-width: 761px) {
       .carousel { overflow: hidden; }
       .carousel-track {
@@ -287,8 +355,10 @@
       letter-spacing: .01em;
       text-align: center;
     }
-    /* 「モノづくり」と「はんこ屋ぶんちゃん」は一回り大きく赤字（2026-08-24 社長指示） */
-    .hc-big { color: var(--red); font-size: 1.35em; font-weight: 900; }
+    /* 2語を一回り大きく。モノづくり＝赤、はんこ屋ぶんちゃん＝黒（2026-08-24 社長指示） */
+    .hc-big { font-size: 1.35em; font-weight: 900; }
+    .hc-red { color: var(--red); }
+    .hc-black { color: var(--text); }
     .hc-br { display: none; }
     @media (max-width: 760px) {
       /* スマホは行間・字間・上下の余白を詰める（2026-08-24 社長指示） */
@@ -296,6 +366,40 @@
       .hc-big { font-size: 1.28em; }
       .hc-br { display: inline; }
       .tiles-head { margin-top: 2px; margin-bottom: 8px; }
+    }
+
+    /* ===== 地域訴求カード（2026-08-24 社長指示）===== */
+    .local-card {
+      padding: 44px 40px;
+      background: linear-gradient(160deg, #ffffff 0%, #fff9ef 55%, #fff2dd 100%);
+      border: 3px solid var(--text);
+      border-radius: 26px;
+      box-shadow: 0 8px 0 var(--text);
+    }
+    .local-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+    }
+    .local-dot { width: 11px; height: 11px; flex: 0 0 11px; border-radius: 50%; background: var(--red); }
+    .local-title {
+      margin: 0 0 18px;
+      color: var(--text);
+      font-size: clamp(26px, 4.2vw, 46px);
+      font-weight: 900;
+      line-height: 1.34;
+    }
+    .local-text { margin: 0 0 26px; max-width: 780px; color: var(--muted); font-size: 15px; line-height: 2; }
+    @media (max-width: 760px) {
+      .local-card { padding: 30px 22px; border-radius: 20px; }
+      .local-eyebrow { font-size: 11px; letter-spacing: .1em; }
+      .local-title { font-size: 24px; }
+      .local-card .cta { width: 100%; }
     }
 
     /* ===== クチコミのスライダー（2026-08-24 社長指示：カード式に）===== */
@@ -373,6 +477,42 @@
       .v-btn { width: 42px; height: 42px; font-size: 22px; }
       .v-prev { left: -6px; }
       .v-next { right: -6px; }
+    }
+
+    /* ===== 姉妹ブランドのカード（2026-08-24 社長指示）===== */
+    .brands { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .brand-card {
+      display: grid;
+      align-content: start;
+      gap: 8px;
+      padding: 26px 28px;
+      border: 3px solid var(--text);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 0 var(--text);
+      color: #fff;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .brand-card:hover { transform: translateY(-3px); box-shadow: 0 9px 0 var(--text); }
+    .brand-print  { background: linear-gradient(140deg, #2f3b52 0%, #1d2637 100%); }
+    .brand-design { background: linear-gradient(140deg, #1a6fd4 0%, #0d4a94 100%); }
+    .bc-lead { font-size: 14px; font-weight: 700; line-height: 1.7; opacity: .95; }
+    .bc-name { font-size: clamp(24px, 2.6vw, 34px); font-weight: 900; line-height: 1.2; }
+    .bc-name small { display: block; margin-top: 4px; font-size: 13px; font-weight: 700; opacity: .85; }
+    .bc-go {
+      justify-self: start;
+      margin-top: 8px;
+      padding: 9px 20px;
+      background: rgba(255,255,255,.16);
+      border: 2px solid rgba(255,255,255,.7);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 900;
+    }
+    @media (max-width: 760px) {
+      .brands { grid-template-columns: 1fr; gap: 12px; }
+      .brand-card { padding: 20px 18px; }
+      .bc-lead { font-size: 13px; }
     }
 
     /* 開業パックの横型カード（画像1枚。差し替えは img/band-kaigyo.jpg） */
@@ -769,16 +909,8 @@
       .header { min-height: 68px; }
       .header-note { display: none; }
       .nav-toggle { display: block; order: 2; }
-      .gnav {
-        display: none;
-        order: 3;
-        width: 100%;
-        flex-direction: column;
-        gap: 0;
-        padding-bottom: 10px;
-      }
-      .gnav.is-open { display: flex; }
-      .gnav a { padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: 16px; }
+      /* ★旧・縦並びメニューの指定は撤去（上の大文字メニューを打ち消していたため）
+         .gnav の見た目は「開いたメニューの中身」の節にまとめてある */
       .gnav a::after { display: none; }
 
       .logo img { height: 38px; }
