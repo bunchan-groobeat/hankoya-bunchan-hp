@@ -67,12 +67,32 @@
             update();
           }, D + 160);
         };
-        prev.addEventListener("click", () => glide(-page()));
-        next.addEventListener("click", () => glide(page()));
+        prev.addEventListener("click", () => { glide(-page()); restart(); });
+        next.addEventListener("click", () => { glide(page()); restart(); });
         // 端に着いたら矢印を薄くする
         track.addEventListener("scroll", update, { passive: true });
         window.addEventListener("resize", update);
         update();
+
+        // 自動スライド（2026-08-24 社長指示）：5秒ごとに1画面送る。
+        // 端まで行ったら先頭に戻る。触っている間・見えていない間は止まる。
+        let timer = null;
+        const tick = () => {
+          if (track.scrollWidth <= track.clientWidth + 4) return; // スマホ等、送る余地なし
+          const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
+          if (atEnd) glide(-track.scrollLeft); else glide(page());
+        };
+        const start = () => { if (!timer) timer = setInterval(tick, 5000); };
+        const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+        const restart = () => { stop(); start(); };
+        track.addEventListener("mouseenter", stop);
+        track.addEventListener("mouseleave", start);
+        track.addEventListener("touchstart", stop, { passive: true });
+        track.addEventListener("touchend", () => setTimeout(start, 4000), { passive: true });
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) stop(); else start();
+        });
+        start();
       }
 
       // 画像が置かれていれば敷く（未設置ならキャプションのまま）
