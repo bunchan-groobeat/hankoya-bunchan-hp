@@ -248,28 +248,30 @@
     /* 見出し下の品目一覧（2026-08-24 社長指示）
        色は各カードの蛍光色（インラインの --c）に合わせ、ボタンは全て同サイズ */
     .item-nav {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 12px;
-      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
     }
     .item-nav a {
       display: grid;
       place-items: center;
-      min-height: 46px;
-      padding: 6px 4px;
+      min-width: 104px;
+      min-height: 34px;
+      padding: 4px 14px;
       background: #fff;
-      border: 3px solid var(--c, var(--text));
+      border: 2px solid var(--c, var(--text));
       border-radius: 999px;
-      box-shadow: 0 3px 0 var(--c, var(--text));
+      box-shadow: 0 2px 0 var(--c, var(--text));
       color: var(--c, var(--text));
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 900;
       white-space: nowrap;
       text-decoration: none;
       transition: transform .12s ease, box-shadow .12s ease;
     }
-    .item-nav a:hover { transform: translateY(2px); box-shadow: 0 1px 0 var(--c, var(--text)); }
+    .item-nav a:hover { transform: translateY(1px); box-shadow: 0 1px 0 var(--c, var(--text)); }
     /* スマホでは品目ボタンは出さない（2026-08-24 社長指示。3列のカード一覧が既に一覧の役を担う） */
     @media (max-width: 760px) {
       .item-nav { display: none; }
@@ -285,10 +287,15 @@
       letter-spacing: .01em;
       text-align: center;
     }
+    /* 「モノづくり」と「はんこ屋ぶんちゃん」は一回り大きく赤字（2026-08-24 社長指示） */
+    .hc-big { color: var(--red); font-size: 1.35em; font-weight: 900; }
     .hc-br { display: none; }
     @media (max-width: 760px) {
-      .hero-catch { font-size: 17px; margin-bottom: 4px; }
+      /* スマホは行間・字間・上下の余白を詰める（2026-08-24 社長指示） */
+      .hero-catch { font-size: 16px; line-height: 1.25; letter-spacing: -.01em; margin-bottom: 0; }
+      .hc-big { font-size: 1.28em; }
       .hc-br { display: inline; }
+      .tiles-head { margin-top: 2px; margin-bottom: 8px; }
     }
 
     /* ===== クチコミのスライダー（2026-08-24 社長指示：カード式に）===== */
@@ -777,7 +784,7 @@
       .logo img { height: 38px; }
       .hero { padding-block: 32px 44px; }
       .opening-actions .cta { width: 100%; }
-      .tiles-head { margin: 36px 0 14px; }
+      .tiles-head { margin: 2px 0 10px; }
       .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
       .tile { min-height: 132px; padding: 14px; }
       .tile-lg { grid-column: span 2; grid-row: span 1; min-height: 210px; }
