@@ -51,44 +51,47 @@
     @media (max-width: 760px) {
       .section { padding-block: 60px; }
     }
-    /* 見出しラベル：赤帯に白字（2026-08-25 社長指示）。英語を大きく、日本語を添える */
+    /* 見出しラベル：★赤い枠に入るのは英語だけ。日本語は枠の外に置く
+       （2026-08-25 社長「赤の項目赤枠英語部分だけ。日本語は外に出して」） */
     .eyebrow {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 16px;
-      padding: 12px 26px;
-      background: var(--red);
-      border-radius: 10px;
-      color: #fff;
+      padding: 0;
+      background: none;
+      color: var(--text);
       font-weight: 900;
       transform: none;
     }
     .eb-en {
+      display: inline-block;
+      padding: 11px 24px;
+      background: var(--red);
+      border-radius: 10px;
       color: #fff;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 900;
       line-height: 1;
       letter-spacing: .14em;
     }
-    .eb-ja { color: rgba(255,255,255,.9); font-size: 13px; font-weight: 900; letter-spacing: .06em; white-space: nowrap; }
+    .eb-ja { color: var(--muted); font-size: 13px; font-weight: 900; letter-spacing: .06em; white-space: nowrap; }
 
-    /* 地域カード・YouTubeカードの中も同じ帯に揃える */
+    /* 地域カード・YouTubeカードも同じ考え方（枠は英語だけ） */
     .local-eyebrow, .yt-eyebrow {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 14px;
-      padding: 12px 26px;
-      background: var(--red);
-      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0;
+      background: none;
     }
     .local-dot, .yt-play { display: none; }
-    .yt-eyebrow .eb-en, .local-eyebrow .eb-en { color: #fff; }
-    .yt-eyebrow .eb-ja, .local-eyebrow .eb-ja { color: rgba(255,255,255,.9); }
+    .local-eyebrow .eb-ja { color: var(--muted); }
+    .yt-eyebrow .eb-ja { color: rgba(255,255,255,.8); }
 
     @media (max-width: 760px) {
-      .eyebrow, .local-eyebrow, .yt-eyebrow { gap: 10px; padding: 9px 18px; border-radius: 8px; }
-      .eb-en { font-size: 19px; letter-spacing: .1em; }
+      .eyebrow, .local-eyebrow, .yt-eyebrow { gap: 9px; }
+      .eb-en { padding: 8px 16px; font-size: 17px; letter-spacing: .1em; border-radius: 8px; }
       .eb-ja { font-size: 11px; }
     }
     .section-title { margin-bottom: 18px; color: var(--navy); font-size: clamp(28px, 4vw, 46px); }
@@ -592,6 +595,36 @@
     }
 
     /* ===== お問い合わせ（2026-08-24 社長指示：dub-design 参考。メール対応）===== */
+    /* ===== 文書ページ（プライバシーポリシー等）2026-08-25 ===== */
+    .doc { max-width: 820px; }
+    .doc-lead { margin: 0 0 40px; color: var(--muted); font-size: 15px; line-height: 2; }
+    .doc h2 {
+      margin: 40px 0 14px;
+      padding-left: 14px;
+      border-left: 6px solid var(--red);
+      color: var(--navy);
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+    .doc p { margin: 0 0 14px; font-size: 15px; line-height: 2; }
+    .doc ul { margin: 0 0 18px; padding-left: 1.4em; }
+    .doc li { margin-bottom: 8px; font-size: 15px; line-height: 1.9; }
+    .doc a { color: var(--red); font-weight: 700; }
+    .doc-contact {
+      padding: 22px 24px;
+      background: #fff;
+      border: 3px solid var(--text);
+      border-radius: var(--radius);
+      box-shadow: 0 5px 0 var(--text);
+    }
+    .doc-date { margin-top: 34px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 760px) {
+      .doc h2 { font-size: 17px; margin-top: 32px; }
+      .doc p, .doc li { font-size: 14px; }
+      .doc-contact { padding: 18px 16px; }
+    }
+
     /* 納期の但し書き（景表法まわりの注意書き。2026-08-25） */
     .speed-caution { margin: 28px 0 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
     .speed-caution a { color: inherit; }
