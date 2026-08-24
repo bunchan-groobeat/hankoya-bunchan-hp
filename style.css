@@ -275,6 +275,22 @@
       .item-nav { display: none; }
     }
 
+    /* 「これ全部つくれます！」の上のキャッチ（2026-08-24 社長指示） */
+    .hero-catch {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: clamp(18px, 2.6vw, 32px);
+      font-weight: 900;
+      line-height: 1.5;
+      letter-spacing: .01em;
+      text-align: center;
+    }
+    .hc-br { display: none; }
+    @media (max-width: 760px) {
+      .hero-catch { font-size: 17px; margin-bottom: 4px; }
+      .hc-br { display: inline; }
+    }
+
     /* ===== クチコミのスライダー（2026-08-24 社長指示：カード式に）===== */
     .voices { position: relative; }
     .voices-track {
