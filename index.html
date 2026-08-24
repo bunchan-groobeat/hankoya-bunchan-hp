@@ -105,7 +105,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608242208">
+  <link rel="stylesheet" href="style.css?v=202608242231">
 </head>
 <body>
   <main>
@@ -306,21 +306,44 @@
       <div class="container">
         <p class="eyebrow">お客様の声</p>
         <h2 class="section-title" id="review-title">Googleのクチコミ</h2>
-        <div class="review-box">
-          <div class="review-score">
-            <p class="review-num">4.8</p>
-            <p class="review-stars" aria-label="5段階中4.8">★★★★★</p>
-            <p class="review-count">Googleのクチコミ 8件</p>
-          </div>
-          <div class="review-body">
-            <p>郡山駅前で11年、印鑑・名刺・ステッカーなどをお作りしてきました。実際にご利用いただいた方の声が、Googleに寄せられています。</p>
-            <p class="review-note">※評価と件数は2026年8月時点のものです。最新の内容はGoogleでご確認ください。</p>
-            <div class="pg-actions">
-              <a class="cta cta-second" href="https://share.google/TN5vIBhqydpP0uvWV" target="_blank" rel="noopener">クチコミを見る</a>
-              <a class="cta" href="https://share.google/TN5vIBhqydpP0uvWV" target="_blank" rel="noopener">クチコミを書く</a>
-            </div>
+        <p class="section-lead">Googleに寄せられた、お客様からのクチコミです。<b>★4.8／8件</b>（2026年8月時点）。</p>
+        <div class="pg-actions" style="margin-bottom:30px">
+          <a class="cta" href="https://share.google/TN5vIBhqydpP0uvWV" target="_blank" rel="noopener">Googleでクチコミを書く</a>
+        </div>
+
+        <!-- クチコミのスライダー（2026-08-24 社長指示：カード式に） -->
+        <div class="voices" id="voices">
+          <button class="v-btn v-prev" type="button" id="voicePrev" aria-label="前のクチコミへ">‹</button>
+          <button class="v-btn v-next" type="button" id="voiceNext" aria-label="次のクチコミへ">›</button>
+          <div class="voices-track" id="voicesTrack">
+            <figure class="voice">
+              <div class="v-head"><span class="v-avatar" aria-hidden="true">タ</span><span><b class="v-name">タマさん</b><small class="v-when">1年前</small></span></div>
+              <blockquote class="v-text">自分は恥ずかしながら、銀行に提出する印鑑や車購入の際の実印のシステムを理解していなかったのですが、懇切丁寧に教えて頂けて本当に助かりました！出来上がりの確認とかもその場でイメージ図を見せてもらえるので、安心してハンコ作成をお願いする事ができました。</blockquote>
+              <figcaption class="v-foot"><span class="v-stars" aria-label="5段階中5">★★★★★</span><span class="v-g" aria-hidden="true">G</span></figcaption>
+            </figure>
+            <figure class="voice">
+              <div class="v-head"><span class="v-avatar" aria-hidden="true">F</span><span><b class="v-name">Fumiko Satou</b><small class="v-when">7年前</small></span></div>
+              <blockquote class="v-text">初めて来店しました、印鑑証明書の印鑑について、とても親切丁寧に対応して頂きました。</blockquote>
+              <figcaption class="v-foot"><span class="v-stars" aria-label="5段階中4">★★★★☆</span><span class="v-g" aria-hidden="true">G</span></figcaption>
+            </figure>
+            <figure class="voice">
+              <div class="v-head"><span class="v-avatar" aria-hidden="true">本</span><span><b class="v-name">本間克枝</b><small class="v-when">1年前</small></span></div>
+              <blockquote class="v-text">ゴム印を頼みました。次の日に出来ました。</blockquote>
+              <figcaption class="v-foot"><span class="v-stars" aria-label="5段階中4">★★★★☆</span><span class="v-g" aria-hidden="true">G</span></figcaption>
+            </figure>
+            <figure class="voice">
+              <div class="v-head"><span class="v-avatar" aria-hidden="true">G</span><span><b class="v-name">Googleのクチコミより</b><small class="v-when"></small></span></div>
+              <blockquote class="v-text">丁寧な説明とスピーディーな仕上がりに満足てした ありがとうございます😊</blockquote>
+              <figcaption class="v-foot"><span class="v-stars" aria-label="5段階中5">★★★★★</span><span class="v-g" aria-hidden="true">G</span></figcaption>
+            </figure>
+            <figure class="voice">
+              <div class="v-head"><span class="v-avatar" aria-hidden="true">G</span><span><b class="v-name">Googleのクチコミより</b><small class="v-when"></small></span></div>
+              <blockquote class="v-text">大事な会議の前に気づいた　ハンコ忘れ！！</blockquote>
+              <figcaption class="v-foot"><span class="v-stars" aria-label="5段階中5">★★★★★</span><span class="v-g" aria-hidden="true">G</span></figcaption>
+            </figure>
           </div>
         </div>
+        <p class="review-note">※Googleに投稿された内容をそのまま掲載しています。最新の内容はGoogleでご確認ください。</p>
       </div>
     </section>
 
@@ -516,6 +539,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608242208" defer></script>
+  <script src="script.js?v=202608242231" defer></script>
 </body>
 </html>
