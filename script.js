@@ -39,6 +39,42 @@
       if (!track) return;
       [...track.children].forEach((el) => el.classList.add("is-card"));
 
+      // PCの手動スライド（矢印で1画面ぶん送る）
+      // ★behavior:"smooth" はズーム環境で無反応になるため、自前のアニメで送る
+      const prev = document.getElementById("carPrev");
+      const next = document.getElementById("carNext");
+      if (prev && next) {
+        const page = () => track.clientWidth;
+        const update = () => {
+          prev.disabled = track.scrollLeft <= 4;
+          next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
+        };
+        const glide = (delta) => {
+          const from = track.scrollLeft;
+          const to = Math.max(0, Math.min(track.scrollWidth - track.clientWidth, from + delta));
+          const t0 = performance.now();
+          const D = 380;
+          const step = (t) => {
+            const p = Math.min(1, (t - t0) / D);
+            const e = 1 - Math.pow(1 - p, 3); // ease-out
+            track.scrollLeft = from + (to - from) * e;
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+          // 保険：タブが裏に居てアニメーションが止まっても、行き先には必ず着ける
+          setTimeout(() => {
+            if (Math.abs(track.scrollLeft - to) > 2) track.scrollLeft = to;
+            update();
+          }, D + 160);
+        };
+        prev.addEventListener("click", () => glide(-page()));
+        next.addEventListener("click", () => glide(page()));
+        // 端に着いたら矢印を薄くする
+        track.addEventListener("scroll", update, { passive: true });
+        window.addEventListener("resize", update);
+        update();
+      }
+
       // 画像が置かれていれば敷く（未設置ならキャプションのまま）
       track.querySelectorAll(".ci-photo[data-photo]").forEach((face) => {
         const src = face.dataset.photo;

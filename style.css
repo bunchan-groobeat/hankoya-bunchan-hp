@@ -194,15 +194,58 @@
     .cta-line { background: #06c755; }
 
     /* ===== 品目カード =====
-       自動で流す形（カルーセル）は2026-08-23に廃止。
-       PC＝1列4枚×2段（8品目が割り切れる／2026-08-24 社長「4枚か5枚1列が一番見やすい」）
-       スマホ＝3列。 */
+       自動で流す形は2026-08-23に廃止（待たないと見えないため）。
+       PC＝5枚表示の手動スライド（矢印で送る／2026-08-24 社長指定）
+       スマホ＝3列グリッド。 */
     .carousel { position: relative; margin-top: 22px; }
+    /* 基本（スマホ）＝3列グリッド */
     .carousel-track {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
       align-items: stretch;
+    }
+    .car-btn { display: none; }
+
+    /* PC＝5枚見えるスライド */
+    @media (min-width: 761px) {
+      .carousel-track {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+      }
+      .carousel-track::-webkit-scrollbar { display: none; }
+      .carousel-track .ci {
+        flex: 0 0 calc((100% - 80px) / 5);
+        scroll-snap-align: start;
+      }
+      .car-btn {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: grid;
+        place-items: center;
+        width: 58px;
+        height: 58px;
+        border: 3px solid var(--text);
+        border-radius: 50%;
+        background: #fff;
+        color: var(--text);
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 1;
+        cursor: pointer;
+        box-shadow: 0 4px 0 var(--text);
+        transform: translateY(-50%);
+        transition: opacity .2s ease;
+      }
+      .car-btn:active { transform: translateY(calc(-50% + 3px)); box-shadow: 0 1px 0 var(--text); }
+      .car-prev { left: -16px; }
+      .car-next { right: -16px; }
+      .car-btn[disabled] { opacity: .25; cursor: default; }
     }
     /* 流すために複製したカード（script.jsが生成）はもう使わない */
     .carousel-track > [aria-hidden="true"] { display: none; }
@@ -232,9 +275,8 @@
       font-weight: 900;
     }
 
-    /* スマホは3列。間隔と余白を詰める */
+    /* スマホの微調整 */
     @media (max-width: 760px) {
-      .carousel-track { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
       .ci:hover { transform: none; }
       /* 左右の余白を詰めて、カードを少しでも大きく見せる */
       .hero > .container { padding-inline: 12px; }
