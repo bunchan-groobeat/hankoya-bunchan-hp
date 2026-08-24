@@ -106,7 +106,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608241013">
+  <link rel="stylesheet" href="style.css?v=202608241034">
 </head>
 <body>
   <main>
@@ -140,6 +140,18 @@
           <!-- ★見出し画像は img/heading.png を差し替えるだけ -->
           <img src="img/heading.png" alt="これ全部つくれます！">
         </div>
+
+        <!-- 品目の一覧（2026-08-24 社長指示：見出しの下に全項目を文字で） -->
+        <nav class="item-nav" aria-label="品目一覧">
+          <a href="inkan.html">印鑑</a>
+          <a href="gomuin.html">ゴム印</a>
+          <a href="meishi.html">名刺</a>
+          <a href="sticker.html">ステッカー</a>
+          <a href="flyer.html">チラシ</a>
+          <a href="poster.html">ポスター</a>
+          <a href="goods.html">グッズ</a>
+          <a href="other.html">その他</a>
+        </nav>
 
         <!-- ★画像は img/card-*.jpg を置けば自動で入ります（未設置の間はキャプション表示） -->
         <!-- ★カードの画像は img/card-<品目>.png を差し替えるだけで変わります -->
@@ -181,14 +193,10 @@
           </div>
         </div>
 
-        <!-- 開業・開店パック（2026-08-24 社長指示：カードの下に横型で） -->
-        <a class="pack-banner" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">
-          <span class="pb-left">
-            <span class="pb-tag">お店を始める方へ</span>
-            <span class="pb-title">開業・開店のお客様<br class="pb-br">専用パック</span>
-          </span>
-          <span class="pb-desc">ロゴ・印鑑・ゴム印・名刺・ショップカード・のぼり——開業に必要なものを、<b>まとめてご相談</b>いただけます。店主自身、仲間に助けられて開業した店です。お見積り無料。</span>
-          <span class="pb-cta">LINEで相談する&nbsp;→</span>
+        <!-- 開業・開店パック（2026-08-24 社長指示：横型カードで下層ページへ）
+             ★カード画像は img/band-kaigyo.jpg を差し替えるだけ（マーシー納品待ち・現在は太郎の仮版） -->
+        <a class="pack-card" href="kaigyo.html" aria-label="開業・開店パックのページを見る">
+          <img src="img/band-kaigyo.jpg" alt="開業・開店パック — お店を始める準備、ロゴから印鑑までまとめてお任せ！当店で全て制作できます！">
         </a>
 
         <div class="shop-box" id="base">
@@ -514,6 +522,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608241013" defer></script>
+  <script src="script.js?v=202608241034" defer></script>
 </body>
 </html>

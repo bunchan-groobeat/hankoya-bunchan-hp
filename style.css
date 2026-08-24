@@ -227,7 +227,38 @@
       to { transform: translateX(calc(var(--flow-distance, 0px) * -1)); }
     }
 
-    /* ===== 開業・開店パックの横カード（2026-08-24 社長指示）===== */
+    /* 見出し下の品目一覧（2026-08-24 社長指示） */
+    .item-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 12px;
+      margin-top: 18px;
+    }
+    .item-nav a {
+      padding: 8px 20px;
+      background: #fff;
+      border: 3px solid var(--text);
+      border-radius: 999px;
+      box-shadow: 0 3px 0 var(--text);
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .item-nav a:hover { transform: translateY(2px); box-shadow: 0 1px 0 var(--text); }
+    @media (max-width: 760px) {
+      .item-nav { gap: 8px; }
+      .item-nav a { padding: 7px 14px; font-size: 13px; border-width: 2px; }
+    }
+
+    /* 開業パックの横型カード（画像1枚。差し替えは img/band-kaigyo.jpg） */
+    .pack-card { display: block; margin-top: 24px; border-radius: 12px; overflow: hidden; transition: transform .15s ease; }
+    .pack-card img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; }
+    .pack-card:hover { transform: translateY(-3px); }
+
+    /* ===== 開業・開店パックの横カード（旧・テキスト版。現在未使用）===== */
     .pack-banner {
       display: flex;
       align-items: center;
