@@ -10,7 +10,8 @@
       --line: #f0e2cd;
       --photo: #f2e7d6;
       --radius: 20px;
-      --container: 1080px;
+      /* PCで小さく見える対策：1080→1280に拡大（2026-08-24 社長指摘） */
+      --container: 1280px;
     }
 
     * { box-sizing: border-box; }
