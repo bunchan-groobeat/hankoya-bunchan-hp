@@ -1068,8 +1068,67 @@
     .contact h2 { margin-bottom: 16px; color: var(--navy); font-size: clamp(30px, 4vw, 48px); }
     .contact-info { color: var(--muted); }
     .contact-info a { text-decoration: none; }
-    footer { padding: 25px 0; border-top: 3px solid var(--text); background: var(--navy); color: rgba(255,255,255,.58); font-size: 12px; }
-    .footer-row { display: flex; justify-content: space-between; gap: 20px; }
+    /* ===== フッター：赤地（2026-08-25 社長指示・dub-design と同じ形）===== */
+    footer { padding: 56px 0 0; background: var(--red); color: #fff; font-size: 13px; }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+      gap: 40px;
+      padding-bottom: 44px;
+    }
+    .f-name { margin: 0 0 12px; font-size: 22px; font-weight: 900; }
+    .f-tagline { margin: 0; color: rgba(255,255,255,.82); font-size: 13px; line-height: 1.9; }
+    .f-label {
+      margin: 0 0 14px;
+      color: rgba(255,255,255,.62);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .22em;
+    }
+    .f-nav { display: grid; align-content: start; gap: 9px; }
+    .f-nav a, .f-sns a, .f-address a {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .f-nav a:hover, .f-sns a:hover, .f-address a:hover { text-decoration: underline; }
+    .f-address { margin: 0 0 14px; color: rgba(255,255,255,.86); font-size: 13px; line-height: 1.95; }
+    .f-sns { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+      border-top: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.75);
+      font-size: 12px;
+    }
+    .footer-bottom a { color: rgba(255,255,255,.9); text-decoration: none; }
+    .footer-bottom a:hover { text-decoration: underline; }
+    @media (max-width: 760px) {
+      footer { padding-top: 40px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px 20px; padding-bottom: 32px; }
+      .f-brand { grid-column: span 2; }
+      .f-info { grid-column: span 2; }
+      .f-name { font-size: 19px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+    }
+
+    /* 地図（2026-08-25 社長指示） */
+    .map-wrap {
+      margin-top: 34px;
+      overflow: hidden;
+      border: 3px solid var(--text);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 0 var(--text);
+      line-height: 0;
+    }
+    .map-wrap iframe { display: block; width: 100%; height: 360px; }
+    .cs-map { display: inline-block; margin-top: 16px; }
+    @media (max-width: 760px) {
+      .map-wrap iframe { height: 260px; }
+    }
 
 
     /* ===== 全ページ共通：追従お問い合わせバー ===== */
