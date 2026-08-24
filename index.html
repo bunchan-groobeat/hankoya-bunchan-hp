@@ -105,7 +105,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608242335">
+  <link rel="stylesheet" href="style.css?v=202608242347">
 </head>
 <body>
   <main>
@@ -121,12 +121,13 @@
 
         <nav class="gnav" id="globalNav" aria-label="サイト内メニュー">
           <div class="gnav-main">
-            <a href="index.html">ホーム</a>
-            <a href="#works">制作事例</a>
-            <a href="#tsukureru">つくれるもの</a>
-            <a href="#flow">ご利用の流れ</a>
-            <a href="#about">お店について</a>
-            <a href="#contact-title">お問い合わせ</a>
+            <a href="index.html"><span class="gm-en">Home</span><span class="gm-ja">ホーム</span></a>
+            <a href="#works"><span class="gm-en">Works</span><span class="gm-ja">制作事例</span></a>
+            <a href="#tsukureru"><span class="gm-en">Items</span><span class="gm-ja">つくれるもの</span></a>
+            <a href="#flow"><span class="gm-en">Flow</span><span class="gm-ja">ご利用の流れ</span></a>
+            <a href="#about"><span class="gm-en">About</span><span class="gm-ja">お店について</span></a>
+            <a href="#youtube"><span class="gm-en">Movie</span><span class="gm-ja">ぶんちゃんねる</span></a>
+            <a href="#contact-title"><span class="gm-en">Contact</span><span class="gm-ja">お問い合わせ</span></a>
           </div>
           <div class="gnav-sub">
             <p class="gnav-label">ITEM</p>
@@ -512,25 +513,40 @@
       </div>
     </section>
 
+    <!-- YouTube（2026-08-24 社長指示：大切な販促ツールとして別枠に） -->
+    <section class="section reveal" id="youtube" aria-labelledby="yt-title">
+      <div class="container">
+        <div class="yt-card">
+          <div class="yt-body">
+            <p class="yt-eyebrow"><span class="yt-play" aria-hidden="true">▶</span>YOUTUBE — はんこ屋ぶんちゃんねる</p>
+            <h2 class="yt-title" id="yt-title">こんなに最高な「人」が！<br>福島県には沢山あります！</h2>
+            <p class="yt-text">開業10周年を記念にはじめた、店主の國分がやっているYouTubeチャンネルです。<b>はんこ屋ぶんちゃんを通して出会った、素晴らしい方々を紹介しています。</b>お店、会社、チーム——郡山を中心に、福島の「最高な人」を訪ね歩いて<b>動画は173本</b>になりました。</p>
+            <p class="yt-text">お店のことも、店主の人となりも、ここを見ていただくのが一番早いと思います。</p>
+            <div class="yt-stats">
+              <span class="yt-stat"><b>746</b>人<small>チャンネル登録</small></span>
+              <span class="yt-stat"><b>173</b>本<small>公開動画</small></span>
+              <span class="yt-stat"><b>2025</b>年<small>開業10周年に開始</small></span>
+            </div>
+            <div class="pg-actions">
+              <a class="cta yt-cta" href="https://www.youtube.com/@bunchannel2025" target="_blank" rel="noopener">チャンネルを見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section warm reveal" aria-labelledby="instagram-title">
       <div class="container">
-        <p class="eyebrow">Instagram / YouTube</p>
-        <h2 class="section-title" id="instagram-title">ふだんの仕事を、もっと見る。</h2>
-        <p class="section-lead">つくったものは毎日インスタに、郡山のお店めぐりはYouTubeに上げています。どんな店かは、ここを見ていただくのが一番早いです。</p>
-        <div class="sns-grid">
+        <p class="eyebrow">Instagram</p>
+        <h2 class="section-title" id="instagram-title">つくったもの、<br>毎日あげています。</h2>
+        <p class="section-lead">印鑑・名刺・ステッカー・ゴム印・Tシャツ。実際にお作りしたものを、そのまま載せています。<b>投稿765件</b>、どんなものが作れるかは、ここを見ていただくのが一番早いです。</p>
+        <div class="sns-grid sns-single">
           <a class="sns-card sns-ig" href="https://www.instagram.com/hankoya_bunchan" target="_blank" rel="noopener">
             <span class="sns-name">Instagram</span>
             <span class="sns-id">@hankoya_bunchan</span>
             <span class="sns-num">フォロワー 1,857人 ／ 投稿 765件</span>
-            <span class="sns-desc">印鑑・名刺・ステッカー・ゴム印・Tシャツ。実際につくったものを、そのまま載せています。</span>
+            <span class="sns-desc">お店の日々と、つくったもの。「こんなの作れるんだ」が見つかります。</span>
             <span class="sns-go">Instagramを見る</span>
-          </a>
-          <a class="sns-card sns-yt" href="https://www.youtube.com/@bunchannel2025" target="_blank" rel="noopener">
-            <span class="sns-name">YouTube</span>
-            <span class="sns-id">はんこ屋ぶんちゃんねる</span>
-            <span class="sns-num">チャンネル登録 746人 ／ 動画 173本</span>
-            <span class="sns-desc">「ぶんちゃんが行く！」郡山のお店を店主が訪ねる番組です。地元のことなら、だいたい知っています。</span>
-            <span class="sns-go">YouTubeを見る</span>
           </a>
         </div>
       </div>
@@ -543,17 +559,77 @@
       </div>
     </section>
 
+    <!-- お問い合わせ（2026-08-24 社長指示：dub-design 参考。メール対応を追加） -->
     <section class="section contact reveal" id="shop" aria-labelledby="contact-title">
       <div class="container">
-        <div class="contact-grid">
-          <div>
-            <p class="eyebrow">お問い合わせ</p>
-            <h2 id="contact-title">はんこも、それ以外も、<br>まずはご相談を。</h2>
-            <p class="contact-info">所在地 〒963-8001 福島県郡山市大町1-3-17（郡山駅前）<br>電話 <a href="tel:0249256861">024-925-6861</a><br>営業時間 9:00〜19:00（水曜・土曜は17:00まで）<br>定休日 日曜日・祝日<br>お支払い 現金・クレジットカード（お受け取りのとき）</p>
+        <p class="eyebrow">お問い合わせ</p>
+        <h2 id="contact-title">「こんなの作れる？」<br>だけでも大歓迎です。</h2>
+        <p class="contact-lead">印鑑も、名刺も、それ以外も。お見積りは無料、1点からお受けします。<br>お急ぎのご用件は、お電話かLINEがいちばん早いです。</p>
+
+        <div class="contact-grid2">
+          <!-- 左：メールフォーム -->
+          <div class="contact-form-wrap">
+            <p class="cf-title">メールで相談する</p>
+            <!-- ★送信先の設定：Formspree等に登録後、action の URL を差し替えるだけで動きます
+                 未設定の間は、送信ボタンでメールソフトが立ち上がる形にしています -->
+            <form class="contact-form" id="contactForm" action="mailto:info@hankoya-bunchan.com" method="post" enctype="text/plain">
+              <label class="cf-row">
+                <span class="cf-label">お名前 <em>*</em></span>
+                <input type="text" name="name" required placeholder="国分 太郎">
+              </label>
+              <label class="cf-row">
+                <span class="cf-label">会社・団体</span>
+                <input type="text" name="company" placeholder="（任意）">
+              </label>
+              <label class="cf-row">
+                <span class="cf-label">メール <em>*</em></span>
+                <input type="email" name="email" required placeholder="you@example.com">
+              </label>
+              <label class="cf-row">
+                <span class="cf-label">お電話</span>
+                <input type="tel" name="tel" placeholder="（任意）折り返しが早くなります">
+              </label>
+              <label class="cf-row">
+                <span class="cf-label">ご相談内容</span>
+                <select name="type">
+                  <option>印鑑（実印・銀行印・認印）</option>
+                  <option>ゴム印・住所印</option>
+                  <option>名刺・ショップカード</option>
+                  <option>ステッカー</option>
+                  <option>チラシ・ポスター</option>
+                  <option>グッズ・ノベルティ</option>
+                  <option>開業・開店パック</option>
+                  <option>その他・まだ決まっていない</option>
+                </select>
+              </label>
+              <label class="cf-row">
+                <span class="cf-label">内容 <em>*</em></span>
+                <textarea name="message" rows="5" required placeholder="作りたいもの・使う場面・ご希望の納期など、わかる範囲でお書きください。"></textarea>
+              </label>
+              <p class="cf-note">※お急ぎの場合はお電話（024-925-6861）が確実です。写真を送りたいときはLINEが便利です。</p>
+              <button class="cta cf-submit" type="submit">送信する</button>
+            </form>
           </div>
-          <div class="contact-actions">
-            <a class="cta cta-line" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">LINEで相談</a>
-            <a class="cta cta-second" href="https://bunchan-groobeat.github.io/groobeat-hearing/" target="_blank" rel="noopener">選ぶだけ相談</a>
+
+          <!-- 右：その他の連絡先 -->
+          <div class="contact-side">
+            <div class="cs-block">
+              <p class="cs-label">すぐ相談したい方へ</p>
+              <a class="cta cta-line" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">LINEで相談</a>
+              <a class="cta cta-second" href="https://bunchan-groobeat.github.io/groobeat-hearing/" target="_blank" rel="noopener">選ぶだけ相談（2〜3分）</a>
+            </div>
+            <div class="cs-block">
+              <p class="cs-label">はんこ屋ぶんちゃん</p>
+              <p class="cs-info">
+                <a href="tel:0249256861"><b>024-925-6861</b></a><br>
+                <a href="mailto:info@hankoya-bunchan.com">info@hankoya-bunchan.com</a><br>
+                〒963-8001 福島県郡山市大町1-3-17（郡山駅前）<br>
+                営業時間 9:00〜19:00（水曜・土曜は17:00まで）<br>
+                定休日 日曜日・祝日<br>
+                お支払い 現金・クレジットカード（お受け取りのとき）
+              </p>
+              <a class="cs-map" href="https://share.google/TN5vIBhqydpP0uvWV" target="_blank" rel="noopener">Googleマップで開く&nbsp;→</a>
+            </div>
           </div>
         </div>
       </div>
@@ -588,6 +664,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608242335" defer></script>
+  <script src="script.js?v=202608242347" defer></script>
 </body>
 </html>

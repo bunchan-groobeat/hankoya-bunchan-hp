@@ -218,21 +218,45 @@
         overscroll-behavior: contain;
       }
       .gnav.is-open { display: flex; }
-      .gnav-main { display: grid; gap: 2px; }
-      /* ★差し色は赤で統一（DUBDESIGNは黒だが、ぶんちゃんは赤。2026-08-24 社長指示） */
+      /* 英語（大）＋日本語（小）の2段組。2026-08-24 社長「タブみたいにスタイリッシュに」 */
+      .gnav-main { display: grid; }
       .gnav-main a {
-        padding: 6px 0;
-        color: var(--red);
-        font-size: clamp(30px, 7vw, 46px);
-        font-weight: 900;
-        line-height: 1.28;
-        letter-spacing: .01em;
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        padding: 15px 2px;
         border: 0;
+        border-bottom: 1px solid var(--line);
+        text-decoration: none;
       }
-      .gnav-sub { display: block; margin-top: 34px; padding-top: 22px; border-top: 2px solid var(--red); }
-      .gnav-label { margin: 0 0 12px; color: var(--red); font-size: 12px; font-weight: 900; letter-spacing: .18em; }
-      .gnav-items { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
-      .gnav-items a { padding: 0; color: var(--text); font-size: 15px; font-weight: 700; border: 0; }
+      .gnav-main a:last-child { border-bottom: 0; }
+      .gm-en {
+        color: var(--red);
+        font-size: clamp(30px, 7.4vw, 44px);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -.01em;
+      }
+      .gm-ja {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: .1em;
+        white-space: nowrap;
+      }
+      .gnav-sub { display: block; margin-top: 28px; padding-top: 22px; border-top: 2px solid var(--red); }
+      .gnav-label { margin: 0 0 14px; color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: .22em; }
+      .gnav-items { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .gnav-items a {
+        padding: 10px 14px;
+        background: #fffaf2;
+        border: 2px solid var(--line);
+        border-radius: 999px;
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 900;
+        text-align: center;
+      }
       .gnav-foot { display: grid; gap: 10px; margin-top: 30px; }
       .gnav-line, .gnav-tel {
         display: grid;
@@ -477,6 +501,114 @@
       .v-btn { width: 42px; height: 42px; font-size: 22px; }
       .v-prev { left: -6px; }
       .v-next { right: -6px; }
+    }
+
+    /* ===== YouTube（2026-08-24 社長指示：大切な販促ツールとして別枠）===== */
+    .yt-card {
+      padding: 46px 42px;
+      background: linear-gradient(150deg, #2a1010 0%, #3d1414 55%, #521a17 100%);
+      border: 3px solid var(--text);
+      border-radius: 26px;
+      box-shadow: 0 8px 0 var(--text);
+      color: #fff;
+    }
+    .yt-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: rgba(255,255,255,.8);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .12em;
+    }
+    .yt-play {
+      display: grid;
+      place-items: center;
+      width: 30px; height: 22px;
+      flex: 0 0 30px;
+      background: #ff0000;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 10px;
+    }
+    .yt-title {
+      margin: 0 0 20px;
+      color: #fff;
+      font-size: clamp(24px, 3.6vw, 40px);
+      font-weight: 900;
+      line-height: 1.36;
+    }
+    .yt-text { margin: 0 0 14px; max-width: 820px; color: rgba(255,255,255,.86); font-size: 15px; line-height: 2; }
+    .yt-text b { color: #fff; }
+    .yt-stats { display: flex; flex-wrap: wrap; gap: 12px 34px; margin: 24px 0 26px; }
+    .yt-stat { display: grid; color: #fff; font-size: 15px; font-weight: 700; }
+    .yt-stat b { font-size: 30px; font-weight: 900; line-height: 1.1; }
+    .yt-stat small { color: rgba(255,255,255,.7); font-size: 12px; font-weight: 700; }
+    .yt-cta { background: #ff0000; }
+    .sns-single { grid-template-columns: 1fr; max-width: 640px; }
+    @media (max-width: 760px) {
+      .yt-card { padding: 28px 20px; border-radius: 20px; }
+      .yt-title { font-size: 22px; }
+      .yt-stats { gap: 10px 22px; margin: 18px 0 20px; }
+      .yt-stat b { font-size: 24px; }
+      .yt-cta { width: 100%; }
+    }
+
+    /* ===== お問い合わせ（2026-08-24 社長指示：dub-design 参考。メール対応）===== */
+    .contact-lead { margin: 0 0 30px; color: var(--muted); font-size: 15px; line-height: 2; }
+    .contact-grid2 { display: grid; grid-template-columns: 1.15fr .85fr; gap: 30px; align-items: start; }
+    .contact-form-wrap {
+      padding: 30px 28px;
+      background: #fff;
+      border: 3px solid var(--text);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 0 var(--text);
+    }
+    .cf-title { margin: 0 0 18px; font-size: 18px; font-weight: 900; }
+    .contact-form { display: grid; gap: 14px; }
+    .cf-row { display: grid; gap: 6px; }
+    .cf-label { font-size: 13px; font-weight: 900; }
+    .cf-label em { color: var(--red); font-style: normal; }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: #fffdf9;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 15px;
+    }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus { outline: none; border-color: var(--red); }
+    .contact-form textarea { resize: vertical; line-height: 1.8; }
+    .cf-note { margin: 4px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .cf-submit { justify-self: start; margin-top: 6px; }
+
+    .contact-side { display: grid; gap: 20px; }
+    .cs-block {
+      display: grid;
+      gap: 12px;
+      padding: 26px 24px;
+      background: #fff;
+      border: 3px solid var(--text);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 0 var(--text);
+    }
+    .cs-label { margin: 0; font-size: 14px; font-weight: 900; }
+    .cs-info { margin: 0; font-size: 14px; line-height: 2; color: var(--text); }
+    .cs-info a { color: var(--red); font-weight: 900; text-decoration: none; }
+    .cs-info a:hover { text-decoration: underline; }
+    .cs-map { justify-self: start; font-size: 13px; font-weight: 900; color: var(--text); text-decoration: none; border-bottom: 2px solid var(--red); }
+    @media (max-width: 760px) {
+      .contact-grid2 { grid-template-columns: 1fr; gap: 18px; }
+      .contact-form-wrap { padding: 24px 18px; }
+      .cf-submit { justify-self: stretch; }
+      .cs-block .cta { width: 100%; }
     }
 
     /* ===== 姉妹ブランドのカード（2026-08-24 社長指示）===== */
