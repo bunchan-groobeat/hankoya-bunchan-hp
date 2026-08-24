@@ -151,8 +151,27 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      }, {
+        // 画面に少し入った時点で動き始める。下から120px手前で発火させ、
+        // スクロールに合わせて自然に見えるようにする（2026-08-25）
+        threshold: 0,
+        rootMargin: "0px 0px -120px 0px",
+      });
       items.forEach(item => observer.observe(item));
+
+      // 保険：監視が働かない環境でも、スクロール位置から自前で判定する
+      const showByPosition = () => {
+        const line = window.innerHeight - 120;
+        items.forEach((item) => {
+          if (item.classList.contains("visible")) return;
+          if (item.getBoundingClientRect().top < line) item.classList.add("visible");
+        });
+      };
+      window.addEventListener("scroll", showByPosition, { passive: true });
+      window.addEventListener("resize", showByPosition);
+      showByPosition();
+      // 何かの理由で最後まで出ないままなら、4秒後に全部表示して詰まらせない
+      setTimeout(() => items.forEach((i) => i.classList.add("visible")), 4000);
     })();
 
 /* 制作事例：img/works-<品目>-1..6.jpg が置かれていれば敷く */
