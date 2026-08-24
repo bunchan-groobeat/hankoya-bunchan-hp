@@ -242,26 +242,14 @@
     /* ★赤帯は .header-bar（container の外側）が担当。.header 自体は中身の配置のみ */
     .header-bar { background: var(--red); }
     .header-bar > .container { display: block; }
-    /* ロゴはアプリと同じカラー版（img/app-logo.png）。
-       赤地だと沈むので、白い座布団を敷いて見せる */
-    .logo img {
-      height: 46px;
-      padding: 6px 12px;
-      background: #fff;
-      border-radius: 10px;
-    }
-    .f-name img {
-      display: block;
-      width: auto;
-      height: 42px;
-      padding: 6px 12px;
-      background: #fff;
-      border-radius: 10px;
-    }
+    /* ロゴはアプリと同じカラー版（img/app-logo.png）。背景は透過のまま赤地に直接置く。
+       ★印鑑の枠の中の白や、顔の白は残してある（2026-08-25 社長指示） */
+    .logo img { height: 62px; }
+    .f-name img { display: block; width: auto; height: 48px; }
     .nav-toggle span { background: #fff; }
     @media (max-width: 760px) {
-      .logo img { height: 38px; padding: 5px 9px; border-radius: 8px; }
-      .f-name img { height: 36px; padding: 5px 9px; border-radius: 8px; }
+      .logo img { height: 46px; }
+      .f-name img { height: 40px; }
     }
 
     /* スマホはスクロールしても上に貼り付く（2026-08-24 社長指示）
@@ -273,11 +261,11 @@
         top: 0; right: 0; left: 0;
         z-index: 800;
       }
-      .header { min-height: 58px; padding-block: 6px; border-bottom: 0; }
+      .header { min-height: 66px; padding-block: 8px; border-bottom: 0; }
       /* 固定したぶん、本文が隠れないよう上に余白 */
-      body { padding-top: 58px; }
+      body { padding-top: 66px; }
       /* 開いたメニューが画面から溢れないように */
-      .gnav.is-open { max-height: calc(100vh - 76px); overflow-y: auto; }
+      .gnav.is-open { max-height: calc(100vh - 84px); overflow-y: auto; }
     }
     /* PCのナビは白文字（赤地のため） */
     .gnav a { color: #fff; }
@@ -1226,7 +1214,7 @@
          .gnav の見た目は「開いたメニューの中身」の節にまとめてある */
       .gnav a::after { display: none; }
 
-      .logo img { height: 38px; }
+      /* ★ロゴのサイズは上の指定（46px）を使う。ここでは上書きしない */
       .hero { padding-block: 32px 44px; }
       .opening-actions .cta { width: 100%; }
       .tiles-head { margin: 2px 0 10px; }
