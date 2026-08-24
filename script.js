@@ -46,38 +46,29 @@
       });
     })();
 
-/* クチコミのスライダー（矢印で1枚ずつ送る。2026-08-24） */
+/* クチコミ：自動でゆっくり流れる（2026-08-25 社長指示）
+   途切れないよう同じ並びをもう1組つくり、1組ぶんの幅だけ流して先頭に戻す。 */
     (() => {
       const track = document.getElementById("voicesTrack");
-      const prev = document.getElementById("voicePrev");
-      const next = document.getElementById("voiceNext");
-      if (!track || !prev || !next) return;
-      const step = () => {
-        const card = track.querySelector(".voice");
+      if (!track) return;
+      const originals = [...track.children];
+      if (!originals.length) return;
+
+      originals.forEach((el) => {
+        const clone = el.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        track.appendChild(clone);
+      });
+
+      const SPEED = 40; // px/秒（品目カードよりゆっくり）
+      const setDuration = () => {
         const gap = parseFloat(getComputedStyle(track).gap) || 0;
-        return card ? card.offsetWidth + gap : track.clientWidth;
+        const one = originals.reduce((w, el) => w + el.offsetWidth + gap, 0);
+        track.style.setProperty("--voice-distance", one + "px");
+        track.style.setProperty("--voice-duration", Math.max(30, one / SPEED) + "s");
       };
-      const update = () => {
-        prev.disabled = track.scrollLeft <= 4;
-        next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
-      };
-      const glide = (delta) => {
-        const from = track.scrollLeft;
-        const to = Math.max(0, Math.min(track.scrollWidth - track.clientWidth, from + delta));
-        const t0 = performance.now(), D = 340;
-        const run = (t) => {
-          const p = Math.min(1, (t - t0) / D);
-          track.scrollLeft = from + (to - from) * (1 - Math.pow(1 - p, 3));
-          if (p < 1) requestAnimationFrame(run);
-        };
-        requestAnimationFrame(run);
-        setTimeout(() => { if (Math.abs(track.scrollLeft - to) > 2) track.scrollLeft = to; update(); }, D + 160);
-      };
-      prev.addEventListener("click", () => glide(-step()));
-      next.addEventListener("click", () => glide(step()));
-      track.addEventListener("scroll", update, { passive: true });
-      window.addEventListener("resize", update);
-      update();
+      setDuration();
+      window.addEventListener("resize", setDuration);
     })();
 
 /* スマホのメニュー開閉 */

@@ -465,29 +465,34 @@
       .local-card .cta { width: 100%; }
     }
 
-    /* ===== クチコミのスライダー（2026-08-24 社長指示：カード式に）===== */
-    .voices { position: relative; }
+    /* ===== クチコミ：自動でゆっくり流れる（2026-08-25 社長指示）=====
+       品目カードと同じ考え方。途切れないよう同じ並びをもう1組つくり、
+       マウスを乗せると止まる。 */
+    .voices { position: relative; overflow: hidden; }
     .voices-track {
       display: flex;
       gap: 20px;
-      overflow-x: auto;
-      scroll-snap-type: x proximity;
-      scrollbar-width: none;
+      width: max-content;
       padding: 6px 2px 10px;
+      animation: voiceFlow var(--voice-duration, 90s) linear infinite;
     }
-    .voices-track::-webkit-scrollbar { display: none; }
+    .voices:hover .voices-track { animation-play-state: paused; }
+    @keyframes voiceFlow {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(var(--voice-distance, 0px) * -1)); }
+    }
     .voice {
       display: grid;
       grid-template-rows: auto 1fr auto;
       gap: 14px;
-      flex: 0 0 calc((100% - 40px) / 3);
+      flex: 0 0 340px;
+      width: 340px;
       margin: 0;
       padding: 26px 24px;
       background: #fff;
       border: 3px solid var(--text);
       border-radius: var(--radius);
       box-shadow: 0 6px 0 var(--text);
-      scroll-snap-align: start;
     }
     .v-head { display: flex; align-items: center; gap: 12px; }
     .v-avatar {
@@ -515,31 +520,10 @@
       color: #4285f4;
       font-size: 15px; font-weight: 900;
     }
-    .v-btn {
-      position: absolute;
-      top: 50%;
-      z-index: 5;
-      display: grid;
-      place-items: center;
-      width: 52px; height: 52px;
-      border: 3px solid var(--text);
-      border-radius: 50%;
-      background: #fff;
-      color: var(--text);
-      font-size: 26px; font-weight: 900; line-height: 1;
-      cursor: pointer;
-      box-shadow: 0 4px 0 var(--text);
-      transform: translateY(-50%);
-    }
-    .v-btn:active { transform: translateY(calc(-50% + 3px)); box-shadow: 0 1px 0 var(--text); }
-    .v-prev { left: -14px; }
-    .v-next { right: -14px; }
-    .v-btn[disabled] { opacity: .25; cursor: default; }
+    /* 自動で流れるので矢印は出さない */
+    .v-btn { display: none; }
     @media (max-width: 760px) {
-      .voice { flex: 0 0 84%; padding: 22px 18px; }
-      .v-btn { width: 42px; height: 42px; font-size: 22px; }
-      .v-prev { left: -6px; }
-      .v-next { right: -6px; }
+      .voice { flex: 0 0 280px; width: 280px; padding: 22px 18px; }
     }
 
     /* ===== YouTube（2026-08-24 社長指示：大切な販促ツールとして別枠）===== */
