@@ -226,8 +226,53 @@
       from { transform: translateX(0); }
       to { transform: translateX(calc(var(--flow-distance, 0px) * -1)); }
     }
-    /* 流すために複製したカード（script.jsが生成）はもう使わない */
-    .carousel-track > [aria-hidden="true"] { display: none; }
+
+    /* ===== 開業・開店パックの横カード（2026-08-24 社長指示）===== */
+    .pack-banner {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-top: 24px;
+      padding: 24px 30px;
+      background: #fff;
+      border: 3px solid var(--text);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 0 var(--text);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .pack-banner:hover { transform: translateY(-3px); box-shadow: 0 9px 0 var(--text); }
+    .pb-left { display: grid; gap: 8px; flex: 0 0 auto; }
+    .pb-tag {
+      justify-self: start;
+      padding: 5px 14px;
+      background: var(--sun);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      transform: rotate(-1.5deg);
+    }
+    .pb-title { color: var(--red); font-size: clamp(20px, 2.2vw, 28px); font-weight: 900; line-height: 1.35; }
+    .pb-desc { flex: 1; font-size: 14px; line-height: 1.9; color: var(--muted); }
+    .pb-desc b { color: var(--text); }
+    .pb-cta {
+      flex: 0 0 auto;
+      padding: 12px 24px;
+      background: #06c755;
+      border: 3px solid var(--text);
+      border-radius: 999px;
+      box-shadow: 0 4px 0 var(--text);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    @media (max-width: 760px) {
+      .pack-banner { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 18px; }
+      .pb-br { display: none; }
+      .pb-cta { align-self: stretch; text-align: center; }
+    }
     /* カードはマーシー納品の画像1枚。画像を差し替えるだけで見た目が変わる */
     .ci {
       position: relative;

@@ -48,13 +48,15 @@
       });
       [...track.children].forEach((el) => el.classList.add("is-card"));
 
-      // 1組ぶんの幅だけ流して先頭に戻す＝無限に見える
-      const SPEED = 30; // px/秒（ゆっくり）
+      // 1組ぶんの幅だけ流して先頭に戻す＝「その他」の次にすぐ「印鑑」が来る
+      // ★幅は offsetWidth で測る。getBoundingClientRect は画面拡大（zoom）の影響を
+      //   受けて距離が過大になり、一周の終わりに空白が見えてしまう
+      const SPEED = 45; // px/秒
       const setDuration = () => {
         const gap = parseFloat(getComputedStyle(track).gap) || 0;
-        const one = originals.reduce((w, el) => w + el.getBoundingClientRect().width + gap, 0);
+        const one = originals.reduce((w, el) => w + el.offsetWidth + gap, 0);
         track.style.setProperty("--flow-distance", one + "px");
-        track.style.setProperty("--flow-duration", Math.max(30, one / SPEED) + "s");
+        track.style.setProperty("--flow-duration", Math.max(20, one / SPEED) + "s");
       };
       setDuration();
       window.addEventListener("resize", setDuration);
