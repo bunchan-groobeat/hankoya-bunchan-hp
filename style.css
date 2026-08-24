@@ -753,3 +753,7 @@
     }
     .footer-sns a { color: inherit; font-size: 14px; text-decoration: none; opacity: .85; }
     .footer-sns a:hover { opacity: 1; text-decoration: underline; }
+
+    /* ===== 広いモニタ対策（2026-08-24 社長「サイドがすごく気になる」）=====
+       画面幅に応じて全体を拡大する。実際の倍率は script.js が画面幅から計算して
+       body の zoom に設定する（1600px以下では等倍のまま） */

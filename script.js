@@ -1,3 +1,15 @@
+/* 広いモニタ対策：画面幅に合わせて全体を拡大する
+   1600pxまでは等倍。それ以上は「1560pxのデザインを画面に合わせて広げる」考え方。
+   （2026-08-24 社長「PCで見るとサイドがすごく気になる」への対応） */
+    (() => {
+      const fit = () => {
+        const w = window.innerWidth;
+        document.body.style.zoom = w > 1600 ? String(Math.min(3, w / 1560)) : "";
+      };
+      fit();
+      window.addEventListener("resize", fit);
+    })();
+
 /* スマホのメニュー開閉 */
     (() => {
       const btn = document.getElementById("navToggle");
