@@ -601,6 +601,19 @@
       .speed-other { font-size: 14px; }
     }
 
+    /* ===== 価格の目安リスト（2026-08-26 社長ヒアリング反映）===== */
+    .price-list { margin: 0 0 8px; padding: 0; list-style: none; display: grid; gap: 8px; max-width: 380px; }
+    .price-list li {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .price-list span { font-size: 14px; font-weight: 700; }
+    .price-list b { color: var(--red); font-size: 17px; font-weight: 900; white-space: nowrap; }
+
     /* 納期の但し書き（景表法まわりの注意書き。2026-08-25） */
     .speed-caution { margin: 28px 0 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
     .speed-caution a { color: inherit; }
