@@ -105,7 +105,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608261042">
+  <link rel="stylesheet" href="style.css?v=202608261043">
 </head>
 <body>
   <main>
@@ -574,11 +574,9 @@
 
         <div class="contact-one">
           <p class="cf-title">メールで相談する</p>
-            <!-- ★★送信先の設定（社長作業）★★
-                 Formspree に登録すると「https://formspree.io/f/xxxxxxxx」という
-                 専用URLがもらえます。下の action="" をそのURLに差し替えるだけで、
-                 info@hankoya-bunchan.com に直接届くようになります。
-                 （差し替えるまでは、送信ボタンでメールソフトが立ち上がる形で動きます） -->
+            <!-- 送信先＝Formspree（2026-08-26 接続済み）。届く先は info@hankoya-bunchan.com。
+                 宛先を変えるときは Formspree の管理画面で。エンドポイントを変えるときは下の action を差し替える。
+                 script.js が formspree.io を検知して「ページ移動なし送信＋送信しました表示」に切り替える -->
             <form class="contact-form" id="contactForm"
                   action="https://formspree.io/f/moeagpqe" method="post">
               <!-- 迷惑メール対策：人には見えない罠。ここに入力があると送信を止めます -->
@@ -718,6 +716,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608261042" defer></script>
+  <script src="script.js?v=202608261043" defer></script>
 </body>
 </html>
