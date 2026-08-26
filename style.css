@@ -80,7 +80,10 @@
       flex: 0 0 54px;
       background: url("img/face.png") center/contain no-repeat;
     }
-    .eb-en {
+    /* 2026-08-27 社長指示：吹き出しの中を日本語（大）に、外へ英語（小）を出す。
+       HTMLは英語→日本語の順のままなので order で並びを入れ替える（全11ページを触らずに済む） */
+    .eb-ja {
+      order: 1;
       position: relative;
       display: inline-block;
       padding: 11px 24px;
@@ -90,10 +93,11 @@
       font-size: 24px;
       font-weight: 900;
       line-height: 1;
-      letter-spacing: .14em;
+      letter-spacing: .06em;
+      white-space: nowrap;
     }
     /* 吹き出しのしっぽ（顔の方を向く） */
-    .eb-en::before {
+    .eb-ja::before {
       content: "";
       position: absolute;
       top: 50%;
@@ -104,7 +108,14 @@
       border-right: 10px solid var(--red);
       transform: translateY(-50%);
     }
-    .eb-ja { color: var(--muted); font-size: 13px; font-weight: 900; letter-spacing: .06em; white-space: nowrap; }
+    .eb-en {
+      order: 2;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      white-space: nowrap;
+    }
 
 
     @media (max-width: 760px) {
@@ -113,8 +124,11 @@
       .eyebrow::before {
         width: 44px; height: 44px; flex-basis: 44px;
       }
-      .eb-en { padding: 11px 22px; font-size: 22px; letter-spacing: .12em; border-radius: 9px; }
-      .eb-ja { font-size: 12px; }
+      /* 長い日本語（はんこ屋ぶんちゃんねる 等）が390px幅で溢れるため、
+         スマホでは吹き出しを詰め、英語は折り返して次の行へ逃がす */
+      .eyebrow { flex-wrap: wrap; row-gap: 6px; }
+      .eb-ja { padding: 9px 16px; font-size: 19px; letter-spacing: 0; border-radius: 9px; }
+      .eb-en { font-size: 11px; letter-spacing: .12em; }
       /* 見出し・本文もひと回り大きく（clampを上書きするため個別指定） */
       .section-title, h2.section-title { font-size: 31px; margin-bottom: 16px; line-height: 1.35; }
       .section-lead { font-size: 15px; line-height: 1.95; }
