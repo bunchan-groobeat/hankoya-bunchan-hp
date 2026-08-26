@@ -1252,18 +1252,38 @@
       .contact-bar a { transition: none; }
     }
 
-    /* スクロールで「ニュルッ」と出てくる動き（2026-08-25 社長指示で強化）
-       少し大きめに動かし、減速する曲線でゆっくり止める */
+    /* スクロールで「ぬるっ」と出てくる動き
+       2026-08-25 社長指示で強化 → 2026-08-27 さらに「ぬるっ」と感じるよう作り直し
+       ①セクション全体をゆっくり持ち上げる ②中身を少しずつ順に出す（ずらし）
+       ③わずかに拡大しながら出す。この3つが重なると「ぬるっ」と見える */
     .reveal {
       opacity: 0;
-      transform: translateY(38px);
-      transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1);
+      transform: translateY(44px) scale(.988);
+      transition: opacity 1.05s cubic-bezier(.16,1,.3,1), transform 1.05s cubic-bezier(.16,1,.3,1);
       will-change: opacity, transform;
     }
     .reveal.visible { opacity: 1; transform: none; }
+
+    /* 中身のずらし出し。見出し→リード→本体の順に少しずつ遅れて出る */
+    .reveal > .container > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .8s cubic-bezier(.16,1,.3,1) var(--rd, 0s),
+                  transform .8s cubic-bezier(.16,1,.3,1) var(--rd, 0s);
+    }
+    .reveal.visible > .container > * { opacity: 1; transform: none; }
+    .reveal > .container > *:nth-child(1) { --rd: .10s; }
+    .reveal > .container > *:nth-child(2) { --rd: .18s; }
+    .reveal > .container > *:nth-child(3) { --rd: .26s; }
+    .reveal > .container > *:nth-child(4) { --rd: .34s; }
+    .reveal > .container > *:nth-child(5) { --rd: .42s; }
+    .reveal > .container > *:nth-child(n+6) { --rd: .48s; }
+
+    /* ★scroll-behavior: smooth は19行目で既に指定済み。ここには重ねて書かない。 */
+
     /* 動きを減らす設定の人には出さない（アクセシビリティ） */
     @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
+      .reveal, .reveal > .container > * { opacity: 1; transform: none; transition: none; }
     }
     @keyframes heroIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
     @keyframes openIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
