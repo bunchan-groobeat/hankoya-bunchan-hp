@@ -1596,8 +1596,23 @@
       padding: 2px 10px; font-size: 12px; font-weight: 900; letter-spacing: .04em;
     }
     .visit__name { font-size: 18px; font-weight: 900; color: var(--text); line-height: 1.4; }
-    .visit__what { margin: 8px 0 0; font-size: 14.5px; line-height: 1.7; color: var(--text); }
-    .visit__meta { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); letter-spacing: .02em; }
+    /* 2026-08-27 社長指示：地域 → 店名 → 動画タイトル の順 */
+    .visit__area { margin: 0 0 4px; font-size: 12px; font-weight: 900; color: var(--red); letter-spacing: .08em; }
+    .visit__title {
+      margin: 8px 0 0; font-size: 13.5px; line-height: 1.65; color: var(--muted);
+      display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+    }
+    /* サムネの上に載る再生マーク */
+    .visit__thumb { position: relative; }
+    .visit__play {
+      position: absolute; right: 10px; bottom: 10px;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 5px 9px; background: rgba(255,255,255,.94); border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.18);
+    }
+    .visit__play svg { display: block; }
+    .yt-mark { flex: 0 0 auto; vertical-align: -3px; }
+    .visit__links a .yt-mark { margin-right: 6px; }
     .visit__links { margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--line); display: flex; gap: 14px; flex-wrap: wrap; }
     .visit__links a { color: var(--red); font-size: 13.5px; font-weight: 900; text-decoration: none; }
     .visit__links a:hover { text-decoration: underline; }
@@ -1610,4 +1625,27 @@
       .visit__body { padding: 14px 16px 16px; }
       .visit__name { font-size: 17px; }
       .bc-logo { margin-bottom: 20px; }
+    }
+
+    /* ===== トップの「ぶんちゃんねる」丸ロゴ（2026-08-27 社長指示）===== */
+    .yt-brand {
+      display: inline-flex; align-items: center; gap: 16px;
+      margin: 0 0 22px; padding: 12px 22px 12px 12px;
+      background: var(--white); border: 2px solid var(--line); border-radius: 999px;
+      text-decoration: none; transition: border-color .15s ease, transform .15s ease;
+    }
+    .yt-brand:hover { border-color: var(--red); transform: translateY(-2px); }
+    .yt-brand__icon { width: 72px; height: 72px; border-radius: 50%; display: block; }
+    .yt-brand__body { display: flex; flex-direction: column; gap: 3px; }
+    .yt-brand__name {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text); font-size: 18px; font-weight: 900; line-height: 1.3;
+    }
+    .yt-brand__sub { color: var(--muted); font-size: 12.5px; font-weight: 700; letter-spacing: .02em; }
+    .yt-cta .yt-mark { margin-right: 8px; vertical-align: -3px; }
+    @media (max-width: 760px) {
+      .yt-brand { gap: 12px; padding: 10px 18px 10px 10px; margin-bottom: 18px; }
+      .yt-brand__icon { width: 58px; height: 58px; }
+      .yt-brand__name { font-size: 16px; }
+      .yt-brand__sub { font-size: 11.5px; }
     }
