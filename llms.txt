@@ -82,7 +82,7 @@
 ## 問い合わせ方法
 
 1. LINE公式アカウント: https://lin.ee/Q52XPutI
-2. 選ぶだけ相談（品目別ヒアリング）: https://bunchan-groobeat.github.io/groobeat-hearing/
+2. 選ぶだけ相談（品目別ヒアリング）: https://bunchan-groobeat.github.io/bunchan-hearing/
 3. 電話: 024-925-6861
 4. メールフォーム: サイトのお問い合わせ欄（info@hankoya-bunchan.com）
 
