@@ -1455,3 +1455,43 @@
     /* ===== 広いモニタ対策（2026-08-24 社長「サイドがすごく気になる」）=====
        画面幅に応じて全体を拡大する。実際の倍率は script.js が画面幅から計算して
        body の zoom に設定する（1600px以下では等倍のまま） */
+
+    /* ===== PCヘッダー：ロゴを中央に、ナビは「英字（大）＋日本語（小）」の2段 =====
+       2026-08-26 社長指示「ヘッダーロゴ中央へ／ヘッダーの項目 英字大きく 日本語は英字の下に小さく」
+       ★スマホ（760px以下）は三本線＋全画面メニューのままなので、ここはPC専用にしてある */
+    @media (min-width: 761px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-block: 12px;
+      }
+      .logo { align-self: center; }
+      .gnav {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        gap: clamp(18px, 2.6vw, 40px);
+      }
+      .gnav-main a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        padding: 4px 0 8px;
+        line-height: 1.15;
+      }
+      .gm-en {
+        font-size: clamp(17px, 1.35vw, 21px);
+        font-weight: 900;
+        letter-spacing: .03em;
+      }
+      .gm-ja {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .04em;
+        opacity: .82;
+      }
+    }
