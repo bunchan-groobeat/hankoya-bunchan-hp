@@ -576,6 +576,11 @@
     .doc ul { margin: 0 0 18px; padding-left: 1.4em; }
     .doc li { margin-bottom: 8px; font-size: 15px; line-height: 1.9; }
     .doc a { color: var(--red); font-weight: 700; }
+    /* ★.doc a の赤文字がボタンの白文字を上書きして「赤地に赤文字」で消えていた
+       （2026-08-27 社長がスマホで発見）。ボタンだけは自前の色に戻す */
+    .doc a.cta { color: #fff; }
+    .doc a.cta-second { color: var(--text); }
+    .doc a.cta-line { color: #fff; }
     .doc-contact {
       padding: 22px 24px;
       background: #fff;
@@ -1578,8 +1583,16 @@
     }
 
     /* ===== ぶんちゃんねる 訪問先一覧（2026-08-27 新設・サムネ付きカード）===== */
-    .bc-logo { margin: 6px 0 26px; }
-    .bc-logo img { display: block; width: 100%; max-width: 620px; height: auto; border-radius: 12px; }
+    /* チャンネルへのリンク＝ロゴそのもの（2026-08-27 社長指示：赤いボタンをロゴに置き換え）*/
+    .bc-logo-link {
+      display: block; width: 100%; max-width: 520px;
+      border: 3px solid var(--text); border-radius: 14px; overflow: hidden;
+      box-shadow: 0 5px 0 var(--text);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .bc-logo-link img { display: block; width: 100%; height: auto; }
+    .bc-logo-link:hover { transform: translateY(3px); box-shadow: 0 2px 0 var(--text); }
+    .bc-logo-link:active { transform: translateY(5px); box-shadow: none; }
     .visit-list { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
     .visit {
       display: flex; flex-direction: column; overflow: hidden;
