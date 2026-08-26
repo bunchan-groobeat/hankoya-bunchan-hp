@@ -1501,3 +1501,44 @@
         opacity: .82;
       }
     }
+
+    /* ===== 開業・開店パック（2026-08-27 社長指示：独立セクションへ格上げ）===== */
+    .pack-list {
+      list-style: none;
+      margin: 26px 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .pack-list li {
+      background: var(--white);
+      border: 2px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    .pack-list li b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .pack-when {
+      margin-top: 20px;
+      padding: 16px 18px;
+      background: var(--white);
+      border-left: 5px solid var(--red);
+      border-radius: 10px;
+      font-size: 14.5px;
+      line-height: 1.9;
+    }
+    @media (max-width: 760px) {
+      .pack-list { grid-template-columns: 1fr; gap: 10px; }
+      .pack-list li { padding: 14px 16px; font-size: 14px; }
+      .pack-list li b { font-size: 15.5px; }
+      .pack-when { font-size: 14px; }
+    }
