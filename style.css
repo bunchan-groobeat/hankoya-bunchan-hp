@@ -1637,6 +1637,8 @@
     .yt-brand:hover { border-color: var(--red); transform: translateY(-2px); }
     .yt-brand__icon { width: 72px; height: 72px; border-radius: 50%; display: block; }
     .yt-brand__body { display: flex; flex-direction: column; gap: 3px; }
+    /* 登録者数などを外したので、名前だけのときは上下の中心に置く */
+    .yt-brand__body:not(:has(.yt-brand__sub)) { justify-content: center; }
     .yt-brand__name {
       display: flex; align-items: center; gap: 8px;
       color: var(--text); font-size: 18px; font-weight: 900; line-height: 1.3;
