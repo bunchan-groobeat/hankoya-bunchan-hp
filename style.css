@@ -38,7 +38,13 @@
       line-height: 1.35;
     }
     button, a { -webkit-tap-highlight-color: transparent; }
-    :focus-visible { outline: 3px solid rgba(200,64,43,.38); outline-offset: 4px; }
+    :focus-visible { outline: 3px solid #b8351f; outline-offset: 3px; }
+        /* 赤地・緑地の上では白で縁取る（2026-08-26 監査: コントラスト3:1未満だった）*/
+        .header-bar :focus-visible,
+        footer :focus-visible,
+        .cta-line:focus-visible,
+        .cb-line:focus-visible,
+        .btn--line:focus-visible { outline-color: #ffffff; }
 
     .container { width: min(100%, calc(var(--container) + 40px)); margin-inline: auto; padding-inline: 20px; }
     /* ★セクションの区切りをはっきりさせる（2026-08-25 社長指示）

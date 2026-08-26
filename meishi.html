@@ -8,6 +8,9 @@
   <title>名刺の印刷・デザイン｜郡山のはんこ屋ぶんちゃん</title>
   <meta name="description" content="名刺のデザインから印刷まで郡山駅前で対応。最短で当日お渡しできます。用紙や加工のオプションもお選びいただけます。">
   <link rel="canonical" href="https://hankoya-bunchan.com/meishi.html">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <meta property="og:type" content="article">
   <meta property="og:title" content="名刺の印刷・デザイン｜郡山のはんこ屋ぶんちゃん">
   <meta property="og:description" content="名刺のデザインから印刷まで郡山駅前で対応。最短で当日お渡しできます。用紙や加工のオプションもお選びいただけます。">
@@ -56,31 +59,53 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "名刺は最短で何日でできますか？",
-        "acceptedAnswer": { "@type": "Answer", "text": "最短で当日お渡しできます。用紙や加工のオプションもお選びいただけます。" }
-      },
-      {
-        "@type": "Question",
-        "name": "支払いはいつしますか？",
-        "acceptedAnswer": { "@type": "Answer", "text": "お受け取りのときで結構です。前払いは不要で、現金・クレジットカードがお使いいただけます。" }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "名刺は最短で何日でできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最短で当日お渡しできます。"
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "値段はどれくらいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100枚（通常用紙）2,000円〜（税別）が目安です。用紙はたくさんの中からお選びいただけます。枚数が多いほどお値引きになります。2026年8月時点の目安です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "角丸や箔押しもできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "できます。角丸・PP（マット／グロス）・箔押し・エンボスなどの加工を承ります。片面・両面、フルカラー・モノクロもお選びいただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "支払いはいつしますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "お受け取りのときで結構です。前払いは不要で、現金・クレジットカードがお使いいただけます。"
+      }
+    }
+  ]
+}
   </script>
-  <link rel="stylesheet" href="style.css?v=202608261841">
+  <link rel="stylesheet" href="style.css?v=202608261932">
 </head>
 <body>
   <main>
     <div class="header-bar">
     <div class="container">
       <header class="header">
-        <p class="logo"><a href="index.html"><img src="img/app-logo.png" alt="はんこ屋ぶんちゃん"></a></p>
+        <p class="logo"><a href="index.html"><img src="img/app-logo.png" alt="はんこ屋ぶんちゃん" width="900" height="266"></a></p>
 
         <button class="nav-toggle" type="button" id="navToggle" aria-expanded="false" aria-controls="globalNav" aria-label="メニューを開く">
           <span></span><span></span><span></span>
@@ -125,7 +150,7 @@
     <section class="pg-hero" style="--neon: #d8a800">
       <div class="container pg-hero-inner">
         <!-- ★横バンドは tools\band8.ps1 で card-meishi.png から自動生成（band-meishi.jpg） -->
-        <img class="pg-band" src="img/band-meishi.jpg" alt="名刺">
+        <img class="pg-band" src="img/band-meishi.jpg" alt="名刺" width="1600" height="800" fetchpriority="high">
         <div class="pg-lead">
           <p class="pg-crumb"><a href="index.html">ホーム</a> ／ 名刺</p>
           <h1 class="pg-title">名刺</h1>
@@ -205,7 +230,33 @@
     </section>
 
     <!-- お見積り -->
-    <section class="section warm reveal" id="estimate" aria-labelledby="est-title">
+        <!-- よくあるご質問（構造化データと同じ内容を必ず画面にも出す。2026-08-26 監査対応） -->
+    <section class="section warm reveal" aria-labelledby="faq-title">
+      <div class="container">
+        <p class="eyebrow"><span class="eb-en">FAQ</span><span class="eb-ja">よくあるご質問</span></p>
+        <h2 class="section-title" id="faq-title">よくいただくご質問。</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <p class="faq-q">名刺は最短で何日でできますか？</p>
+            <p class="faq-a">最短で当日お渡しできます。</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">値段はどれくらいですか？</p>
+            <p class="faq-a">100枚（通常用紙）2,000円〜（税別）が目安です。用紙はたくさんの中からお選びいただけます。枚数が多いほどお値引きになります。2026年8月時点の目安です。</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">角丸や箔押しもできますか？</p>
+            <p class="faq-a">できます。角丸・PP（マット／グロス）・箔押し・エンボスなどの加工を承ります。片面・両面、フルカラー・モノクロもお選びいただけます。</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">支払いはいつしますか？</p>
+            <p class="faq-a">お受け取りのときで結構です。前払いは不要で、現金・クレジットカードがお使いいただけます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section reveal" id="estimate" aria-labelledby="est-title">
       <div class="container">
         <p class="eyebrow"><span class="eb-en">ESTIMATE</span><span class="eb-ja">お見積り</span></p>
         <h2 class="section-title" id="est-title">質問に選んで答えるだけ。<br>2〜3分でまとまります。</h2>
@@ -223,19 +274,19 @@
     </section>
 
     <!-- ほかの品目へ -->
-    <section class="section reveal" aria-labelledby="others-title">
+    <section class="section warm reveal" aria-labelledby="others-title">
       <div class="container">
         <p class="eyebrow"><span class="eb-en">MORE</span><span class="eb-ja">ほかにも作れます</span></p>
         <h2 class="section-title" id="others-title">これ全部つくれます！</h2>
         <div class="carousel">
           <div class="carousel-track" id="carouselTrack">
-            <a class="ci" href="inkan.html" aria-label="印鑑のページを見る"><img class="ci-img" src="img/card-inkan.jpg" alt="印鑑" loading="lazy"></a>
-            <a class="ci" href="gomuin.html" aria-label="ゴム印のページを見る"><img class="ci-img" src="img/card-gomuin.jpg" alt="ゴム印" loading="lazy"></a>
-            <a class="ci" href="sticker.html" aria-label="ステッカーのページを見る"><img class="ci-img" src="img/card-sticker.jpg" alt="ステッカー" loading="lazy"></a>
-            <a class="ci" href="flyer.html" aria-label="チラシのページを見る"><img class="ci-img" src="img/card-flyer.jpg" alt="チラシ" loading="lazy"></a>
-            <a class="ci" href="poster.html" aria-label="ポスターのページを見る"><img class="ci-img" src="img/card-poster.jpg" alt="ポスター" loading="lazy"></a>
-            <a class="ci" href="goods.html" aria-label="グッズのページを見る"><img class="ci-img" src="img/card-goods.jpg" alt="グッズ" loading="lazy"></a>
-            <a class="ci" href="other.html" aria-label="その他のページを見る"><img class="ci-img" src="img/card-other.jpg" alt="その他" loading="lazy"></a>
+            <a class="ci" href="inkan.html" aria-label="印鑑のページを見る"><img class="ci-img" src="img/card-inkan.jpg" alt="印鑑" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="gomuin.html" aria-label="ゴム印のページを見る"><img class="ci-img" src="img/card-gomuin.jpg" alt="ゴム印" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="sticker.html" aria-label="ステッカーのページを見る"><img class="ci-img" src="img/card-sticker.jpg" alt="ステッカー" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="flyer.html" aria-label="チラシのページを見る"><img class="ci-img" src="img/card-flyer.jpg" alt="チラシ" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="poster.html" aria-label="ポスターのページを見る"><img class="ci-img" src="img/card-poster.jpg" alt="ポスター" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="goods.html" aria-label="グッズのページを見る"><img class="ci-img" src="img/card-goods.jpg" alt="グッズ" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="other.html" aria-label="その他のページを見る"><img class="ci-img" src="img/card-other.jpg" alt="その他" loading="lazy" width="675" height="1200"></a>
           </div>
         </div>
       </div>
@@ -261,7 +312,7 @@
   <footer>
     <div class="container footer-inner">
       <div class="f-brand">
-        <p class="f-name"><img src="img/app-logo.png" alt="はんこ屋ぶんちゃん"></p>
+        <p class="f-name"><img src="img/app-logo.png" alt="はんこ屋ぶんちゃん" width="900" height="266"></p>
         <p class="f-tagline">郡山で『モノづくり』するなら。<br>印鑑・ゴム印・名刺・ステッカー・チラシ・ポスター・グッズ。</p>
       </div>
 
@@ -311,6 +362,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608261841" defer></script>
+  <script src="script.js?v=202608261932" defer></script>
 </body>
 </html>

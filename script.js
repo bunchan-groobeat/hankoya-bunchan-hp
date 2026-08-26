@@ -37,8 +37,13 @@
           if (!res.ok) throw new Error("送信に失敗しました");
           const done = document.createElement("p");
           done.className = "cf-done";
+          // 画面が変わったことを読み上げソフトにも伝える（2026-08-26 監査#10）
+          done.setAttribute("role", "status");
+          done.setAttribute("aria-live", "polite");
+          done.tabIndex = -1;
           done.textContent = "送信しました。ありがとうございます。折り返しご連絡します。";
           form.replaceWith(done);
+          done.focus();
         } catch (err) {
           if (btn) { btn.disabled = false; btn.textContent = before; }
           alert("うまく送信できませんでした。お手数ですが、お電話（024-925-6861）かLINEでご連絡ください。");
