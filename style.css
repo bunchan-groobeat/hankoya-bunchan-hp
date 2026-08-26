@@ -1543,13 +1543,19 @@
       .pack-when { font-size: 14px; }
     }
 
-    /* ===== ぶんちゃんねる 訪問先一覧（2026-08-27 新設）===== */
-    .visit-list { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+    /* ===== ぶんちゃんねる 訪問先一覧（2026-08-27 新設・サムネ付きカード）===== */
+    .bc-logo { margin: 6px 0 26px; }
+    .bc-logo img { display: block; width: 100%; max-width: 620px; height: auto; border-radius: 12px; }
+    .visit-list { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
     .visit {
-      background: var(--white); border: 2px solid var(--line); border-radius: 14px;
-      padding: 18px 20px; transition: border-color .15s ease, transform .15s ease;
+      display: flex; flex-direction: column; overflow: hidden;
+      background: var(--white); border: 2px solid var(--line); border-radius: 16px;
+      transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
     }
-    .visit:hover { border-color: var(--red); transform: translateY(-2px); }
+    .visit:hover { border-color: var(--red); transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0,0,0,.08); }
+    .visit__thumb { display: block; background: var(--photo); }
+    .visit__thumb img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+    .visit__body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
     .visit__head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
     .visit__no {
       flex-shrink: 0; background: var(--red); color: #fff; border-radius: 999px;
@@ -1557,16 +1563,17 @@
     }
     .visit__name { font-size: 18px; font-weight: 900; color: var(--text); line-height: 1.4; }
     .visit__what { margin: 8px 0 0; font-size: 14.5px; line-height: 1.7; color: var(--text); }
-    .visit__meta { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); letter-spacing: .02em; }
+    .visit__meta { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); letter-spacing: .02em; }
+    .visit__links { margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--line); display: flex; gap: 14px; flex-wrap: wrap; }
+    .visit__links a { color: var(--red); font-size: 13.5px; font-weight: 900; text-decoration: none; }
+    .visit__links a:hover { text-decoration: underline; }
     .visit-note {
       margin-top: 28px; padding: 16px 18px; background: var(--warm);
       border-left: 5px solid var(--red); border-radius: 10px; font-size: 14px; line-height: 1.9;
     }
     @media (max-width: 760px) {
-      .visit-list { grid-template-columns: 1fr; gap: 10px; }
-      .visit { padding: 16px 18px; }
+      .visit-list { grid-template-columns: 1fr; gap: 14px; }
+      .visit__body { padding: 14px 16px 16px; }
       .visit__name { font-size: 17px; }
+      .bc-logo { margin-bottom: 20px; }
     }
-    .visit__links { margin: 10px 0 0; display: flex; gap: 14px; flex-wrap: wrap; }
-    .visit__links a { color: var(--red); font-size: 13.5px; font-weight: 900; text-decoration: none; }
-    .visit__links a:hover { text-decoration: underline; }
