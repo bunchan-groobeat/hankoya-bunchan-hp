@@ -1666,10 +1666,30 @@
     }
 
 
-/* ===== トップの制作事例グリッド（2026-08-30 社長指示） ===== */
-.works-grid--top { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 30px; }
-.works-cell--link { position: relative; text-decoration: none; transition: transform .18s ease; }
-.works-cell--link:hover { transform: translateY(-3px); }
+/* ===== トップの制作事例：2段で左右にゆっくり流れる（2026-08-30 社長指示） =====
+   上段は右から左、下段は左から右。既存の .carousel-track と同じ考え方。
+   はみ出しは .works-marquee の overflow:hidden で隠す。 */
+.works-marquee { margin-top: 30px; display: grid; gap: 12px; overflow: hidden; }
+.works-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  will-change: transform;
+}
+.works-dup { display: flex; gap: 12px; margin-left: 12px; }
+.works-track--left  { animation: worksFlowLeft  64s linear infinite; }
+.works-track--right { animation: worksFlowRight 64s linear infinite; }
+.works-marquee:hover .works-track { animation-play-state: paused; }
+@keyframes worksFlowLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes worksFlowRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+.works-track .works-cell { flex: 0 0 232px; width: 232px; margin: 0; }
+.works-cell--link { position: relative; text-decoration: none; }
 .works-cell--link:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
 .works-cell__label {
   position: absolute; left: 8px; bottom: 8px;
@@ -1683,58 +1703,8 @@
 }
 .works-note { margin: 20px 0 0; color: var(--muted); font-size: 14px; }
 @media (max-width: 760px) {
-  .works-grid--top { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .works-track .works-cell { flex: 0 0 150px; width: 150px; }
+  .works-track--left  { animation-duration: 46s; }
+  .works-track--right { animation-duration: 46s; }
   .works-cell__label { left: 5px; bottom: 5px; padding: 3px 8px; font-size: 10px; }
-}
-
-
-/* ===== 品目ページの看板：左に写真・右に品目色のベタ地＋白文字（2026-08-30 社長指示） =====
-   これまでは「横バンドが上・文言が下」の1カラムだった。
-   ★末尾に置いて既存指定に勝たせている（style.css は同名指定が離れた場所に複数あるため）。 */
-.pg-hero { padding-block: 0 48px; }
-.pg-hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  align-items: stretch;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 24px rgba(88, 64, 32, .12);
-}
-.pg-hero .pg-band {
-  width: 100%;
-  height: 100%;
-  min-height: 320px;
-  object-fit: cover;
-  border-radius: 0;
-}
-.pg-hero .pg-lead {
-  background: var(--neon, var(--red));
-  color: #fff;
-  padding: 42px 38px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.pg-hero .pg-title { color: #fff; }
-.pg-hero .pg-text { color: #fff; }
-.pg-hero .pg-crumb,
-.pg-hero .pg-crumb a { color: rgba(255, 255, 255, .88); }
-.pg-hero .opening-safe { color: rgba(255, 255, 255, .92); }
-/* 色地の上ではボタンを白抜きにする（品目色によっては赤ボタンが沈むため） */
-.pg-hero .pg-actions .cta {
-  background: #fff;
-  color: var(--neon, var(--red));
-  border-color: #fff;
-}
-.pg-hero .pg-actions .cta-line {
-  background: rgba(255, 255, 255, .14);
-  color: #fff;
-  border: 2px solid #fff;
-}
-@media (max-width: 760px) {
-  /* スマホは左右に割ると狭すぎるので、写真を上・色地を下に積む */
-  .pg-hero-inner { grid-template-columns: 1fr; }
-  .pg-hero .pg-band { min-height: 0; aspect-ratio: 16 / 9; }
-  .pg-hero .pg-lead { padding: 28px 22px 32px; }
 }
