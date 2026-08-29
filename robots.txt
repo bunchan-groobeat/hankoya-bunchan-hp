@@ -1,5 +1,5 @@
 # hankoya bunchan - confirmation site (NOT production)
-# restore C:\HQ\hanko-bunchan\hp\robots.txt on real launch
+# build.ps1 が自動で書いている。本番に出すときは $PRODUCTION = $true にする。
 
 User-agent: *
 Disallow: /
