@@ -196,18 +196,6 @@
   });
 })();
 
-/* トップの制作事例グリッド：セルごとの data-photo を敷く（2026-08-30） */
-(() => {
-  document.querySelectorAll(".works-cell[data-photo]").forEach((cell) => {
-    const src = cell.dataset.photo;
-    const probe = new Image();
-    probe.addEventListener("load", () => {
-      cell.style.backgroundImage = 'url("' + src + '")';
-    });
-    probe.src = src;
-  });
-})();
-
 /* 店舗・店主などの写真：data-photo が置かれていれば敷く */
 (() => {
   document.querySelectorAll(".photo-placeholder[data-photo]").forEach((face) => {

@@ -1666,30 +1666,10 @@
     }
 
 
-/* ===== トップの制作事例：2段で左右にゆっくり流れる（2026-08-30 社長指示） =====
-   上段は右から左、下段は左から右。既存の .carousel-track と同じ考え方。
-   はみ出しは .works-marquee の overflow:hidden で隠す。 */
-.works-marquee { margin-top: 30px; display: grid; gap: 12px; overflow: hidden; }
-.works-track {
-  display: flex;
-  gap: 12px;
-  width: max-content;
-  will-change: transform;
-}
-.works-dup { display: flex; gap: 12px; margin-left: 12px; }
-.works-track--left  { animation: worksFlowLeft  64s linear infinite; }
-.works-track--right { animation: worksFlowRight 64s linear infinite; }
-.works-marquee:hover .works-track { animation-play-state: paused; }
-@keyframes worksFlowLeft {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-@keyframes worksFlowRight {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
-}
-.works-track .works-cell { flex: 0 0 232px; width: 232px; margin: 0; }
-.works-cell--link { position: relative; text-decoration: none; }
+/* ===== トップの制作事例グリッド（2026-08-30 社長指示） ===== */
+.works-grid--top { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 30px; }
+.works-cell--link { position: relative; text-decoration: none; transition: transform .18s ease; }
+.works-cell--link:hover { transform: translateY(-3px); }
 .works-cell--link:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
 .works-cell__label {
   position: absolute; left: 8px; bottom: 8px;
@@ -1703,8 +1683,6 @@
 }
 .works-note { margin: 20px 0 0; color: var(--muted); font-size: 14px; }
 @media (max-width: 760px) {
-  .works-track .works-cell { flex: 0 0 150px; width: 150px; }
-  .works-track--left  { animation-duration: 46s; }
-  .works-track--right { animation-duration: 46s; }
+  .works-grid--top { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .works-cell__label { left: 5px; bottom: 5px; padding: 3px 8px; font-size: 10px; }
 }

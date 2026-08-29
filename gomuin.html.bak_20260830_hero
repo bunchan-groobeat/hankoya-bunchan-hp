@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ★公開時に必ず削除すること（CHECKLIST_KOKAI対象） -->
   <meta name="robots" content="noindex,nofollow">
-  <title>チラシの印刷・デザイン｜郡山のはんこ屋ぶんちゃん</title>
-  <meta name="description" content="開店の告知やセールのお知らせに。チラシのデザインから印刷まで郡山駅前で対応します。部数はご相談ください。">
-  <link rel="canonical" href="https://hankoya-bunchan.com/flyer.html">
+  <title>ゴム印（住所印・社判・日付印）｜郡山のはんこ屋ぶんちゃん</title>
+  <meta name="description" content="住所印・社判・日付印などのゴム印を郡山駅前で製作。午前中の受付で翌日午後のお渡し。サイズも素材もご指定いただけます。">
+  <link rel="canonical" href="https://hankoya-bunchan.com/gomuin.html">
   <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="チラシの印刷・デザイン｜郡山のはんこ屋ぶんちゃん">
-  <meta property="og:description" content="開店の告知やセールのお知らせに。チラシのデザインから印刷まで郡山駅前で対応します。部数はご相談ください。">
-  <meta property="og:url" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/flyer.html">
+  <meta property="og:title" content="ゴム印（住所印・社判・日付印）｜郡山のはんこ屋ぶんちゃん">
+  <meta property="og:description" content="住所印・社判・日付印などのゴム印を郡山駅前で製作。午前中の受付で翌日午後のお渡し。サイズも素材もご指定いただけます。">
+  <meta property="og:url" content="https://hankoya-bunchan.com/gomuin.html">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/img/ogp.jpg">
+  <meta property="og:image" content="https://hankoya-bunchan.com/img/ogp.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="はんこ屋ぶんちゃん これ全部つくれます！">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/img/ogp.jpg">
+  <meta name="twitter:image" content="https://hankoya-bunchan.com/img/ogp.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://hankoya-bunchan.com/" },
-      { "@type": "ListItem", "position": 2, "name": "チラシ", "item": "https://hankoya-bunchan.com/flyer.html" }
+      { "@type": "ListItem", "position": 2, "name": "ゴム印", "item": "https://hankoya-bunchan.com/gomuin.html" }
     ]
   }
   </script>
@@ -39,8 +39,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "チラシの印刷・デザイン",
-  "serviceType": "チラシの印刷・デザイン",
+  "name": "ゴム印・住所印・社判",
+  "serviceType": "ゴム印・住所印・社判",
   "provider": {
     "@type": "Store",
     "name": "はんこ屋ぶんちゃん",
@@ -60,14 +60,15 @@
     "@type": "City",
     "name": "郡山市"
   },
-  "url": "https://hankoya-bunchan.com/flyer.html",
+  "url": "https://hankoya-bunchan.com/gomuin.html",
   "offers": {
-    "@type": "Offer",
+    "@type": "AggregateOffer",
     "priceCurrency": "JPY",
-    "price": "3000",
+    "lowPrice": "330",
     "valueAddedTaxIncluded": false,
-    "description": "A4・100枚（税別・2026年8月時点の目安）",
-    "url": "https://hankoya-bunchan.com/flyer.html"
+    "description": "氏名印330円〜／会社横判・データー印2,000円〜（税別・2026年8月時点の目安）",
+    "url": "https://hankoya-bunchan.com/gomuin.html",
+    "highPrice": "2000"
   }
 }
   </script>
@@ -78,10 +79,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "チラシは何部から頼めますか？",
+      "name": "ゴム印は何日でできますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "小ロットから承ります。"
+        "text": "午前中の受付で、翌日午後のお渡しです。"
       }
     },
     {
@@ -89,15 +90,15 @@
       "name": "値段はどれくらいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A4・100枚で3,000円（税別）が目安です。用紙・加工・部数により変わります。枚数が多いほどお値引きになります。2026年8月時点の目安です。"
+        "text": "氏名印330円〜、会社横判2,000円〜、のし袋用1,500円〜、データー印2,000円〜（いずれも税別）が目安です。サイズ・内容により変わります。2026年8月時点の目安です。"
       }
     },
     {
       "@type": "Question",
-      "name": "両面印刷や用紙は選べますか？",
+      "name": "サイズや文字の並びは指定できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "片面・両面のフルカラー印刷に対応しています。用紙はコート紙・マット紙などからお選びいただけます。サイズもA4・B5・A5などから選べます。"
+        "text": "サイズはご指定いただけます。文字の並びや大きさもご相談ください。素材もご用途に合わせてお選びいただけます。"
       }
     },
     {
@@ -111,7 +112,7 @@
   ]
 }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608300102">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
@@ -161,16 +162,16 @@
     </div>
 
     <!-- 品目の看板 -->
-    <section class="pg-hero" style="--neon: #e8622c">
+    <section class="pg-hero" style="--neon: #e5197f">
       <div class="container pg-hero-inner">
-        <!-- ★横バンドは tools\band8.ps1 で card-flyer.png から自動生成（band-flyer.jpg） -->
-        <img class="pg-band" src="img/band-flyer.jpg" alt="チラシ" width="1600" height="800" fetchpriority="high">
+        <!-- ★横バンドは tools\band8.ps1 で card-gomuin.png から自動生成（band-gomuin.jpg） -->
+        <img class="pg-band" src="img/band-gomuin.jpg" alt="ゴム印" width="1600" height="800" fetchpriority="high">
         <div class="pg-lead">
-          <p class="pg-crumb"><a href="index.html">ホーム</a> ／ チラシ</p>
-          <h1 class="pg-title">チラシ</h1>
-          <p class="pg-text">開店の告知やセールのお知らせに。伝えたいこと一つに絞って作ります。デザインから印刷まで、部数もご相談ください。</p>
+          <p class="pg-crumb"><a href="index.html">ホーム</a> ／ ゴム印</p>
+          <h1 class="pg-title">ゴム印</h1>
+          <p class="pg-text">午前中に受け付けたものは、翌日の午後にお渡しできます。サイズも素材もご指定いただけます。毎日押すものだからこそ、押しやすさにこだわります。</p>
           <div class="pg-actions">
-            <a class="cta" href="https://bunchan-groobeat.github.io/bunchan-hearing/?s=flyer" target="_blank" rel="noopener">選ぶだけ相談（2〜3分）</a>
+            <a class="cta" href="https://bunchan-groobeat.github.io/bunchan-hearing/?s=gomuin" target="_blank" rel="noopener">選ぶだけ相談（2〜3分）</a>
             <a class="cta cta-line" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">LINEで相談</a>
           </div>
           <p class="opening-safe">お見積り無料／1点からOK／はじめての方も歓迎です</p>
@@ -182,23 +183,23 @@
     <section class="section reveal" id="can" aria-labelledby="can-title">
       <div class="container">
         <p class="eyebrow"><span class="eb-en">ITEMS</span><span class="eb-ja">こんなのが作れます</span></p>
-        <h2 class="section-title" id="can-title">チラシで、<br>できること。</h2>
+        <h2 class="section-title" id="can-title">ゴム印で、<br>できること。</h2>
         <ul class="item-list">
           <li>
-            <h3>開店・移転の告知</h3>
-            <p>いつ・どこで・何の店かが3秒で伝わる作りにします。</p>
+            <h3>住所印</h3>
+            <p>会社やお店の住所・電話番号をまとめて。行ごとの組み替えもできます。</p>
           </li>
           <li>
-            <h3>セール・キャンペーン</h3>
-            <p>日付と割引がひと目で分かるように。</p>
+            <h3>社判・角印</h3>
+            <p>請求書や領収書に押す会社の印。書体もご相談ください。</p>
           </li>
           <li>
-            <h3>メニュー・料金表</h3>
-            <p>折込にも店頭配布にも使える形で。</p>
+            <h3>日付印</h3>
+            <p>受付日や検品日に。回転式でその日の日付が押せます。</p>
           </li>
           <li>
-            <h3>イベント告知</h3>
-            <p>日時・場所・連絡先をまとめて。</p>
+            <h3>組み合わせ印</h3>
+            <p>住所・社名・担当者名を分割して、必要な行だけ押せる形にもできます。</p>
           </li>
         </ul>
       </div>
@@ -209,15 +210,15 @@
       <div class="container">
         <p class="eyebrow"><span class="eb-en">WORKS</span><span class="eb-ja">制作事例</span></p>
         <h2 class="section-title" id="works-title">作ってきたものが、<br>信用のすべてです。</h2>
-        <p class="section-lead">これまでにお作りしたチラシの実例です。</p>
-        <!-- ★写真は img/works-flyer-1.jpg 〜 -6.jpg を置くと入ります -->
-        <div class="works-grid" data-works="flyer">
-          <div class="works-cell"><span>ここにチラシの制作事例</span></div>
-          <div class="works-cell"><span>ここにチラシの制作事例</span></div>
-          <div class="works-cell"><span>ここにチラシの制作事例</span></div>
-          <div class="works-cell"><span>ここにチラシの制作事例</span></div>
-          <div class="works-cell"><span>ここにチラシの制作事例</span></div>
-          <div class="works-cell"><span>ここにチラシの制作事例</span></div>
+        <p class="section-lead">これまでにお作りしたゴム印の実例です。</p>
+        <!-- ★写真は img/works-gomuin-1.jpg 〜 -6.jpg を置くと入ります -->
+        <div class="works-grid" data-works="gomuin">
+          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
+          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
+          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
+          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
+          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
+          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
         </div>
       </div>
     </section>
@@ -226,17 +227,20 @@
     <section class="section reveal" aria-labelledby="spec-title">
       <div class="container">
         <p class="eyebrow"><span class="eb-en">SPEC</span><span class="eb-ja">仕様・納期</span></p>
-        <h2 class="section-title" id="spec-title">チラシの詳しいこと。</h2>
+        <h2 class="section-title" id="spec-title">ゴム印の詳しいこと。</h2>
         <dl class="spec">
-            <div class="spec-row"><dt>サイズ</dt><dd>A4・B5・A5など</dd></div>
-            <div class="spec-row"><dt>印刷</dt><dd>片面・両面／フルカラー</dd></div>
-            <div class="spec-row"><dt>用紙</dt><dd>コート紙・マット紙などからお選びいただけます</dd></div>
-            <div class="spec-row"><dt>部数</dt><dd>小ロットから承ります</dd></div>
+            <div class="spec-row"><dt>納期</dt><dd>午前中受付で翌日午後のお渡し</dd></div>
+            <div class="spec-row"><dt>サイズ</dt><dd>ご指定いただけます</dd></div>
+            <div class="spec-row"><dt>素材</dt><dd>ご用途に合わせてお選びいただけます</dd></div>
+            <div class="spec-row"><dt>レイアウト</dt><dd>文字の並びや大きさもご相談ください</dd></div>
             <div class="spec-row"><dt>価格の目安</dt><dd>
               <ul class="price-list">
-                <li><span>A4・100枚</span><b>3,000円</b></li>
+                <li><span>氏名印</span><b>330円〜</b></li>
+                <li><span>会社横判</span><b>2,000円〜</b></li>
+                <li><span>のし袋用</span><b>1,500円〜</b></li>
+                <li><span>データー印</span><b>2,000円〜</b></li>
               </ul>
-              <small>※税別。用紙・加工・部数により変わります。枚数が多いほどお値引きになります。2026年8月時点の目安です。</small>
+              <small>※税別。サイズ・内容により変わります。2026年8月時点の目安です。</small>
             </dd></div>
             <div class="spec-row"><dt>お支払い</dt><dd>お受け取りのときで結構です（前払い不要）。現金・クレジットカードがお使いいただけます</dd></div>
         </dl>
@@ -251,16 +255,16 @@
         <h2 class="section-title" id="faq-title">よくいただくご質問。</h2>
         <div class="faq-list">
           <div class="faq-item">
-            <p class="faq-q">チラシは何部から頼めますか？</p>
-            <p class="faq-a">小ロットから承ります。</p>
+            <p class="faq-q">ゴム印は何日でできますか？</p>
+            <p class="faq-a">午前中の受付で、翌日午後のお渡しです。</p>
           </div>
           <div class="faq-item">
             <p class="faq-q">値段はどれくらいですか？</p>
-            <p class="faq-a">A4・100枚で3,000円（税別）が目安です。用紙・加工・部数により変わります。枚数が多いほどお値引きになります。2026年8月時点の目安です。</p>
+            <p class="faq-a">氏名印330円〜、会社横判2,000円〜、のし袋用1,500円〜、データー印2,000円〜（いずれも税別）が目安です。サイズ・内容により変わります。2026年8月時点の目安です。</p>
           </div>
           <div class="faq-item">
-            <p class="faq-q">両面印刷や用紙は選べますか？</p>
-            <p class="faq-a">片面・両面のフルカラー印刷に対応しています。用紙はコート紙・マット紙などからお選びいただけます。サイズもA4・B5・A5などから選べます。</p>
+            <p class="faq-q">サイズや文字の並びは指定できますか？</p>
+            <p class="faq-a">サイズはご指定いただけます。文字の並びや大きさもご相談ください。素材もご用途に合わせてお選びいただけます。</p>
           </div>
           <div class="faq-item">
             <p class="faq-q">支払いはいつしますか？</p>
@@ -275,13 +279,13 @@
         <p class="eyebrow"><span class="eb-en">ESTIMATE</span><span class="eb-ja">お見積り</span></p>
         <h2 class="section-title" id="est-title">質問に選んで答えるだけ。<br>2〜3分でまとまります。</h2>
         <ol class="flow">
-          <li class="flow-step"><span class="flow-num">1</span><h3>選ぶだけ相談を開く</h3><p>チラシの質問に、選んで答えていくだけです。</p></li>
+          <li class="flow-step"><span class="flow-num">1</span><h3>選ぶだけ相談を開く</h3><p>ゴム印の質問に、選んで答えていくだけです。</p></li>
           <li class="flow-step"><span class="flow-num">2</span><h3>内容がまとまる</h3><p>答えた内容が、そのまま伝わる形に整います。</p></li>
           <li class="flow-step"><span class="flow-num">3</span><h3>LINEで送る</h3><p>ボタンひとつでLINEに貼り付けて送れます。</p></li>
           <li class="flow-step"><span class="flow-num">4</span><h3>お見積りをご連絡</h3><p>内容を確認して、金額と納期をお伝えします。無料です。</p></li>
         </ol>
         <div class="pg-actions" style="margin-top:28px">
-          <a class="cta" href="https://bunchan-groobeat.github.io/bunchan-hearing/?s=flyer" target="_blank" rel="noopener">選ぶだけ相談をはじめる</a>
+          <a class="cta" href="https://bunchan-groobeat.github.io/bunchan-hearing/?s=gomuin" target="_blank" rel="noopener">選ぶだけ相談をはじめる</a>
           <a class="cta cta-line" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">LINEで相談</a>
         </div>
       </div>
@@ -294,13 +298,13 @@
         <h2 class="section-title" id="others-title">これ全部つくれます！</h2>
         <div class="carousel">
           <div class="carousel-track" id="carouselTrack">
-            <a class="ci" href="inkan.html" aria-label="印鑑のページを見る"><img class="ci-img" src="img/card-inkan.jpg" alt="印鑑" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="gomuin.html" aria-label="ゴム印のページを見る"><img class="ci-img" src="img/card-gomuin.jpg" alt="ゴム印" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="meishi.html" aria-label="名刺のページを見る"><img class="ci-img" src="img/card-meishi.jpg" alt="名刺" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="sticker.html" aria-label="ステッカーのページを見る"><img class="ci-img" src="img/card-sticker.jpg" alt="ステッカー" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="poster.html" aria-label="ポスターのページを見る"><img class="ci-img" src="img/card-poster.jpg" alt="ポスター" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="goods.html" aria-label="グッズのページを見る"><img class="ci-img" src="img/card-goods.jpg" alt="グッズ" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="other.html" aria-label="その他のページを見る"><img class="ci-img" src="img/card-other.jpg" alt="その他" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="inkan.html" aria-label="印鑑のページを見る"><img class="ci-img" src="img/card-inkan.png" alt="印鑑" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="meishi.html" aria-label="名刺のページを見る"><img class="ci-img" src="img/card-meishi.png" alt="名刺" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="sticker.html" aria-label="ステッカーのページを見る"><img class="ci-img" src="img/card-sticker.png" alt="ステッカー" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="flyer.html" aria-label="チラシのページを見る"><img class="ci-img" src="img/card-flyer.png" alt="チラシ" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="poster.html" aria-label="ポスターのページを見る"><img class="ci-img" src="img/card-poster.png" alt="ポスター" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="goods.html" aria-label="グッズのページを見る"><img class="ci-img" src="img/card-goods.png" alt="グッズ" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="other.html" aria-label="その他のページを見る"><img class="ci-img" src="img/card-other.png" alt="その他" loading="lazy" width="675" height="1200"></a>
           </div>
         </div>
       </div>
@@ -376,6 +380,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608300102" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
