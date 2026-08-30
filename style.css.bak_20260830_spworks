@@ -1703,14 +1703,10 @@
 }
 .works-note { margin: 20px 0 0; color: var(--muted); font-size: 14px; }
 @media (max-width: 760px) {
-  /* 1枚を大きく（150→218px）。3列グリッドの110pxより二回り大きく見せる */
-  .works-track .works-cell { flex: 0 0 218px; width: 218px; }
-  /* ★スマホは上下とも左から右へ流す（社長指示 2026-08-30）。
-     逆方向だと画面が狭いぶん目が散るため。 */
-  .works-track--left,
-  .works-track--right { animation: worksFlowRight 52s linear infinite; }
-  .works-cell__label { left: 6px; bottom: 6px; padding: 3px 10px; font-size: 11px; }
-  .works-marquee { gap: 10px; }
+  .works-track .works-cell { flex: 0 0 150px; width: 150px; }
+  .works-track--left  { animation-duration: 46s; }
+  .works-track--right { animation-duration: 46s; }
+  .works-cell__label { left: 5px; bottom: 5px; padding: 3px 8px; font-size: 10px; }
 }
 
 
