@@ -1832,10 +1832,10 @@
   border: 2px solid #fff;
 }
 @media (max-width: 760px) {
-  /* スマホも文字が上・写真が下（2026-08-30 社長指示）。PCと同じ並びに揃える */
+  /* スマホは左右に割ると狭すぎるので、写真を上・色地を下に積む（order を戻す） */
   .pg-hero-inner { grid-template-columns: 1fr; }
-  .pg-hero .pg-band { order: 2; }
-  .pg-hero .pg-lead { order: 1; }
+  .pg-hero .pg-band { order: 1; }
+  .pg-hero .pg-lead { order: 2; }
   .pg-hero .pg-band { min-height: 0; aspect-ratio: 16 / 9; }
   .pg-hero .pg-lead { padding: 28px 22px 32px; }
 }
