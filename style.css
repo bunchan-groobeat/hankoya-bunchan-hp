@@ -1891,3 +1891,17 @@
   border-bottom: 2px solid #e8452c;
 }
 #kaigyo .pack-list__bunpri a:hover { opacity: .75; }
+
+
+/* 「これは別ブランドで承ります」という項目（2026-08-31）
+   ぶんちゃんで作るものと、ぶんプリ／ぶんデザインへ渡すものを見分けられるように */
+.item-elsewhere { border-style: dashed !important; }
+.item-elsewhere a {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--red);
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+}
+.item-elsewhere a:hover { opacity: .75; }
