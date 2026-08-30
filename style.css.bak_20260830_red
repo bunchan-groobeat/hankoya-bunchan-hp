@@ -1715,25 +1715,25 @@
 
 
 /* ===== 開業・開店パック特集をピンク基調に（2026-08-30 社長指示） =====
-   カードの「開店・開業パック」を #e8452c にしたので、下の特集もそこへ揃える。
+   カードの「開店・開業パック」を #ff0090 にしたので、下の特集もそこへ揃える。
    ★末尾に置いて既存指定に勝たせている（style.css は同名指定が離れた場所に複数あるため）。 */
-#kaigyo { --neon: #e8452c; }
-#kaigyo .eb-ja { background: #e8452c; }
-#kaigyo .eb-ja::before { border-right-color: #e8452c; }
-#kaigyo .section-title { color: #c02f18; }
-#kaigyo .section-lead b { color: #c02f18; }
+#kaigyo { --neon: #ff0090; }
+#kaigyo .eb-ja { background: #ff0090; }
+#kaigyo .eb-ja::before { border-right-color: #ff0090; }
+#kaigyo .section-title { color: #c8006f; }
+#kaigyo .section-lead b { color: #c8006f; }
 
 #kaigyo .pack-card {
   display: block;
   margin: 30px 0 0;
-  border: 5px solid #e8452c;
+  border: 5px solid #ff0090;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 6px 22px rgba(200, 60, 30, .18);
+  box-shadow: 0 6px 22px rgba(200, 0, 111, .18);
   transition: transform .18s ease;
 }
 #kaigyo .pack-card:hover { transform: translateY(-3px); }
-#kaigyo .pack-card:focus-visible { outline: 3px solid #e8452c; outline-offset: 3px; }
+#kaigyo .pack-card:focus-visible { outline: 3px solid #ff0090; outline-offset: 3px; }
 #kaigyo .pack-card img { display: block; width: 100%; height: auto; }
 
 #kaigyo .pack-list {
@@ -1746,7 +1746,7 @@
 }
 #kaigyo .pack-list li {
   background: #fff;
-  border: 2px solid #e8452c;
+  border: 2px solid #ff0090;
   border-radius: 12px;
   padding: 16px 18px;
   font-size: 14.5px;
@@ -1756,7 +1756,7 @@
 #kaigyo .pack-list li b {
   display: block;
   margin-bottom: 4px;
-  color: #e8452c;
+  color: #ff0090;
   font-size: 16px;
   font-weight: 900;
   letter-spacing: .01em;
@@ -1765,21 +1765,21 @@
   margin: 22px 0 24px;
   padding: 16px 20px;
   background: #fff;
-  border-left: 6px solid #e8452c;
+  border-left: 6px solid #ff0090;
   border-radius: 6px;
   font-size: 14.5px;
   line-height: 1.95;
 }
-#kaigyo .pack-when b { color: #c02f18; font-weight: 900; }
+#kaigyo .pack-when b { color: #c8006f; font-weight: 900; }
 #kaigyo .pg-actions .cta {
-  background: #e8452c;
-  border-color: #e8452c;
+  background: #ff0090;
+  border-color: #ff0090;
   color: #fff;
 }
 #kaigyo .pg-actions .cta-line {
   background: #fff;
-  border: 2px solid #e8452c;
-  color: #e8452c;
+  border: 2px solid #ff0090;
+  color: #ff0090;
 }
 
 
@@ -1877,17 +1877,3 @@
 @media (prefers-reduced-motion: reduce) {
   .carousel-track .ci { animation: none !important; }
 }
-
-
-/* 開業パックの中の「ぶんプリへ渡す」項目（2026-08-30 社長指示）
-   ぶんちゃんでは衣類を扱わないので、別ブランドへの導線だと分かる見た目にする */
-#kaigyo .pack-list__bunpri { border-style: dashed; }
-#kaigyo .pack-list__bunpri a {
-  display: inline-block;
-  margin-top: 6px;
-  color: #e8452c;
-  font-weight: 900;
-  text-decoration: none;
-  border-bottom: 2px solid #e8452c;
-}
-#kaigyo .pack-list__bunpri a:hover { opacity: .75; }

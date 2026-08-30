@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ★公開時に必ず削除すること（CHECKLIST_KOKAI対象） -->
   <meta name="robots" content="noindex,nofollow">
-  <title>ゴム印（住所印・社判・日付印）｜郡山のはんこ屋ぶんちゃん</title>
-  <meta name="description" content="住所印・社判・日付印などのゴム印を郡山駅前で製作。午前中の受付で翌日午後のお渡し。サイズも素材もご指定いただけます。">
-  <link rel="canonical" href="https://hankoya-bunchan.com/gomuin.html">
+  <title>開業・開店パック｜郡山のはんこ屋ぶんちゃん</title>
+  <meta name="description" content="ロゴ・印鑑・ゴム印・名刺・ショップカード・のぼり——開業・開店に必要なものを郡山駅前のはんこ屋ぶんちゃんがまとめてお作りします。お見積り無料。">
+  <link rel="canonical" href="https://hankoya-bunchan.com/kaigyo.html">
   <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="ゴム印（住所印・社判・日付印）｜郡山のはんこ屋ぶんちゃん">
-  <meta property="og:description" content="住所印・社判・日付印などのゴム印を郡山駅前で製作。午前中の受付で翌日午後のお渡し。サイズも素材もご指定いただけます。">
-  <meta property="og:url" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/gomuin.html">
+  <meta property="og:title" content="開業・開店パック｜郡山のはんこ屋ぶんちゃん">
+  <meta property="og:description" content="ロゴ・印鑑・ゴム印・名刺・ショップカード・のぼり——開業・開店に必要なものをまとめてお作りします。お見積り無料。">
+  <meta property="og:url" content="https://hankoya-bunchan.com/kaigyo.html">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/img/ogp.jpg">
+  <meta property="og:image" content="https://hankoya-bunchan.com/img/ogp.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="はんこ屋ぶんちゃん これ全部つくれます！">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/img/ogp.jpg">
+  <meta name="twitter:image" content="https://hankoya-bunchan.com/img/ogp.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://hankoya-bunchan.com/" },
-      { "@type": "ListItem", "position": 2, "name": "ゴム印", "item": "https://hankoya-bunchan.com/gomuin.html" }
+      { "@type": "ListItem", "position": 2, "name": "開業・開店パック", "item": "https://hankoya-bunchan.com/kaigyo.html" }
     ]
   }
   </script>
@@ -39,8 +39,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "ゴム印・住所印・社判",
-  "serviceType": "ゴム印・住所印・社判",
+  "name": "開業・開店パック",
+  "serviceType": "開業・開店パック",
   "provider": {
     "@type": "Store",
     "name": "はんこ屋ぶんちゃん",
@@ -60,16 +60,7 @@
     "@type": "City",
     "name": "郡山市"
   },
-  "url": "https://hankoya-bunchan.com/gomuin.html",
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "JPY",
-    "lowPrice": "330",
-    "valueAddedTaxIncluded": false,
-    "description": "氏名印330円〜／会社横判・データー印2,000円〜（税別・2026年8月時点の目安）",
-    "url": "https://hankoya-bunchan.com/gomuin.html",
-    "highPrice": "2000"
-  }
+  "url": "https://hankoya-bunchan.com/kaigyo.html"
 }
   </script>
   <script type="application/ld+json">
@@ -79,26 +70,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "ゴム印は何日でできますか？",
+      "name": "開業の準備はいつ相談すればいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "午前中の受付で、翌日午後のお渡しです。"
+        "text": "開業日の1〜2か月前がおすすめです。お急ぎもご相談ください。"
       }
     },
     {
       "@type": "Question",
-      "name": "値段はどれくらいですか？",
+      "name": "一部だけの依頼でもいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "氏名印330円〜、会社横判2,000円〜、のし袋用1,500円〜、データー印2,000円〜（いずれも税別）が目安です。サイズ・内容により変わります。2026年8月時点の目安です。"
+        "text": "構いません。必要なものを一緒に洗い出し、ロゴから順にお作りします。全部でなく一部だけでも承ります。"
       }
     },
     {
       "@type": "Question",
-      "name": "サイズや文字の並びは指定できますか？",
+      "name": "法人印は登記に間に合いますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "サイズはご指定いただけます。文字の並びや大きさもご相談ください。素材もご用途に合わせてお選びいただけます。"
+        "text": "登記スケジュールに合わせます。店頭なら当日お渡しも可能です。"
       }
     },
     {
@@ -112,7 +103,7 @@
   ]
 }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608302358">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
@@ -162,44 +153,52 @@
     </div>
 
     <!-- 品目の看板 -->
-    <section class="pg-hero" style="--neon: #35b449">
+    <section class="pg-hero" style="--neon: #e8452c">
       <div class="container pg-hero-inner">
-        <!-- ★横バンドは tools\band8.ps1 で card-gomuin.png から自動生成（band-gomuin.jpg） -->
-        <img class="pg-band" src="img/hero-gomuin.jpg" alt="ゴム印" width="800" height="1422" fetchpriority="high">
+        <!-- ★横カードはマーシー納品（img/band-kaigyo.jpg を差し替えるだけ） -->
+        <img class="pg-band" src="img/hero-kaigyo.jpg" alt="開業・開店パック — お店を始める準備、ロゴから印鑑までまとめてお任せ！" width="800" height="1422" fetchpriority="high">
         <div class="pg-lead">
-          <p class="pg-crumb"><a href="index.html">ホーム</a> ／ ゴム印</p>
-          <h1 class="pg-title">ゴム印</h1>
-          <p class="pg-text">午前中に受け付けたものは、翌日の午後にお渡しできます。サイズも素材もご指定いただけます。毎日押すものだからこそ、押しやすさにこだわります。</p>
+          <p class="pg-crumb"><a href="index.html">ホーム</a> ／ 開業・開店パック</p>
+          <h1 class="pg-title">開業・開店パック</h1>
+          <p class="pg-text">お店や会社を始めるとき、必要になるものは一度にやってきます。ロゴ・印鑑・ゴム印・名刺・ショップカード・のぼり——ばらばらに頼むと大変なものを、まとめてお引き受けします。店主自身、仲間に助けられて開業した店です。開く人の味方をします。</p>
           <div class="pg-actions">
-            <a class="cta" href="https://bunchan-groobeat.github.io/bunchan-hearing/?s=gomuin" target="_blank" rel="noopener">選ぶだけ相談（2〜3分）</a>
             <a class="cta cta-line" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">LINEで相談</a>
+            <a class="cta cta-second" href="tel:0249256861">電話で相談</a>
           </div>
-          <p class="opening-safe">お見積り無料／1点からOK／はじめての方も歓迎です</p>
+          <p class="opening-safe">お見積り無料／必要なものだけでもOK／開業前のご相談歓迎です</p>
         </div>
       </div>
     </section>
 
-    <!-- こんなのが作れます -->
+    <!-- こんなのが揃います -->
     <section class="section reveal" id="can" aria-labelledby="can-title">
       <div class="container">
-        <p class="eyebrow"><span class="eb-en">ITEMS</span><span class="eb-ja">こんなのが作れます</span></p>
-        <h2 class="section-title" id="can-title">ゴム印で、<br>できること。</h2>
+        <p class="eyebrow"><span class="eb-en">ITEMS</span><span class="eb-ja">まとめてお作りします</span></p>
+        <h2 class="section-title" id="can-title">開業に必要なもの、<br>だいたい揃います。</h2>
         <ul class="item-list">
           <li>
-            <h3>住所印</h3>
-            <p>会社やお店の住所・電話番号をまとめて。行ごとの組み替えもできます。</p>
+            <h3>会社の印鑑</h3>
+            <p>代表者印・銀行印・角印の3点セット。法人設立の登記に間に合わせます。</p>
           </li>
           <li>
-            <h3>社判・角印</h3>
-            <p>請求書や領収書に押す会社の印。書体もご相談ください。</p>
+            <h3>ロゴ</h3>
+            <p>お店の顔になるマーク。名刺にも看板メニューにも、この先ずっと使います。</p>
           </li>
           <li>
-            <h3>日付印</h3>
-            <p>受付日や検品日に。回転式でその日の日付が押せます。</p>
+            <h3>ゴム印・住所印</h3>
+            <p>請求書や封筒に。開業したその日から毎日使う道具です。</p>
           </li>
           <li>
-            <h3>組み合わせ印</h3>
-            <p>住所・社名・担当者名を分割して、必要な行だけ押せる形にもできます。</p>
+            <h3>名刺・ショップカード</h3>
+            <p>挨拶まわりと開店告知に。ロゴと揃えてデザインします。</p>
+          </li>
+          <li>
+            <h3>のぼり・チラシ</h3>
+            <p>開店を知らせる販促物。オープン日に間に合うよう段取りします。</p>
+          </li>
+          <li>
+            <h3>ホームページ・アプリ</h3>
+            <p>同じ店主の「BUN Design」で承ります。あわせてご相談ください。</p>
           </li>
         </ul>
       </div>
@@ -209,16 +208,16 @@
     <section class="section warm reveal" id="works" aria-labelledby="works-title">
       <div class="container">
         <p class="eyebrow"><span class="eb-en">WORKS</span><span class="eb-ja">制作事例</span></p>
-        <h2 class="section-title" id="works-title">作ってきたものが、<br>信用のすべてです。</h2>
-        <p class="section-lead">これまでにお作りしたゴム印の実例です。</p>
-        <!-- ★写真は img/works-gomuin-1.jpg 〜 -6.jpg を置くと入ります -->
-        <div class="works-grid" data-works="gomuin">
-          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
-          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
-          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
-          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
-          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
-          <div class="works-cell"><span>ここにゴム印の制作事例</span></div>
+        <h2 class="section-title" id="works-title">開業を、何度も<br>手伝ってきました。</h2>
+        <p class="section-lead">これまでにお手伝いした開業・開店まわりの実例です。</p>
+        <!-- ★写真は img/works-kaigyo-1.jpg 〜 -6.jpg を置くと入ります -->
+        <div class="works-grid" data-works="kaigyo">
+          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
+          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
+          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
+          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
+          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
+          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
         </div>
       </div>
     </section>
@@ -226,22 +225,13 @@
     <!-- 仕様・納期 -->
     <section class="section reveal" aria-labelledby="spec-title">
       <div class="container">
-        <p class="eyebrow"><span class="eb-en">SPEC</span><span class="eb-ja">仕様・納期</span></p>
-        <h2 class="section-title" id="spec-title">ゴム印の詳しいこと。</h2>
+        <p class="eyebrow"><span class="eb-en">SPEC</span><span class="eb-ja">進め方</span></p>
+        <h2 class="section-title" id="spec-title">開業パックの詳しいこと。</h2>
         <dl class="spec">
-            <div class="spec-row"><dt>納期</dt><dd>午前中受付で翌日午後のお渡し</dd></div>
-            <div class="spec-row"><dt>サイズ</dt><dd>ご指定いただけます</dd></div>
-            <div class="spec-row"><dt>素材</dt><dd>ご用途に合わせてお選びいただけます</dd></div>
-            <div class="spec-row"><dt>レイアウト</dt><dd>文字の並びや大きさもご相談ください</dd></div>
-            <div class="spec-row"><dt>価格の目安</dt><dd>
-              <ul class="price-list">
-                <li><span>氏名印</span><b>330円〜</b></li>
-                <li><span>会社横判</span><b>2,000円〜</b></li>
-                <li><span>のし袋用</span><b>1,500円〜</b></li>
-                <li><span>データー印</span><b>2,000円〜</b></li>
-              </ul>
-              <small>※税別。サイズ・内容により変わります。2026年8月時点の目安です。</small>
-            </dd></div>
+            <div class="spec-row"><dt>ご相談の時期</dt><dd>開業日の1〜2か月前がおすすめです。お急ぎもご相談ください</dd></div>
+            <div class="spec-row"><dt>進め方</dt><dd>必要なものを一緒に洗い出し→ロゴから順にお作りします。全部でなく一部だけでも構いません</dd></div>
+            <div class="spec-row"><dt>法人印</dt><dd>登記スケジュールに合わせます。店頭なら当日お渡しも可能です</dd></div>
+            <div class="spec-row"><dt>お見積り</dt><dd>無料。内容が決まりしだい、まとめて金額と納期をお伝えします</dd></div>
             <div class="spec-row"><dt>お支払い</dt><dd>お受け取りのときで結構です（前払い不要）。現金・クレジットカードがお使いいただけます</dd></div>
         </dl>
       </div>
@@ -255,16 +245,16 @@
         <h2 class="section-title" id="faq-title">よくいただくご質問。</h2>
         <div class="faq-list">
           <div class="faq-item">
-            <p class="faq-q">ゴム印は何日でできますか？</p>
-            <p class="faq-a">午前中の受付で、翌日午後のお渡しです。</p>
+            <p class="faq-q">開業の準備はいつ相談すればいいですか？</p>
+            <p class="faq-a">開業日の1〜2か月前がおすすめです。お急ぎもご相談ください。</p>
           </div>
           <div class="faq-item">
-            <p class="faq-q">値段はどれくらいですか？</p>
-            <p class="faq-a">氏名印330円〜、会社横判2,000円〜、のし袋用1,500円〜、データー印2,000円〜（いずれも税別）が目安です。サイズ・内容により変わります。2026年8月時点の目安です。</p>
+            <p class="faq-q">一部だけの依頼でもいいですか？</p>
+            <p class="faq-a">構いません。必要なものを一緒に洗い出し、ロゴから順にお作りします。全部でなく一部だけでも承ります。</p>
           </div>
           <div class="faq-item">
-            <p class="faq-q">サイズや文字の並びは指定できますか？</p>
-            <p class="faq-a">サイズはご指定いただけます。文字の並びや大きさもご相談ください。素材もご用途に合わせてお選びいただけます。</p>
+            <p class="faq-q">法人印は登記に間に合いますか？</p>
+            <p class="faq-a">登記スケジュールに合わせます。店頭なら当日お渡しも可能です。</p>
           </div>
           <div class="faq-item">
             <p class="faq-q">支払いはいつしますか？</p>
@@ -276,17 +266,17 @@
 
 <section class="section reveal" id="estimate" aria-labelledby="est-title">
       <div class="container">
-        <p class="eyebrow"><span class="eb-en">ESTIMATE</span><span class="eb-ja">お見積り</span></p>
-        <h2 class="section-title" id="est-title">質問に選んで答えるだけ。<br>2〜3分でまとまります。</h2>
+        <p class="eyebrow"><span class="eb-en">CONTACT</span><span class="eb-ja">ご相談</span></p>
+        <h2 class="section-title" id="est-title">「お店を始めます」<br>それだけで大丈夫です。</h2>
         <ol class="flow">
-          <li class="flow-step"><span class="flow-num">1</span><h3>選ぶだけ相談を開く</h3><p>ゴム印の質問に、選んで答えていくだけです。</p></li>
-          <li class="flow-step"><span class="flow-num">2</span><h3>内容がまとまる</h3><p>答えた内容が、そのまま伝わる形に整います。</p></li>
-          <li class="flow-step"><span class="flow-num">3</span><h3>LINEで送る</h3><p>ボタンひとつでLINEに貼り付けて送れます。</p></li>
-          <li class="flow-step"><span class="flow-num">4</span><h3>お見積りをご連絡</h3><p>内容を確認して、金額と納期をお伝えします。無料です。</p></li>
+          <li class="flow-step"><span class="flow-num">1</span><h3>LINEか電話でご連絡</h3><p>「開業します」「開店予定です」とだけお伝えください。</p></li>
+          <li class="flow-step"><span class="flow-num">2</span><h3>必要なものを洗い出し</h3><p>業種と開業日を伺って、要るものを一緒にリストにします。</p></li>
+          <li class="flow-step"><span class="flow-num">3</span><h3>まとめてお見積り</h3><p>全体の金額と、間に合う納期をお伝えします。無料です。</p></li>
+          <li class="flow-step"><span class="flow-num">4</span><h3>順にお渡し</h3><p>登記に要る印鑑から順に。開業日に全部が揃うよう段取りします。</p></li>
         </ol>
         <div class="pg-actions" style="margin-top:28px">
-          <a class="cta" href="https://bunchan-groobeat.github.io/bunchan-hearing/?s=gomuin" target="_blank" rel="noopener">選ぶだけ相談をはじめる</a>
           <a class="cta cta-line" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">LINEで相談</a>
+          <a class="cta" href="tel:0249256861">024-925-6861 に電話</a>
         </div>
       </div>
     </section>
@@ -294,17 +284,18 @@
     <!-- ほかの品目へ -->
     <section class="section warm reveal" aria-labelledby="others-title">
       <div class="container">
-        <p class="eyebrow"><span class="eb-en">MORE</span><span class="eb-ja">ほかにも作れます</span></p>
+        <p class="eyebrow"><span class="eb-en">MORE</span><span class="eb-ja">単品でも作れます</span></p>
         <h2 class="section-title" id="others-title">これ全部つくれます！</h2>
         <div class="carousel">
           <div class="carousel-track" id="carouselTrack">
-            <a class="ci" href="inkan.html" aria-label="印鑑のページを見る"><img class="ci-img" src="img/card-inkan.jpg" alt="印鑑" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="meishi.html" aria-label="名刺のページを見る"><img class="ci-img" src="img/card-meishi.jpg" alt="名刺" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="sticker.html" aria-label="ステッカーのページを見る"><img class="ci-img" src="img/card-sticker.jpg" alt="ステッカー" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="flyer.html" aria-label="チラシのページを見る"><img class="ci-img" src="img/card-flyer.jpg" alt="チラシ" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="poster.html" aria-label="ポスターのページを見る"><img class="ci-img" src="img/card-poster.jpg" alt="ポスター" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="goods.html" aria-label="グッズのページを見る"><img class="ci-img" src="img/card-goods.jpg" alt="グッズ" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="other.html" aria-label="その他のページを見る"><img class="ci-img" src="img/card-other.jpg" alt="その他" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="inkan.html" aria-label="印鑑のページを見る"><img class="ci-img" src="img/card-inkan.png" alt="印鑑" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="gomuin.html" aria-label="ゴム印のページを見る"><img class="ci-img" src="img/card-gomuin.png" alt="ゴム印" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="meishi.html" aria-label="名刺のページを見る"><img class="ci-img" src="img/card-meishi.png" alt="名刺" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="sticker.html" aria-label="ステッカーのページを見る"><img class="ci-img" src="img/card-sticker.png" alt="ステッカー" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="flyer.html" aria-label="チラシのページを見る"><img class="ci-img" src="img/card-flyer.png" alt="チラシ" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="poster.html" aria-label="ポスターのページを見る"><img class="ci-img" src="img/card-poster.png" alt="ポスター" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="goods.html" aria-label="グッズのページを見る"><img class="ci-img" src="img/card-goods.png" alt="グッズ" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="other.html" aria-label="その他のページを見る"><img class="ci-img" src="img/card-other.png" alt="その他" loading="lazy" width="675" height="1200"></a>
           </div>
         </div>
       </div>
@@ -380,6 +371,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608302358" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
