@@ -14,14 +14,14 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="ゴム印（住所印・社判・日付印）｜郡山のはんこ屋ぶんちゃん">
   <meta property="og:description" content="住所印・社判・日付印などのゴム印を郡山駅前で製作。午前中の受付で翌日午後のお渡し。サイズも素材もご指定いただけます。">
-  <meta property="og:url" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/gomuin.html">
+  <meta property="og:url" content="https://hankoya-bunchan.com/gomuin.html">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/img/ogp.jpg">
+  <meta property="og:image" content="https://hankoya-bunchan.com/img/ogp.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="はんこ屋ぶんちゃん これ全部つくれます！">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/img/ogp.jpg">
+  <meta name="twitter:image" content="https://hankoya-bunchan.com/img/ogp.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -112,7 +112,7 @@
   ]
 }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608302304">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
@@ -162,7 +162,7 @@
     </div>
 
     <!-- 品目の看板 -->
-    <section class="pg-hero" style="--neon: #35b449">
+    <section class="pg-hero" style="--neon: #e5197f">
       <div class="container pg-hero-inner">
         <!-- ★横バンドは tools\band8.ps1 で card-gomuin.png から自動生成（band-gomuin.jpg） -->
         <img class="pg-band" src="img/hero-gomuin.jpg" alt="ゴム印" width="800" height="1422" fetchpriority="high">
@@ -298,13 +298,13 @@
         <h2 class="section-title" id="others-title">これ全部つくれます！</h2>
         <div class="carousel">
           <div class="carousel-track" id="carouselTrack">
-            <a class="ci" href="inkan.html" aria-label="印鑑のページを見る"><img class="ci-img" src="img/card-inkan.jpg" alt="印鑑" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="meishi.html" aria-label="名刺のページを見る"><img class="ci-img" src="img/card-meishi.jpg" alt="名刺" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="sticker.html" aria-label="ステッカーのページを見る"><img class="ci-img" src="img/card-sticker.jpg" alt="ステッカー" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="flyer.html" aria-label="チラシのページを見る"><img class="ci-img" src="img/card-flyer.jpg" alt="チラシ" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="poster.html" aria-label="ポスターのページを見る"><img class="ci-img" src="img/card-poster.jpg" alt="ポスター" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="goods.html" aria-label="グッズのページを見る"><img class="ci-img" src="img/card-goods.jpg" alt="グッズ" loading="lazy" width="675" height="1200"></a>
-            <a class="ci" href="other.html" aria-label="その他のページを見る"><img class="ci-img" src="img/card-other.jpg" alt="その他" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="inkan.html" aria-label="印鑑のページを見る"><img class="ci-img" src="img/card-inkan.png" alt="印鑑" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="meishi.html" aria-label="名刺のページを見る"><img class="ci-img" src="img/card-meishi.png" alt="名刺" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="sticker.html" aria-label="ステッカーのページを見る"><img class="ci-img" src="img/card-sticker.png" alt="ステッカー" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="flyer.html" aria-label="チラシのページを見る"><img class="ci-img" src="img/card-flyer.png" alt="チラシ" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="poster.html" aria-label="ポスターのページを見る"><img class="ci-img" src="img/card-poster.png" alt="ポスター" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="goods.html" aria-label="グッズのページを見る"><img class="ci-img" src="img/card-goods.png" alt="グッズ" loading="lazy" width="675" height="1200"></a>
+            <a class="ci" href="other.html" aria-label="その他のページを見る"><img class="ci-img" src="img/card-other.png" alt="その他" loading="lazy" width="675" height="1200"></a>
           </div>
         </div>
       </div>
@@ -380,6 +380,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608302304" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
