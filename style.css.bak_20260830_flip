@@ -1787,9 +1787,6 @@
    これまでは「横バンドが上・文言が下」の1カラムだった。
    ★末尾に置いて既存指定に勝たせている（style.css は同名指定が離れた場所に複数あるため）。 */
 .pg-hero { padding-block: 0 48px; }
-/* 画像を右・文言を左に（2026-08-30 社長指示）。HTMLの順序は変えず order だけで入れ替える */
-.pg-hero .pg-band { order: 2; }
-.pg-hero .pg-lead { order: 1; }
 .pg-hero-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1798,7 +1795,6 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(88, 64, 32, .12);
-  direction: ltr;
 }
 .pg-hero .pg-band {
   width: 100%;
@@ -1832,10 +1828,8 @@
   border: 2px solid #fff;
 }
 @media (max-width: 760px) {
-  /* スマホは左右に割ると狭すぎるので、写真を上・色地を下に積む（order を戻す） */
+  /* スマホは左右に割ると狭すぎるので、写真を上・色地を下に積む */
   .pg-hero-inner { grid-template-columns: 1fr; }
-  .pg-hero .pg-band { order: 1; }
-  .pg-hero .pg-lead { order: 2; }
   .pg-hero .pg-band { min-height: 0; aspect-ratio: 16 / 9; }
   .pg-hero .pg-lead { padding: 28px 22px 32px; }
 }
