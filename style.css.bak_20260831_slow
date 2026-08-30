@@ -1677,8 +1677,8 @@
   will-change: transform;
 }
 .works-dup { display: flex; gap: 12px; margin-left: 12px; }
-.works-track--left  { animation: worksFlowLeft  128s linear infinite; }
-.works-track--right { animation: worksFlowRight 128s linear infinite; }
+.works-track--left  { animation: worksFlowLeft  64s linear infinite; }
+.works-track--right { animation: worksFlowRight 64s linear infinite; }
 .works-marquee:hover .works-track { animation-play-state: paused; }
 @keyframes worksFlowLeft {
   from { transform: translateX(0); }
@@ -1708,7 +1708,7 @@
   /* ★スマホは上下とも左から右へ流す（社長指示 2026-08-30）。
      逆方向だと画面が狭いぶん目が散るため。 */
   .works-track--left,
-  .works-track--right { animation: worksFlowRight 104s linear infinite; }
+  .works-track--right { animation: worksFlowRight 52s linear infinite; }
   .works-cell__label { left: 6px; bottom: 6px; padding: 3px 10px; font-size: 11px; }
   .works-marquee { gap: 10px; }
 }
@@ -1921,7 +1921,7 @@
   display: flex;
   gap: 12px;
   width: max-content;
-  animation: ytFlow 140s linear infinite;
+  animation: ytFlow 70s linear infinite;
   will-change: transform;
 }
 .yt-strip__dup { display: flex; gap: 12px; margin-left: 12px; }
@@ -1936,12 +1936,11 @@
 }
 .yt-strip:hover .yt-strip__track { animation-play-state: paused; }
 @keyframes ytFlow {
-  /* 右から左へ（2026-08-31 社長指示。以前は左→右だった） */
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 @media (max-width: 760px) {
   .yt-strip img { flex: 0 0 200px; width: 200px; border-width: 2px; }
-  .yt-strip__track { animation-duration: 110s; }
+  .yt-strip__track { animation-duration: 52s; }
   .yt-strip { margin: 20px 0 24px; }
 }
