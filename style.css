@@ -1905,3 +1905,42 @@
   border-bottom: 2px solid var(--red);
 }
 .item-elsewhere a:hover { opacity: .75; }
+
+
+/* ===== ぶんちゃんねる：訪問先のサムネをゆっくり左から右へ（2026-08-31 社長指示） =====
+   押すと「訪ねたお店の一覧」（bunchannel.html）へ飛ぶ。 */
+.yt-strip {
+  display: block;
+  margin: 26px 0 30px;
+  overflow: hidden;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.yt-strip:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.yt-strip__track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: ytFlow 70s linear infinite;
+  will-change: transform;
+}
+.yt-strip__dup { display: flex; gap: 12px; margin-left: 12px; }
+.yt-strip img {
+  display: block;
+  flex: 0 0 268px;
+  width: 268px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid var(--text);
+  background: #efe4d2;
+}
+.yt-strip:hover .yt-strip__track { animation-play-state: paused; }
+@keyframes ytFlow {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+@media (max-width: 760px) {
+  .yt-strip img { flex: 0 0 200px; width: 200px; border-width: 2px; }
+  .yt-strip__track { animation-duration: 52s; }
+  .yt-strip { margin: 20px 0 24px; }
+}

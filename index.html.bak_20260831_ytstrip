@@ -14,14 +14,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="はんこ屋ぶんちゃん｜郡山でモノづくり 印鑑・名刺・ステッカー・チラシ">
   <meta property="og:description" content="郡山駅前で11年。印鑑・ゴム印・名刺・ステッカー・チラシ・ポスター・グッズまで、なんでもお作りします。認印は店頭最短15分、名刺は最短当日。1点から、全国発送も。">
-  <meta property="og:url" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/">
+  <meta property="og:url" content="https://hankoya-bunchan.com/">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/img/ogp.jpg">
+  <meta property="og:image" content="https://hankoya-bunchan.com/img/ogp.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="はんこ屋ぶんちゃん これ全部つくれます！">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bunchan-groobeat.github.io/hankoya-bunchan-hp/img/ogp.jpg">
+  <meta name="twitter:image" content="https://hankoya-bunchan.com/img/ogp.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -119,7 +119,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=202608310037">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
@@ -197,39 +197,39 @@
         <div class="carousel">
           <div class="carousel-track" id="carouselTrack">
           <a class="ci" id="item-inkan" href="inkan.html" aria-label="印鑑について相談する">
-            <img class="ci-img" src="img/card-inkan.jpg" alt="印鑑 — 認印は15分。実印、銀行印も当日お渡し可能。" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-inkan.png" alt="印鑑 — 認印は15分。実印、銀行印も当日お渡し可能。" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">印鑑</span>
           </a>
           <a class="ci" id="item-gomuin" href="gomuin.html" aria-label="ゴム印について相談する">
-            <img class="ci-img" src="img/card-gomuin.jpg" alt="ゴム印 — 午前中受付で次の日午後のお渡し！サイズ、素材も指定可能！" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-gomuin.png" alt="ゴム印 — 午前中受付で次の日午後のお渡し！サイズ、素材も指定可能！" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">ゴム印</span>
           </a>
           <a class="ci" id="item-meishi" href="meishi.html" aria-label="名刺について相談する">
-            <img class="ci-img" src="img/card-meishi.jpg" alt="名刺 — 最短当日お渡し可能！用紙や細かいオプション選べます！" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-meishi.png" alt="名刺 — 最短当日お渡し可能！用紙や細かいオプション選べます！" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">名刺</span>
           </a>
           <a class="ci" id="item-sticker" href="sticker.html" aria-label="ステッカーについて相談する">
-            <img class="ci-img" src="img/card-sticker.jpg" alt="ステッカー — お店のノベルティー用から車など貼り付ける屋外用まで幅広いステッカー作れます！" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-sticker.png" alt="ステッカー — お店のノベルティー用から車など貼り付ける屋外用まで幅広いステッカー作れます！" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">ステッカー</span>
           </a>
           <a class="ci" id="item-flyer" href="flyer.html" aria-label="チラシについて相談する">
-            <img class="ci-img" src="img/card-flyer.jpg" alt="チラシ — 配りたい相手が、決まっているなら。開店・セール告知に。" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-flyer.png" alt="チラシ — 配りたい相手が、決まっているなら。開店・セール告知に。" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">チラシ</span>
           </a>
           <a class="ci" id="item-goods" href="goods.html" aria-label="グッズについて相談する">
-            <img class="ci-img" src="img/card-goods.jpg" alt="グッズ — 配って、覚えて帰ってもらう。記念品・販促・粗品に。" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-goods.png" alt="グッズ — 配って、覚えて帰ってもらう。記念品・販促・粗品に。" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">グッズ</span>
           </a>
           <a class="ci" id="item-other" href="other.html" aria-label="その他について相談する">
-            <img class="ci-img" src="img/card-other.jpg" alt="その他 — ここに無いものも、大体つくれます。まずは聞いてください。" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-other.png" alt="その他 — ここに無いものも、大体つくれます。まずは聞いてください。" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">その他</span>
           </a>
           <a class="ci" id="item-poster" href="poster.html" aria-label="ポスターについて相談する">
-            <img class="ci-img" src="img/card-poster.jpg" alt="ポスター — 遠くからでも、読ませる。店頭掲示・イベント告知に。" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-poster.png" alt="ポスター — 遠くからでも、読ませる。店頭掲示・イベント告知に。" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">ポスター</span>
           </a>
           <a class="ci" id="item-kaigyo" href="kaigyo.html" aria-label="開店・開業パックについて相談する">
-            <img class="ci-img" src="img/card-kaigyo.jpg" alt="開店・開業パック — ロゴ、印鑑、ゴム印、名刺、のぼりまで。開業に要るもの一式まとめてお任せください。" loading="lazy" width="675" height="1200">
+            <img class="ci-img" src="img/card-kaigyo.png" alt="開店・開業パック — ロゴ、印鑑、ゴム印、名刺、のぼりまで。開業に要るもの一式まとめてお任せください。" loading="lazy" width="675" height="1200">
           </a>
           </div>
         </div>
@@ -616,29 +616,6 @@
             <span class="yt-brand__name"><svg class="yt-mark" viewBox="0 0 28 20" width="26" height="19" aria-hidden="true" focusable="false"><path fill="#FF0000" d="M27.4 3.1a3.5 3.5 0 0 0-2.5-2.5C22.7 0 14 0 14 0S5.3 0 3.1.6A3.5 3.5 0 0 0 .6 3.1C0 5.3 0 10 0 10s0 4.7.6 6.9a3.5 3.5 0 0 0 2.5 2.5C5.3 20 14 20 14 20s8.7 0 10.9-.6a3.5 3.5 0 0 0 2.5-2.5c.6-2.2.6-6.9.6-6.9s0-4.7-.6-6.9z"/><path fill="#fff" d="M11.2 14.3 18.4 10l-7.2-4.3z"/></svg>はんこ屋ぶんちゃんねる</span>
           </span>
         </a>
-        <!-- ぶんちゃんねるの訪問先サムネ。ゆっくり左から右へ流れ、押すと一覧へ（2026-08-31 社長指示）
-             ★サムネは bunchannel.html と同じものを使う。動画が増えたら tools/yt-marquee.mjs を再実行 -->
-        <a class="yt-strip" href="bunchannel.html" aria-label="ぶんちゃんねるで訪ねたお店の一覧を見る">
-          <span class="yt-strip__track">
-            <img src="https://i.ytimg.com/vi/eHN2_ApEZzI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/HU5huV3CpTI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/DI4257JdAaw/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/5Y3TlRwRsHU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/muXZlFpN0B0/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/hU0nnUJ-XYk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/OMw_HsSqpDE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/WAI8SvHQY2g/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/Dth1btV3dIU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/A3xzbAqm_lc/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/RMIbvln_T8Y/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/K1o-EMbYt-g/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/q3Mnwk5lfgk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/hy3H0jgBTiA/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/BgL1f0tE6oc/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <img src="https://i.ytimg.com/vi/0WQuYjV3ob8/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <span aria-hidden="true" class="yt-strip__dup"><img src="https://i.ytimg.com/vi/eHN2_ApEZzI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/HU5huV3CpTI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/DI4257JdAaw/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/5Y3TlRwRsHU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/muXZlFpN0B0/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/hU0nnUJ-XYk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/OMw_HsSqpDE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/WAI8SvHQY2g/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/Dth1btV3dIU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/A3xzbAqm_lc/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/RMIbvln_T8Y/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/K1o-EMbYt-g/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/q3Mnwk5lfgk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/hy3H0jgBTiA/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/BgL1f0tE6oc/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><img src="https://i.ytimg.com/vi/0WQuYjV3ob8/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"></span>
-          </span>
-        </a>
         <h2 class="section-title" id="yt-title">こんなに最高な「人」が！<br>福島県には沢山あります！</h2>
         <p class="section-lead">開業10周年を記念にはじめた、店主の國分がやっているYouTubeチャンネルです。<b>はんこ屋ぶんちゃんを通して出会った、素晴らしい方々を紹介しています。</b>お店、会社、チーム——郡山を中心に、福島の「最高な人」を訪ね歩いています。お店のことも、店主の人となりも、ここを見ていただくのが一番早いと思います。</p>
         <div class="pg-actions">
@@ -838,6 +815,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202608310037" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
