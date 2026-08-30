@@ -152,7 +152,7 @@
               <a href="meishi.html">名刺</a>
               <a href="sticker.html">ステッカー</a>
               <a href="flyer.html">チラシ</a>
-              <a href="poster.html">ポスター</a>
+              <a href="poster.html">飲食店様向け</a>
               <a href="goods.html">グッズ</a>
               <a href="other.html">その他</a>
               <a href="kaigyo.html">開業・開店パック</a>
@@ -216,10 +216,6 @@
             <img class="ci-img" src="img/card-flyer.png" alt="チラシ — 配りたい相手が、決まっているなら。開店・セール告知に。" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">チラシ</span>
           </a>
-          <a class="ci" id="item-poster" href="poster.html" aria-label="ポスターについて相談する">
-            <img class="ci-img" src="img/card-poster.png" alt="ポスター — 遠くからでも、読ませる。店頭掲示・イベント告知に。" loading="lazy" width="675" height="1200">
-            <span class="ci-fallback">ポスター</span>
-          </a>
           <a class="ci" id="item-goods" href="goods.html" aria-label="グッズについて相談する">
             <img class="ci-img" src="img/card-goods.png" alt="グッズ — 配って、覚えて帰ってもらう。記念品・販促・粗品に。" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">グッズ</span>
@@ -227,6 +223,13 @@
           <a class="ci" id="item-other" href="other.html" aria-label="その他について相談する">
             <img class="ci-img" src="img/card-other.png" alt="その他 — ここに無いものも、大体つくれます。まずは聞いてください。" loading="lazy" width="675" height="1200">
             <span class="ci-fallback">その他</span>
+          </a>
+          <a class="ci" id="item-poster" href="poster.html" aria-label="ポスターについて相談する">
+            <img class="ci-img" src="img/card-poster.png" alt="ポスター — 遠くからでも、読ませる。店頭掲示・イベント告知に。" loading="lazy" width="675" height="1200">
+            <span class="ci-fallback">ポスター</span>
+          </a>
+          <a class="ci" id="item-kaigyo" href="kaigyo.html" aria-label="開店・開業パックについて相談する">
+            <img class="ci-img" src="img/card-kaigyo.png" alt="開店・開業パック — ロゴ、印鑑、ゴム印、名刺、のぼりまで。開業に要るもの一式まとめてお任せください。" loading="lazy" width="675" height="1200">
           </a>
           </div>
         </div>
@@ -240,7 +243,7 @@
             <span class="bc-go">相談する&nbsp;→</span>
           </a>
           <a class="brand-card brand-design" href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">
-            <span class="bc-lead">ホームページ制作、アプリ制作、看板制作はこちら！</span>
+            <span class="bc-lead">看板・ホームページ・アプリはこちら！</span>
             <span class="bc-name">BUN Design<small>ぶんデザイン</small></span>
             <span class="bc-go">相談する&nbsp;→</span>
           </a>
@@ -274,6 +277,8 @@
           <li><b>ゴム印・住所印</b>請求書や封筒に。開業したその日から毎日使う道具です。</li>
           <li><b>名刺・ショップカード</b>挨拶まわりと開店告知に。ロゴと揃えてデザインします。</li>
           <li><b>のぼり・チラシ</b>開店を知らせる販促物。オープン日に間に合うよう段取りします。</li>
+          <li class="pack-list__bunpri"><b>ユニフォーム・Tシャツ</b>スタッフのユニフォームは、同じ店主の「BUN PRINT（ぶんプリ）」へ。<a href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">ぶんプリに相談する →</a></li>
+          <li class="pack-list__bunpri"><b>看板・ホームページ・アプリ</b>お店の看板、ホームページ、アプリは、同じ店主の「BUN Design（ぶんデザイン）」へ。<a href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">ぶんデザインに相談する →</a></li>
         </ul>
         <p class="pack-when">ご相談は<b>開業日の1〜2か月前</b>がおすすめです。お急ぎもご相談ください。<b>全部でなく一部だけ</b>でも構いません。お見積りは無料です。</p>
         <div class="pg-actions">
@@ -464,7 +469,7 @@
             <a href="other.html">のぼり・横断幕・のれんを見る</a>
           </li>
         </ul>
-        <p class="brand-note">Tシャツプリント・ユニフォームは、同じ店主の「BUN PRINT（ぶんプリ）」で承っています。</p>
+        <p class="brand-note">Tシャツ・ユニフォームは「BUN PRINT（ぶんプリ）」、<b>取り付け工事を伴う看板</b>とホームページ・アプリは「BUN Design（ぶんデザイン）」で承っています。どちらも同じ店主です。</p>
       </div>
     </section>
 
@@ -522,27 +527,52 @@
             <a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-1.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a>
             <a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-1.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a>
             <a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-1.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a>
+            <a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-1.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a>
             <a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-1.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a>
+            <a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-1.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a>
+            <a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-1.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a>
+            <a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-1.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a>
             <a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-2.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a>
             <a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-2.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a>
             <a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-2.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a>
+            <a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-2.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a>
             <a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-2.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a>
+            <a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-2.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a>
+            <a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-2.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a>
+            <a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-2.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a>
             <a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-3.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a>
             <a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-3.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a>
-            <span aria-hidden="true" class="works-dup"><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-1.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-1.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-1.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-1.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-2.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-2.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-2.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-2.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-3.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-3.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a></span>
+            <a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-3.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a>
+            <a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-3.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a>
+            <a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-3.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a>
+            <a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-3.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a>
+            <a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-3.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a>
+            <span aria-hidden="true" class="works-dup"><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-1.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-1.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-1.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-1.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-1.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-1.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a><a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-1.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a><a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-1.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-2.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-2.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-2.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-2.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-2.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-2.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a><a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-2.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a><a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-2.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-3.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-3.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-3.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-3.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-3.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-3.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a><a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-3.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a></span>
           </div>
           <div class="works-track works-track--right">
-            <a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-3.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a>
-            <a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-3.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a>
+            <a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-3.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a>
             <a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-4.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a>
             <a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-4.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a>
             <a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-4.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a>
+            <a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-4.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a>
             <a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-4.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a>
+            <a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-4.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a>
+            <a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-4.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a>
+            <a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-4.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a>
             <a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-5.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a>
             <a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-5.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a>
             <a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-5.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a>
+            <a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-5.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a>
             <a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-5.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a>
-            <span aria-hidden="true" class="works-dup"><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-3.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-3.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-4.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-4.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-4.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-4.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-5.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-5.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-5.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-5.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a></span>
+            <a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-5.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a>
+            <a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-5.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a>
+            <a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-5.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a>
+            <a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-6.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a>
+            <a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-6.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a>
+            <a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-6.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a>
+            <a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-6.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a>
+            <a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-6.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a>
+            <span aria-hidden="true" class="works-dup"><a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-3.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-4.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-4.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-4.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-4.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-4.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-4.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a><a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-4.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a><a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-4.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a><a class="works-cell works-cell--link" href="inkan.html" data-photo="img/works-inkan-5.jpg" aria-label="印鑑の制作事例"><span class="works-cell__label">印鑑</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-5.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-5.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-5.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-5.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-5.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a><a class="works-cell works-cell--link" href="goods.html" data-photo="img/works-goods-5.jpg" aria-label="グッズの制作事例"><span class="works-cell__label">グッズ</span></a><a class="works-cell works-cell--link" href="other.html" data-photo="img/works-other-5.jpg" aria-label="その他の制作事例"><span class="works-cell__label">その他</span></a><a class="works-cell works-cell--link" href="gomuin.html" data-photo="img/works-gomuin-6.jpg" aria-label="ゴム印の制作事例"><span class="works-cell__label">ゴム印</span></a><a class="works-cell works-cell--link" href="meishi.html" data-photo="img/works-meishi-6.jpg" aria-label="名刺の制作事例"><span class="works-cell__label">名刺</span></a><a class="works-cell works-cell--link" href="sticker.html" data-photo="img/works-sticker-6.jpg" aria-label="ステッカーの制作事例"><span class="works-cell__label">ステッカー</span></a><a class="works-cell works-cell--link" href="flyer.html" data-photo="img/works-flyer-6.jpg" aria-label="チラシの制作事例"><span class="works-cell__label">チラシ</span></a><a class="works-cell works-cell--link" href="poster.html" data-photo="img/works-poster-6.jpg" aria-label="ポスターの制作事例"><span class="works-cell__label">ポスター</span></a></span>
           </div>
         </div>
         <p class="works-note">郡山駅前で11年、実際にお作りしたものです。品目名を押すと、その品目のページへ移ります。</p>
@@ -756,7 +786,7 @@
         <a href="meishi.html">名刺</a>
         <a href="sticker.html">ステッカー</a>
         <a href="flyer.html">チラシ</a>
-        <a href="poster.html">ポスター</a>
+        <a href="poster.html">飲食店様向け</a>
         <a href="goods.html">グッズ</a>
         <a href="other.html">その他</a>
         <a href="kaigyo.html">開業・開店パック</a>
