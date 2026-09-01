@@ -103,7 +103,7 @@
   ]
 }
   </script>
-  <link rel="stylesheet" href="style.css?v=202609011135">
+  <link rel="stylesheet" href="style.css?v=202609011143">
 </head>
 <body>
   <main>
@@ -214,19 +214,24 @@
     </section>
 
     <!-- 制作事例 -->
-    <section class="section warm reveal" id="works" aria-labelledby="works-title">
+    <!-- 🔴★2026-09-01: 開業のお客様の実例写真が1枚も無いため、写真が届くまで閉じている。
+         ★他品目（印鑑・名刺など）の写真で埋めないこと。ここは「開業の実例」と書いてあるので、
+           流用すると嘘になる。
+         ★戻し方: 下の style="display:none" を消し、img/works-kaigyo-1.jpg 〜 -6.jpg を置いて
+           node C:/HQ/hanko-bunchan/tools/works-grid.mjs を流す。それだけで入る。 -->
+    <section class="section warm reveal" id="works" aria-labelledby="works-title" style="display:none">
       <div class="container">
         <p class="eyebrow"><span class="eb-en">WORKS</span><span class="eb-ja">制作事例</span></p>
         <h2 class="section-title" id="works-title">開業を、何度も<br>手伝ってきました。</h2>
         <p class="section-lead">これまでにお手伝いした開業・開店まわりの実例です。</p>
         <!-- ★写真は img/works-kaigyo-1.jpg 〜 -6.jpg を置くと入ります -->
         <div class="works-grid" data-works="kaigyo">
-          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
-          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
-          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
-          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
-          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
-          <div class="works-cell"><span>ここに開業セットの制作事例</span></div>
+          <div class="works-cell"></div>
+          <div class="works-cell"></div>
+          <div class="works-cell"></div>
+          <div class="works-cell"></div>
+          <div class="works-cell"></div>
+          <div class="works-cell"></div>
         </div>
       </div>
     </section>
@@ -380,6 +385,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202609011135" defer></script>
+  <script src="script.js?v=202609011143" defer></script>
 </body>
 </html>
