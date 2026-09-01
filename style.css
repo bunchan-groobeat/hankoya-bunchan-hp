@@ -704,8 +704,13 @@
       .cr-text small { font-size: 12px; }
     }
     /* お問い合わせは1つの枠にまとめる（2026-08-25 社長指示） */
+    /* ★2026-09-01 社長指示「メールで相談する の右横の空白が気になる」
+       ＝枠は720px、器（.container）は1280pxで、左寄せだったため右に560pxの空きが出ていた。
+       中央寄せにして左右均等にする。★720pxはフォームの1行が長くなりすぎない幅なので広げない
+       （入力欄が1200px幅に伸びると、かえって読みにくく安っぽくなる）。 */
     .contact-one {
       max-width: 720px;
+      margin-inline: auto;
       padding: 32px 30px;
       background: #fff;
       border: 3px solid var(--text);
@@ -1145,7 +1150,10 @@
     .contact { color: var(--text); }
     .contact-grid { display: grid; grid-template-columns: 1fr auto; gap: 42px; align-items: end; }
     .contact-actions { display: flex; flex-direction: column; gap: 14px; }
-    .contact h2 { margin-bottom: 16px; color: var(--navy); font-size: clamp(30px, 4vw, 48px); }
+    /* ★2026-09-01 社長指示「タイトル文字が大きすぎる」＝PCで48pxだった。
+       他セクションのh2は46pxだが、ここだけ2行（「こんなの作れる？」／だけでも大歓迎です。）なので
+       同じ大きさだと塊の高さが倍になって重い。38pxへ落とす。スマホ側（144行の30px）は据え置き。 */
+    .contact h2 { margin-bottom: 16px; color: var(--navy); font-size: clamp(30px, 3vw, 38px); }
     .contact-info { color: var(--muted); }
     .contact-info a { text-decoration: none; }
     /* ===== フッター：赤地（2026-08-25 社長指示・dub-design と同じ形）===== */
@@ -1853,6 +1861,35 @@
   /* スマホは横長に切って、品物が大きく見えるようにする */
   .pg-hero .pg-band { min-height: 0; aspect-ratio: 5 / 4; object-position: center 45%; }
   .pg-hero .pg-lead { padding: 28px 22px 32px; }
+}
+
+/* ★★2026-09-01 社長指示（2回目）「商品ページが見ずらい。ボックス大きすぎる。
+   　　上部に横型の上下短いボックスにして」＝PCのヒーローを【横長の帯＋その下に文言】へ組み替える。
+
+   経緯（同じ日に2段階で変えている。前の指示だけ読んで戻さないこと）
+   ①「上段の画像がでかすぎる」→ 左右2カラムのまま 540px で頭打ちにした
+   ②「見ずらい。上部に横型の上下短いボックスに」→ ①では足りず、**組み方そのものを変えた**のが下記
+
+   何が問題だったか＝hero-*.jpg が 800×1422 の【縦長】。左右2カラム（各640px）に縦長を入れると
+   画像の元比率がそのまま行の高さになり、**1138px**まで伸びていた（ビューポート950pxより高い）。
+   540で止めても、赤ベタの文言パネルが640×540の大きな塊のままで「大きすぎる・見づらい」は残った。
+
+   直し方＝PCだけ1カラムにして、
+     ・画像は横幅いっぱい・高さ220pxの【帯】に切る（object-fit:cover。縦長写真の中央帯だけ見せる）
+     ・文言はその下。1カラムなので横幅が倍になり、行が詰まって縦が自然に短くなる
+   ★band-*.jpg（1600×800）は使わない。**文字が焼き込まれていて h1・本文と二重になる**うえ、
+     8/30の色の振り直し前に作られていて品目色と合っていない（印鑑ページなのに緑）。
+   スマホ（上の max-width:760px）は元から「写真が上・文字が下」なので触っていない。 */
+@media (min-width: 761px) {
+  .pg-hero-inner { grid-template-columns: 1fr; }
+  .pg-hero .pg-band {
+    order: 1;
+    height: 220px;
+    min-height: 0;
+    max-height: none;
+    object-position: center 45%;
+  }
+  .pg-hero .pg-lead { order: 2; padding: 28px 32px 32px; }
 }
 
 
