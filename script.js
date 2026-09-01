@@ -223,3 +223,42 @@
     probe.src = src;
   });
 })();
+
+/* アンカーで開かれたときの位置合わせ（2026-09-01）
+   ★直している困りごとは2つ。
+     ① 飛んだ先が .reveal だと opacity:0 のまま「真っ白」に見える → その場で表示する
+     ② 画像が順に入ってページが伸び続けるため、飛んだ位置からどんどんずれる
+        （実測: #app はページ内15085pxにあるのに、合わせた直後の画面は115px＝ほぼトップだった）
+   ★1回合わせるだけでは足りないので、**高さが変わるたびに合わせ直す**。
+     ただしユーザーが自分でスクロールを始めたら即やめる（勝手に飛ぶのは不快なので）。
+     4秒で見切る。それ以上引っぱると、読み終わったあとに動いてしまう。 */
+(() => {
+  if (!location.hash) return;
+  let target;
+  try { target = document.querySelector(location.hash); } catch (e) { return; }
+  if (!target) return;
+
+  // 飛んだ先とその中身は、出てくる演出を待たずにすぐ見せる
+  target.classList.add('visible');
+  target.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+
+  let done = false;
+  // ★behavior は必ず 'instant'。
+  //   html に scroll-behavior:smooth があるため、既定のままだと1回1回がアニメーションになり、
+  //   高さが変わるたびに呼び直すと**前のアニメーションを打ち消し合って一歩も進まない**。
+  //   実測: 既定では scrollY が114のまま動かず、instant にした瞬間に 12799 まで飛んだ。
+  //   （クリックしたときの「ぬるっ」は smooth のまま残るので、気持ちよさは失われない）
+  const settle = () => { if (!done) target.scrollIntoView({ behavior: 'instant', block: 'start' }); };
+  const stop = () => { done = true; if (ro) ro.disconnect(); };
+
+  addEventListener('wheel', stop, { passive: true, once: true });
+  addEventListener('touchstart', stop, { passive: true, once: true });
+  addEventListener('keydown', stop, { once: true });
+
+  let ro = null;
+  if ('ResizeObserver' in window) { ro = new ResizeObserver(settle); ro.observe(document.body); }
+  addEventListener('load', settle);
+  setTimeout(settle, 300);
+  setTimeout(settle, 1000);
+  setTimeout(stop, 4000);
+})();
