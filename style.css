@@ -1278,10 +1278,12 @@
        2026-08-25 社長指示で強化 → 2026-08-27 さらに「ぬるっ」と感じるよう作り直し
        ①セクション全体をゆっくり持ち上げる ②中身を少しずつ順に出す（ずらし）
        ③わずかに拡大しながら出す。この3つが重なると「ぬるっ」と見える */
+    /* ★2026-09-04 社長「全体のコメントもっと早くだして」→ 1.05s→.55s／中身 .8s→.4s／ずらし幅を半分に。
+       「ぬるっ」の感触（イージング・持ち上げ・拡大）は残し、時間だけ詰めた */
     .reveal {
       opacity: 0;
-      transform: translateY(44px) scale(.988);
-      transition: opacity 1.05s cubic-bezier(.16,1,.3,1), transform 1.05s cubic-bezier(.16,1,.3,1);
+      transform: translateY(32px) scale(.99);
+      transition: opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1);
       will-change: opacity, transform;
     }
     .reveal.visible { opacity: 1; transform: none; }
@@ -1289,17 +1291,17 @@
     /* 中身のずらし出し。見出し→リード→本体の順に少しずつ遅れて出る */
     .reveal > .container > * {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity .8s cubic-bezier(.16,1,.3,1) var(--rd, 0s),
-                  transform .8s cubic-bezier(.16,1,.3,1) var(--rd, 0s);
+      transform: translateY(14px);
+      transition: opacity .4s cubic-bezier(.16,1,.3,1) var(--rd, 0s),
+                  transform .4s cubic-bezier(.16,1,.3,1) var(--rd, 0s);
     }
     .reveal.visible > .container > * { opacity: 1; transform: none; }
-    .reveal > .container > *:nth-child(1) { --rd: .10s; }
-    .reveal > .container > *:nth-child(2) { --rd: .18s; }
-    .reveal > .container > *:nth-child(3) { --rd: .26s; }
-    .reveal > .container > *:nth-child(4) { --rd: .34s; }
-    .reveal > .container > *:nth-child(5) { --rd: .42s; }
-    .reveal > .container > *:nth-child(n+6) { --rd: .48s; }
+    .reveal > .container > *:nth-child(1) { --rd: .04s; }
+    .reveal > .container > *:nth-child(2) { --rd: .08s; }
+    .reveal > .container > *:nth-child(3) { --rd: .12s; }
+    .reveal > .container > *:nth-child(4) { --rd: .16s; }
+    .reveal > .container > *:nth-child(5) { --rd: .20s; }
+    .reveal > .container > *:nth-child(n+6) { --rd: .24s; }
 
     /* ★2026-09-04 社長指示：見出しを1文字ずつ打ち込む（script.js の typeTitle と対）
        .is-typing は JS が「演出できる」と確定したときだけ h2 に付ける。

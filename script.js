@@ -218,13 +218,13 @@
         // 画面に少し入った時点で動き始める。下から120px手前で発火させ、
         // スクロールに合わせて自然に見えるようにする（2026-08-25）
         threshold: 0,
-        rootMargin: "0px 0px -120px 0px",
+        rootMargin: "0px 0px -60px 0px",   /* 120→60px：もっと早く出す（2026-09-04 社長指示） */
       });
       items.forEach(item => observer.observe(item));
 
       // 保険：監視が働かない環境でも、スクロール位置から自前で判定する
       const showByPosition = () => {
-        const line = window.innerHeight - 120;
+        const line = window.innerHeight - 60;
         items.forEach((item) => {
           if (item.classList.contains("visible")) return;
           if (item.getBoundingClientRect().top < line) show(item);
