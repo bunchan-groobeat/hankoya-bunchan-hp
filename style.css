@@ -1322,8 +1322,29 @@
     .app-pop a:hover { transform: translateY(-4px); }
     .app-pop img { display: block; width: 100%; height: auto; }
     @media (max-width: 760px) { .app-pop { grid-template-columns: 1fr; max-width: 420px; } }
-    /* トップの #app に出す1枚版（表のみ・2026-09-04 社長指示）。QRより上に、縦長のまま1枚 */
-    .app-pop--top { grid-template-columns: 1fr; max-width: 400px; margin: 18px auto 26px; }
+    /* トップの #app：告知POP上段（スマホ画面＋「アプリ、はじめました。」）＋アイコンのカード（2026-09-04 社長「この部分とアイコンをうまく」）
+       ★チラシの白いカード（アイコン／公式アプリ・無料／QR）をHTMLで再現。画像は上段だけ切り出して使う */
+    .app-hero { max-width: 760px; margin: 22px auto 26px; }
+    .app-hero__visual { display: block; border-radius: 22px; overflow: hidden; box-shadow: 0 12px 34px rgba(232,69,44,.28); background: #e8452c; }
+    .app-hero__visual img { display: block; width: 100%; height: auto; }
+    .app-card { display: flex; align-items: center; gap: 18px; margin-top: 16px; padding: 16px 18px; background: #fff; border: 2px solid #f2d9d3; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .app-card__icon { flex: 0 0 auto; width: 84px; height: 84px; border-radius: 22%; background: #e8452c; box-shadow: 0 4px 12px rgba(0,0,0,.18); display: grid; place-items: center; overflow: hidden; }
+    .app-card__icon img { width: 76%; height: 76%; object-fit: contain; }
+    .app-card__body { flex: 1 1 auto; min-width: 0; }
+    .app-card__name { margin: 0; font-size: clamp(17px, 2.2vw, 22px); font-weight: 900; color: var(--navy); line-height: 1.3; }
+    .app-card__free { display: inline-block; margin-left: 8px; padding: 2px 12px; border-radius: 999px; background: #e8452c; color: #fff; font-size: 13px; font-weight: 700; vertical-align: middle; }
+    .app-card__note { margin: 6px 0 0; font-size: 13px; color: #6b6b6b; }
+    .app-card__qr { flex: 0 0 auto; width: 92px; height: 92px; border: 1px solid #e5e5e5; border-radius: 10px; padding: 4px; background: #fff; }
+    .app-card__qr img { display: block; width: 100%; height: 100%; }
+    /* スマホ＝QRは出さない（スマホで見ている人はカメラで読めない。すぐ下の「アプリを開く」で足りる）。文字に幅を渡す */
+    @media (max-width: 560px) {
+      .app-card { gap: 14px; padding: 14px 16px; }
+      .app-card__icon { width: 64px; height: 64px; }
+      .app-card__qr { display: none; }
+      .app-card__name { font-size: 17px; }
+      .app-card__free { margin-left: 6px; padding: 1px 10px; font-size: 12px; }
+      .app-card__note { font-size: 12px; }
+    }
 
     /* ★scroll-behavior: smooth は19行目で既に指定済み。ここには重ねて書かない。 */
 

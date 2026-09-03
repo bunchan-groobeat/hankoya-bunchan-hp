@@ -119,7 +119,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=20260904c">
+  <link rel="stylesheet" href="style.css?v=20260904d">
 </head>
 <body>
   <main>
@@ -677,15 +677,24 @@
         <p class="eyebrow"><span class="eb-en">APP</span><span class="eb-ja">ぶんちゃんアプリ</span></p>
         <h2 class="section-title" id="app-title">紙のポイントカード、<br>もう持ち歩かなくて大丈夫です。</h2>
         <p class="section-lead">スマホで開くだけの、はんこ屋ぶんちゃんのポイントカードです。<b>アプリストアからのダウンロードは要りません。</b>お会計のときにスタンプがたまり、<b>10個たまると1,000円分のクーポン</b>になります。会員証もこの中に入っているので、お財布が1枚軽くなります。ご登録は無料です。</p>
-        <!-- ★2026-09-04 社長「アプリのとこに、トップページのアプリはじめました。のPOPだして」＝告知POPの表（app-pop-1.jpg）。押すとアプリページへ -->
-        <div class="app-pop app-pop--top">
-          <a href="app.html" aria-label="ぶんちゃんアプリの詳しい説明を見る"><img src="img/app-pop-1.jpg" alt="ぶんちゃんアプリ告知POP — アプリ、はじめました。スマホがそのまま会員証に。インストールは要りません。" width="900" height="1600" loading="lazy"></a>
+        <!-- ★2026-09-04 社長「この部分とアイコンをうまくトップページに」＝告知POP（表）の上段（スマホ画面＋「アプリ、はじめました。」）を
+             img/app-hero.jpg に切り出し、その下にアイコン＋「公式アプリ・無料」＋QRのカードをHTMLで組んだ（チラシの白いカードの再現）。
+             元＝PWA/告知物_2026-09-01/チラシ_スマホ版/chirashi_sp_front.png（y=100〜870を切り出し） -->
+        <div class="app-hero">
+          <a class="app-hero__visual" href="app.html" aria-label="ぶんちゃんアプリの詳しい説明を見る"><img src="img/app-hero.jpg" alt="アプリ、はじめました。スマホが、そのまま会員証に。インストールは要りません。いま登録するとスタンプ2個プレゼント！" width="960" height="684" loading="lazy"></a>
+          <div class="app-card">
+            <span class="app-card__icon"><img src="img/app-icon-256.png" alt="" width="256" height="256" loading="lazy"></span>
+            <div class="app-card__body">
+              <p class="app-card__name">はんこ屋ぶんちゃん 公式アプリ <span class="app-card__free">無料</span></p>
+              <p class="app-card__note">QRをスマホのカメラで読むだけ・30秒で登録できます</p>
+            </div>
+            <a class="app-card__qr" href="https://app.groobeat.jp" target="_blank" rel="noopener" aria-label="ぶんちゃんアプリを開く"><img src="img/qr-app.png" alt="ぶんちゃんアプリのQRコード" width="480" height="480" loading="lazy"></a>
+          </div>
         </div>
         <div class="pg-actions">
           <a class="cta" href="https://app.groobeat.jp" target="_blank" rel="noopener">アプリを開く</a>
           <a class="cta cta-second" href="app.html">詳しくはこちら</a>
         </div>
-        <p class="app-qr app-qr--sm"><img src="img/qr-app.png" alt="ぶんちゃんアプリのQRコード" width="480" height="480" loading="lazy"></p>
       </div>
     </section>
 
@@ -861,6 +870,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260904c" defer></script>
+  <script src="script.js?v=20260904d" defer></script>
 </body>
 </html>
