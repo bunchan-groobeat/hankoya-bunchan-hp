@@ -1311,6 +1311,9 @@
       display: inline-block;
     }
     .section-title.is-typing .tw-char.is-on { opacity: 1; transform: translateY(0); }
+    /* 打つ見出しは「ずらし出し」のフェード対象から外す。フェードと同時に打つと、打っているのが埋もれて見えない
+       （2026-09-04 社長「見出し打たれてるのわからない」）。文字だけが順に置かれていく */
+    .reveal > .container > h2.section-title.is-typing { opacity: 1; transform: none; transition: none; }
 
     /* アプリページ：告知POP（PWA/告知物_2026-09-01 のスマホ版チラシ表裏）。PC=横2枚／スマホ=縦積み */
     .app-pop { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 760px; margin: 22px auto 0; }

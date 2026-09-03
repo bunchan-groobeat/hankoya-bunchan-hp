@@ -151,8 +151,11 @@
        ・隠すのは「演出できる」と確定して h2 に .is-typing を付けたときだけ（CSS側も .is-typing 起点）
        ・動きを減らす設定の方には演出しない
        ・打ち始めるのは .reveal が visible になった瞬間（スクロールで見えたとき）。1回だけ */
-    const TW_STEP = 70;        /* 1文字あたり。見出しは12〜18文字なので 70ms×18 ≒ 1.3秒。水野谷(165ms)はヒーロー1本用の速さ */
-    const TW_START = 150;      /* セクションが浮き上がり始めてから打ち始める */
+    /* ★2026-09-04 深夜 社長「見出し打たれてるのわからない」→ 3点を直した
+       ①70ms→110ms/字（18文字で約2秒）②打ち始めは「見出しが画面の下から30%より上に入ったとき」（セクションの
+       浮き上がりと同時だと、フェードに埋もれて打っているのが見えない）③CSS側で見出しのフェードを外し、文字だけ動かす */
+    const TW_STEP = 110;       /* 1文字あたり。水野谷(165ms)はヒーロー1本用。ここは見出しが多いので少し速め */
+    const TW_START = 120;      /* 見出しが見える位置に来てから打ち始めるまで */
     const twReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const twReady = !twReduce && 'IntersectionObserver' in window;
     if (twReady) {
@@ -175,19 +178,26 @@
         h.classList.add('is-typing');
       });
     }
-    const typeTitle = (section) => {
-      section.querySelectorAll('h2.section-title.is-typing').forEach((h) => {
-        if (h.dataset.typed) return;
-        h.dataset.typed = '1';
-        h.querySelectorAll('.tw-char').forEach((s, i) => {
-          setTimeout(() => s.classList.add('is-on'), TW_START + i * TW_STEP);
-        });
+    const typeOne = (h) => {
+      if (h.dataset.typed) return;
+      h.dataset.typed = '1';
+      h.querySelectorAll('.tw-char').forEach((s, i) => {
+        setTimeout(() => s.classList.add('is-on'), TW_START + i * TW_STEP);
       });
     };
+    const typeTitle = (section) => section.querySelectorAll('h2.section-title.is-typing').forEach(typeOne);
+    /* 見出しそのものを監視して、画面の下30%より上に入ったら打つ（セクションの出現より遅らせる） */
+    if (twReady) {
+      const twIO = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { typeOne(e.target); twIO.unobserve(e.target); } });
+      }, { threshold: 0, rootMargin: '0px 0px -30% 0px' });
+      document.querySelectorAll('h2.section-title.is-typing').forEach((h) => twIO.observe(h));
+    }
 
     (() => {
       const items = document.querySelectorAll('.reveal');
-      const show = (item) => { item.classList.add('visible'); typeTitle(item); };
+      /* IntersectionObserver が無い環境だけ、セクション表示と同時に打つ（twIO が無いので） */
+      const show = (item) => { item.classList.add('visible'); if (!twReady) typeTitle(item); };
       if (!('IntersectionObserver' in window)) {
         items.forEach(show);
         return;
