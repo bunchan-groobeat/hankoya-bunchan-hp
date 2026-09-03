@@ -1304,16 +1304,17 @@
     /* ★2026-09-04 社長指示：見出しを1文字ずつ打ち込む（script.js の typeTitle と対）
        .is-typing は JS が「演出できる」と確定したときだけ h2 に付ける。
        素で .tw-char を透明にすると、JSが止まった瞬間に見出しが消える事故になるので必ず .is-typing 起点で書く */
-    .section-title.is-typing .tw-char {
+    /* 対象＝h2.section-title／.big-year「11年」／.years strong／.review-num／品目ページの h1.pg-title（2026-09-04 拡張） */
+    .is-typing .tw-char {
       opacity: 0;
       transform: translateY(.12em);          /* わずかに下から「置く」感じ。大きく動かすと軽くなる */
       transition: opacity .18s ease, transform .18s ease;
       display: inline-block;
     }
-    .section-title.is-typing .tw-char.is-on { opacity: 1; transform: translateY(0); }
+    .is-typing .tw-char.is-on { opacity: 1; transform: translateY(0); }
     /* 打つ見出しは「ずらし出し」のフェード対象から外す。フェードと同時に打つと、打っているのが埋もれて見えない
        （2026-09-04 社長「見出し打たれてるのわからない」）。文字だけが順に置かれていく */
-    .reveal > .container > h2.section-title.is-typing { opacity: 1; transform: none; transition: none; }
+    .reveal > .container > .is-typing { opacity: 1; transform: none; transition: none; }
 
     /* アプリページ：告知POP（PWA/告知物_2026-09-01 のスマホ版チラシ表裏）。PC=横2枚／スマホ=縦積み */
     .app-pop { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 760px; margin: 22px auto 0; }

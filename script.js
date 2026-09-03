@@ -158,25 +158,29 @@
     const TW_START = 120;      /* 見出しが見える位置に来てから打ち始めるまで */
     const twReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const twReady = !twReduce && 'IntersectionObserver' in window;
+    /* ★2026-09-04 社長「スライドで表示されたら打ち込みで11年とかも」→ 対象を広げた。
+       見出し(h2.section-title)＋大きい数字（.big-year「11年」・.years strong・.review-num）＋品目ページのh1(.pg-title) */
+    const TW_TARGETS = '.reveal h2.section-title, .reveal h2.speed-statement, .reveal .big-year, .reveal .years, .reveal .review-num, .pg-hero .pg-title';
     if (twReady) {
-      document.querySelectorAll('.reveal h2.section-title').forEach((h) => {
-        const frag = document.createDocumentFragment();
-        Array.prototype.forEach.call(h.childNodes, (node) => {
+      /* 文字を1つずつ span に包む。<br> はそのまま。<strong>・<span> など入れ子の要素は、要素を残して中の文字だけ包む
+         （「印鑑・名刺は<strong>その日のうちに</strong>」「<strong>11</strong><span>年分</span>」も全部の文字が打たれる） */
+      const wrap = (parent) => {
+        Array.prototype.slice.call(parent.childNodes).forEach((node) => {
           if (node.nodeType === 3) {
+            const frag = document.createDocumentFragment();
             node.textContent.split('').forEach((ch) => {
               const s = document.createElement('span');
               s.className = 'tw-char';
               s.textContent = ch;
               frag.appendChild(s);
             });
-          } else {
-            frag.appendChild(node.cloneNode(true));
+            parent.replaceChild(frag, node);
+          } else if (node.nodeType === 1 && node.tagName !== 'BR') {
+            wrap(node);
           }
         });
-        h.textContent = '';
-        h.appendChild(frag);
-        h.classList.add('is-typing');
-      });
+      };
+      document.querySelectorAll(TW_TARGETS).forEach((h) => { wrap(h); h.classList.add('is-typing'); });
     }
     const typeOne = (h) => {
       if (h.dataset.typed) return;
@@ -185,13 +189,14 @@
         setTimeout(() => s.classList.add('is-on'), TW_START + i * TW_STEP);
       });
     };
-    const typeTitle = (section) => section.querySelectorAll('h2.section-title.is-typing').forEach(typeOne);
-    /* 見出しそのものを監視して、画面の下30%より上に入ったら打つ（セクションの出現より遅らせる） */
+    const typeTitle = (section) => section.querySelectorAll('.is-typing').forEach(typeOne);
+    /* 見出しそのものを監視して、画面の下30%より上に入ったら打つ（セクションの出現より遅らせる）。
+       品目ページのh1は読み込み時点で画面内なので、そのまま即打ち始まる（水野谷のヒーローと同じ） */
     if (twReady) {
       const twIO = new IntersectionObserver((entries) => {
         entries.forEach((e) => { if (e.isIntersecting) { typeOne(e.target); twIO.unobserve(e.target); } });
       }, { threshold: 0, rootMargin: '0px 0px -30% 0px' });
-      document.querySelectorAll('h2.section-title.is-typing').forEach((h) => twIO.observe(h));
+      document.querySelectorAll('.is-typing').forEach((h) => twIO.observe(h));
     }
 
     (() => {
