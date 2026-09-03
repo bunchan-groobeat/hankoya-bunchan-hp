@@ -143,16 +143,59 @@
       });
     })();
 
+    /* ★2026-09-04 社長指示：セクション見出し（h2.section-title）を1文字ずつ打ち込む演出。
+       水野谷HP（site.js:initTypewriter・2026-08-10）の移植。設計はそのまま＝
+       ・HTMLの文字は消さない。1文字ずつ <span class="tw-char"> で包み、CSSで透明にしてから順に見せる
+         → JSが動かない環境・検索・読み上げには最初から全文がある
+       ・<br> はそのまま残す（改行位置を壊さない）
+       ・隠すのは「演出できる」と確定して h2 に .is-typing を付けたときだけ（CSS側も .is-typing 起点）
+       ・動きを減らす設定の方には演出しない
+       ・打ち始めるのは .reveal が visible になった瞬間（スクロールで見えたとき）。1回だけ */
+    const TW_STEP = 70;        /* 1文字あたり。見出しは12〜18文字なので 70ms×18 ≒ 1.3秒。水野谷(165ms)はヒーロー1本用の速さ */
+    const TW_START = 150;      /* セクションが浮き上がり始めてから打ち始める */
+    const twReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const twReady = !twReduce && 'IntersectionObserver' in window;
+    if (twReady) {
+      document.querySelectorAll('.reveal h2.section-title').forEach((h) => {
+        const frag = document.createDocumentFragment();
+        Array.prototype.forEach.call(h.childNodes, (node) => {
+          if (node.nodeType === 3) {
+            node.textContent.split('').forEach((ch) => {
+              const s = document.createElement('span');
+              s.className = 'tw-char';
+              s.textContent = ch;
+              frag.appendChild(s);
+            });
+          } else {
+            frag.appendChild(node.cloneNode(true));
+          }
+        });
+        h.textContent = '';
+        h.appendChild(frag);
+        h.classList.add('is-typing');
+      });
+    }
+    const typeTitle = (section) => {
+      section.querySelectorAll('h2.section-title.is-typing').forEach((h) => {
+        if (h.dataset.typed) return;
+        h.dataset.typed = '1';
+        h.querySelectorAll('.tw-char').forEach((s, i) => {
+          setTimeout(() => s.classList.add('is-on'), TW_START + i * TW_STEP);
+        });
+      });
+    };
+
     (() => {
       const items = document.querySelectorAll('.reveal');
+      const show = (item) => { item.classList.add('visible'); typeTitle(item); };
       if (!('IntersectionObserver' in window)) {
-        items.forEach(item => item.classList.add('visible'));
+        items.forEach(show);
         return;
       }
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            show(entry.target);
             observer.unobserve(entry.target);
           }
         });
@@ -169,14 +212,14 @@
         const line = window.innerHeight - 120;
         items.forEach((item) => {
           if (item.classList.contains("visible")) return;
-          if (item.getBoundingClientRect().top < line) item.classList.add("visible");
+          if (item.getBoundingClientRect().top < line) show(item);
         });
       };
       window.addEventListener("scroll", showByPosition, { passive: true });
       window.addEventListener("resize", showByPosition);
       showByPosition();
       // 何かの理由で最後まで出ないままなら、4秒後に全部表示して詰まらせない
-      setTimeout(() => items.forEach((i) => i.classList.add("visible")), 4000);
+      setTimeout(() => items.forEach(show), 4000);
     })();
 
 /* 制作事例：img/works-<品目>-1..6.jpg が置かれていれば敷く */
