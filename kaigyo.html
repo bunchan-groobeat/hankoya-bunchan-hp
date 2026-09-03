@@ -103,7 +103,7 @@
   ]
 }
   </script>
-  <link rel="stylesheet" href="style.css?v=202609011413">
+  <link rel="stylesheet" href="style.css?v=202609032240">
 </head>
 <body>
   <main>
@@ -177,38 +177,46 @@
         <p class="eyebrow"><span class="eb-en">ITEMS</span><span class="eb-ja">まとめてお作りします</span></p>
         <h2 class="section-title" id="can-title">開業に必要なもの、<br>だいたい揃います。</h2>
         <ul class="item-list">
+          <!-- ★2026-09-03 太郎の下書き。呼びかけ型へ書き換え（旧＝会社の印鑑／ロゴ／ゴム印・住所印／名刺・ショップカード／のぼり・チラシ）。
+               並び順は変えていない。ぶんプリ・ぶんデザインの2項目（pack-list__bunpri）は触っていない。
+               本文の事実（登記に合わせる／店頭なら当日お渡しも可能／一部だけでも可／お見積り無料／1〜2か月前）は、
+               このページのSPEC・FAQに既に書いてあるものだけを使った。
+               ★社長の言葉に差し替える前提の仮文。社長の確認が出るまで本番へは出さない。 -->
           <li>
-            <h3>会社の印鑑</h3>
-            <p>代表者印・銀行印・角印の3点セット。法人設立の登記に間に合わせます。</p>
+            <h3>登記に間に合わせたい方へ！</h3>
+            <p>代表者印・銀行印・角印の3点セットです。登記スケジュールに合わせます。店頭なら当日お渡しも可能です。</p>
           </li>
           <li>
-            <h3>ロゴ</h3>
-            <p>お店の顔になるマーク。名刺にも看板メニューにも、この先ずっと使います。</p>
+            <h3>お店の顔をつくりましょう！</h3>
+            <p>ロゴは名刺にも看板にもメニューにも、この先ずっと使います。開業のいちばん初めにお作りします。</p>
           </li>
           <li>
-            <h3>ゴム印・住所印</h3>
-            <p>請求書や封筒に。開業したその日から毎日使う道具です。</p>
+            <h3>開業したその日から毎日使います！</h3>
+            <p>ゴム印・住所印は請求書や封筒に。サイズは自由に、定番サイズでもお作りできます。</p>
           </li>
           <li>
-            <h3>名刺・ショップカード</h3>
-            <p>挨拶まわりと開店告知に。ロゴと揃えてデザインします。</p>
+            <h3>挨拶まわりに間に合わせます！</h3>
+            <p>名刺・ショップカードは、ロゴと揃えてデザインします。開店のご案内にもお使いいただけます。</p>
           </li>
           <li>
-            <h3>のぼり・チラシ</h3>
-            <p>開店を知らせる販促物。オープン日に間に合うよう段取りします。</p>
+            <h3>オープン日に間に合わせます！</h3>
+            <p>のぼり・チラシは開店を知らせる販促物です。オープン日から逆算して段取りします。</p>
           </li>
           <li class="pack-list__bunpri">
             <h3>ユニフォーム・Tシャツ</h3>
-            <p>スタッフのユニフォームは、同じ店主の「BUN PRINT（ぶんプリ）」へ。<a href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">ぶんプリに相談する →</a></p>
+            <p>スタッフのユニフォームは、同じ店主の「BUN PRINT（ぶんプリ）」へ。<a href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">ぶんプリに相談する</a></p>
           </li>
           <li class="pack-list__bunpri">
             <h3>看板・ホームページ・アプリ</h3>
-            <p>お店の看板、ホームページ、アプリは、同じ店主の「BUN Design（ぶんデザイン）」へ。<a href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">ぶんデザインに相談する →</a></p>
+            <p>お店の看板、ホームページ、アプリは、同じ店主の「BUN Design（ぶんデザイン）」へ。<a href="https://lin.ee/Q52XPutI" target="_blank" rel="noopener">ぶんデザインに相談する</a></p>
           </li>
+          <!-- 🔴2026-09-03 重複のため非表示。すぐ上の「看板・ホームページ・アプリ」（pack-list__bunpri）と同じ案内が
+               2つ並んでいた（こちらは相談先のリンクも無い）。消したのではなくコメントにしてあるので、戻すならこの4行を出すだけ。
           <li>
             <h3>ホームページ・アプリ</h3>
             <p>同じ店主の「BUN Design」で承ります。あわせてご相談ください。</p>
           </li>
+          -->
         </ul>
       </div>
     </section>
@@ -218,7 +226,7 @@
          ★他品目（印鑑・名刺など）の写真で埋めないこと。ここは「開業の実例」と書いてあるので、
            流用すると嘘になる。
          ★戻し方: 下の style="display:none" を消し、img/works-kaigyo-1.jpg 〜 -6.jpg を置いて
-           node C:/HQ/hanko-bunchan/tools/works-grid.mjs を流す。それだけで入る。 -->
+           node C:/HQ/projects/hanko-bunchan/tools/works-grid.mjs を流す。それだけで入る。 -->
     <section class="section warm reveal" id="works" aria-labelledby="works-title" style="display:none">
       <div class="container">
         <p class="eyebrow"><span class="eb-en">WORKS</span><span class="eb-ja">制作事例</span></p>
@@ -385,6 +393,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202609011413" defer></script>
+  <script src="script.js?v=202609032240" defer></script>
 </body>
 </html>
