@@ -1342,6 +1342,7 @@
       .app-card__icon { width: 64px; height: 64px; }
       .app-card__qr { display: none; }
       .app-card__name { font-size: 17px; }
+      .app-card__brand { display: block; font-size: 14px; font-weight: 700; color: #6b6b6b; margin-bottom: 2px; }  /* 店名を上の行に。「公式アプリ」が途中で折れないように */
       .app-card__free { margin-left: 6px; padding: 1px 10px; font-size: 12px; }
       .app-card__note { font-size: 12px; }
     }
