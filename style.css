@@ -1322,6 +1322,8 @@
     .app-pop a:hover { transform: translateY(-4px); }
     .app-pop img { display: block; width: 100%; height: auto; }
     @media (max-width: 760px) { .app-pop { grid-template-columns: 1fr; max-width: 420px; } }
+    /* トップの #app に出す1枚版（表のみ・2026-09-04 社長指示）。QRより上に、縦長のまま1枚 */
+    .app-pop--top { grid-template-columns: 1fr; max-width: 400px; margin: 18px auto 26px; }
 
     /* ★scroll-behavior: smooth は19行目で既に指定済み。ここには重ねて書かない。 */
 
