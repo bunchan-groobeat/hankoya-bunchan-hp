@@ -1326,6 +1326,10 @@
     .app-pop a:hover { transform: translateY(-4px); }
     .app-pop img { display: block; width: 100%; height: auto; }
     @media (max-width: 760px) { .app-pop { grid-template-columns: 1fr; max-width: 420px; } }
+    /* SNSカードの見出しにロゴ（2026-09-04 社長「インスタロゴ取って」）。色は見出しの色をそのまま使う */
+    .sns-name { display: inline-flex; align-items: center; gap: .32em; }
+    .sns-ico { width: 1.05em; height: 1.05em; flex: 0 0 auto; }
+
     /* アプリページの上段画像（hero-app.jpg）だけ上端基準で見せる。品目ページの写真は中央基準でよいが、
        この画像は上にアイコンと「アプリ」の文字があるので、中央基準だと肝心な部分が切れる（2026-09-04） */
     .pg-hero .pg-band.pg-band--top { object-position: center top !important; }  /* 後ろの @media 内 .pg-hero .pg-band{center 45%} に勝たせる */
