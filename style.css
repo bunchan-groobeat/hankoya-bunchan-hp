@@ -2082,3 +2082,33 @@
 }
 .app-qr--sm img { width: 132px; height: 132px; padding: 8px; }
 @media (max-width: 600px) { .app-qr img { width: 168px; height: 168px; } }
+
+/* =========================================================
+   トップ上段を「左1/3＝文言（パステル背景）／右2/3＝カードの帯」に（2026-09-04 社長指示）
+   ★PCだけ。スマホは従来の縦積み（キャッチ→見出し→カード）のまま。
+   ★HTMLは .hero-copy で3つ（キャッチ・見出し画像・品目ナビ）を包んだだけ。
+   ========================================================= */
+@media (min-width: 761px) {
+  .hero > .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);   /* 1/3 : 2/3 */
+    grid-template-areas: "copy cards" "brands brands";
+    column-gap: 26px;
+    align-items: center;
+  }
+  .hero-copy {
+    grid-area: copy;
+    background: #ffe9d6;               /* パステル（桃色寄りのクリーム。ブランドの赤と喧嘩しない） */
+    border-radius: 22px;
+    padding: 30px 26px 26px;
+    text-align: left;
+  }
+  .hero-copy .hero-catch { margin: 0 0 10px; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.35; text-align: left; }
+  .hero-copy .hc-br { display: inline; }           /* 「するなら」で改行して3行に */
+  .hero-copy .hc-big { font-size: 1.3em; }
+  .hero-copy .tiles-head { margin: 0 0 16px; text-align: left; }
+  .hero-copy .tiles-head img { width: 100%; margin: 0; }
+  .hero-copy .item-nav { justify-content: flex-start; gap: 8px; }
+  .hero > .container > .carousel { grid-area: cards; margin-top: 0; }
+  .hero > .container > .brands { grid-area: brands; }
+}

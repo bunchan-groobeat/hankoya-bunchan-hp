@@ -119,7 +119,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=20260904q">
+  <link rel="stylesheet" href="style.css?v=20260904r">
 </head>
 <body>
   <main>
@@ -172,6 +172,8 @@
 
     <section class="hero" aria-label="つくれるもの">
       <div class="container">
+        <!-- ★2026-09-04 社長「トップ画像右側、左に文言、背景パステル、全体の1/3が文言」→ PCは左1/3＝この箱（キャッチ＋見出し画像＋品目ナビ）／右2/3＝カードの帯。スマホは従来どおり縦積み（CSS .hero-copy） -->
+        <div class="hero-copy">
         <!-- 見出しの上のキャッチ（2026-08-24 社長指示） -->
         <p class="hero-catch">郡山で<b class="hc-big hc-red">『モノづくり』</b>するなら<br class="hc-br"><b class="hc-big hc-black">はんこ屋ぶんちゃん</b></p>
 
@@ -191,6 +193,7 @@
           <a href="goods.html"   style="--c:#02b4a2">グッズ</a>
           <a href="other.html"   style="--c:#e8452c">その他</a>
         </nav>
+        </div>
 
         <!-- ★画像は img/card-*.jpg を置けば自動で入ります（未設置の間はキャプション表示） -->
         <!-- ★カードの画像は img/card-<品目>.png を差し替えるだけで変わります -->
@@ -870,6 +873,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260904q" defer></script>
+  <script src="script.js?v=20260904r" defer></script>
 </body>
 </html>
