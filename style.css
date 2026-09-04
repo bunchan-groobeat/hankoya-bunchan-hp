@@ -1776,9 +1776,9 @@
 @media (max-width: 760px) {
   /* 1枚を大きく（150→218px）。3列グリッドの110pxより二回り大きく見せる */
   .works-track .works-cell { flex: 0 0 218px; width: 218px; }
-  /* ★スマホは上下とも左から右へ流す（社長指示 2026-08-30）。
-     逆方向だと画面が狭いぶん目が散るため。 */
-  .works-track--left,
+  /* ★2026-09-04 社長「上段左から右、下段右から左に流れるように」→ スマホもPCと同じ向き（8/30の「上下とも左から右」を解除）。
+     向きはHTMLのクラスで決まる＝上段 .works-track--right（左→右）／下段 .works-track--left（右→左）。ここでは速さだけ変える */
+  .works-track--left  { animation: worksFlowLeft  104s linear infinite; }
   .works-track--right { animation: worksFlowRight 104s linear infinite; }
   .works-cell__label { left: 6px; bottom: 6px; padding: 3px 10px; font-size: 11px; }
   .works-marquee { gap: 10px; }
