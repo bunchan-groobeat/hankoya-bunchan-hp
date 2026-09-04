@@ -139,7 +139,9 @@
       .eb-ja { padding: 9px 16px; font-size: 19px; letter-spacing: 0; border-radius: 9px; }
       .eb-en { font-size: 11px; letter-spacing: .12em; }
       /* 見出し・本文もひと回り大きく（clampを上書きするため個別指定） */
-      .section-title, h2.section-title { font-size: 31px; margin-bottom: 16px; line-height: 1.35; }
+      /* ★2026-09-04 社長「文言スマホ版2列にして」→ 31px固定だと13文字の行（助けられて開いた店だから、）が折れて3〜4行になる。
+         幅に応じて 6.7vw（390pxで26px・430pxで29px）。<br> で切った2行に収まる大きさ */
+      .section-title, h2.section-title { font-size: clamp(22px, 6.7vw, 31px); margin-bottom: 16px; line-height: 1.35; }
       .section-lead { font-size: 15px; line-height: 1.95; }
       .contact h2 { font-size: 30px; }
       .item-list h3 { font-size: 17px; }
