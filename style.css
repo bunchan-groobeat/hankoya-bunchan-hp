@@ -1329,6 +1329,12 @@
     .app-pop a:hover { transform: translateY(-4px); }
     .app-pop img { display: block; width: 100%; height: auto; }
     @media (max-width: 760px) { .app-pop { grid-template-columns: 1fr; max-width: 420px; } }
+    /* 店舗外観（社長撮影・2026-09-04差し替え・4:3）はスマホでも看板の文字が切れないよう、枠を写真と同じ4:3にする
+       （既定の min-height:340px だと幅350×高340の枠になり、左右が大きく切れて「はんこ屋ぶん」が欠ける） */
+    @media (max-width: 760px) {
+      .photo-placeholder[data-photo="img/shop-outside.jpg"] { min-height: 0; aspect-ratio: 4 / 3; }
+    }
+
     /* SNSカードの見出しにロゴ（2026-09-04 社長「インスタロゴ取って」）。色は見出しの色をそのまま使う */
     .sns-name { display: inline-flex; align-items: center; gap: .32em; }
     .sns-ico { width: 1.05em; height: 1.05em; flex: 0 0 auto; }
