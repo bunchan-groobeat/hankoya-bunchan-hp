@@ -334,19 +334,22 @@
         text-decoration: none;
       }
       .gnav-main a:last-child { border-bottom: 0; }
-      .gm-en {
+      /* ★2026-09-04 社長「ヘッダー英語と日本語入れ替え」→ 日本語を主（大）・英語を副（小）に。HTMLの順は英→日のまま、order で入れ替える */
+      .gm-ja {
+        order: 1;
         color: var(--red);
-        font-size: clamp(30px, 7.4vw, 44px);
+        font-size: clamp(26px, 6.6vw, 40px);
         font-weight: 900;
         line-height: 1;
-        letter-spacing: -.01em;
+        letter-spacing: .02em;
+        white-space: nowrap;
       }
-      .gm-ja {
+      .gm-en {
+        order: 2;
         color: var(--muted);
         font-size: 12px;
         font-weight: 900;
         letter-spacing: .1em;
-        white-space: nowrap;
       }
       .gnav-sub { display: block; margin-top: 28px; padding-top: 22px; border-top: 2px solid var(--red); }
       .gnav-label { margin: 0 0 14px; color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: .22em; }
@@ -1603,15 +1606,19 @@
         padding: 4px 0 8px;
         line-height: 1.15;
       }
-      .gm-en {
-        font-size: clamp(17px, 1.35vw, 21px);
-        font-weight: 900;
-        letter-spacing: .03em;
-      }
+      /* ★2026-09-04 社長指示：PCも日本語を上に大きく、英語を下に小さく（order で入れ替え） */
       .gm-ja {
+        order: 1;
+        font-size: clamp(15px, 1.2vw, 18px);
+        font-weight: 900;
+        letter-spacing: .04em;
+        white-space: nowrap;
+      }
+      .gm-en {
+        order: 2;
         font-size: 11px;
         font-weight: 700;
-        letter-spacing: .04em;
+        letter-spacing: .06em;
         opacity: .82;
       }
     }
